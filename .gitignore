@@ -1,0 +1,31 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Eval outputs (regenerate; may be large)
+evals/reports/*
+!evals/reports/.gitkeep
+
+# Real users' data from the concierge test: never commit
+concierge/
+
+# Secrets
+.env
+.env.*
+
+# Keep the documented template
+!.env.example
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+.pnpm-store/
+
+# The original, unmodified skill collection the .claude/ copies were adapted from. Kept locally only:
+# its licensing for redistribution is unclear, and the project uses the adapted copies in .claude/.
+SUPER/

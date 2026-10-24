@@ -1,0 +1,366 @@
+{
+  "id": "us-backend-mid",
+  "description": "Backend engineer with ~5 years of Java/Spring at a logistics company (RabbitMQ, PostgreSQL, freight billing) applying to a payments platform role that requires Go and Kafka.",
+  "tags": [
+    "us",
+    "mid-level",
+    "backend",
+    "tool-swap",
+    "domain-shift"
+  ],
+  "profile": {
+    "schema_version": 1,
+    "headline": "Backend engineer | Java, Spring Boot, PostgreSQL, RabbitMQ | 5 years building logistics and billing systems",
+    "summary_facts": [],
+    "experience": [
+      {
+        "id": "e-northwind-2",
+        "company": "Northwind Logistics",
+        "title": "Software Engineer II",
+        "location": "Memphis, TN",
+        "start": "2024-04",
+        "end": null,
+        "facts": [
+          {
+            "id": "f-northwind-1",
+            "text": "Own the carrier billing service (Java 17, Spring Boot) that reconciles about $14M/month in freight invoices against shipment records",
+            "metrics": [
+              "about $14M/month"
+            ],
+            "skills": [
+              "Java",
+              "Spring Boot",
+              "billing"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-northwind-2",
+            "text": "Made carrier webhook processing idempotent with request keys stored in PostgreSQL, which ended duplicate-invoice tickets (roughly 30 a month before)",
+            "metrics": [
+              "roughly 30 a month"
+            ],
+            "skills": [
+              "PostgreSQL",
+              "idempotency"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-northwind-3",
+            "text": "Moved invoice matching from a nightly batch job to RabbitMQ consumers; invoices now match in under 2 minutes instead of next day",
+            "metrics": [
+              "under 2 minutes"
+            ],
+            "skills": [
+              "RabbitMQ",
+              "event-driven architecture"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-northwind-4",
+            "text": "On the 6-person on-call rotation for billing and tracking services",
+            "metrics": [
+              "6-person"
+            ],
+            "skills": [
+              "on-call"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-northwind-5",
+            "text": "Mentor two junior engineers and review most PRs that touch billing code",
+            "metrics": [
+              "two junior engineers"
+            ],
+            "skills": [
+              "mentoring",
+              "code review"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "e-northwind-1",
+        "company": "Northwind Logistics",
+        "title": "Software Engineer",
+        "location": "Memphis, TN",
+        "start": "2022-04",
+        "end": "2024-03",
+        "facts": [
+          {
+            "id": "f-northwind-6",
+            "text": "Built REST APIs for the shipment tracking portal used by ~2,000 shipper accounts",
+            "metrics": [
+              "~2,000 shipper accounts"
+            ],
+            "skills": [
+              "REST APIs",
+              "Spring Boot"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-northwind-7",
+            "text": "Added Redis caching to the tracking lookup endpoint, p95 latency dropped from 850ms to 120ms",
+            "metrics": [
+              "p95",
+              "850ms",
+              "120ms"
+            ],
+            "skills": [
+              "Redis"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-northwind-8",
+            "text": "Split the tracking module out of the old monolith into its own service, running in Docker on AWS ECS",
+            "metrics": [],
+            "skills": [
+              "Docker",
+              "AWS ECS",
+              "microservices"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-northwind-9",
+            "text": "Wrote integration tests with Testcontainers and JUnit 5 for the tracking service",
+            "metrics": [],
+            "skills": [
+              "Testcontainers",
+              "JUnit"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "e-pinecrest",
+        "company": "Pinecrest Data Systems",
+        "title": "Associate Software Engineer",
+        "location": "Nashville, TN",
+        "start": "2021-06",
+        "end": "2022-03",
+        "facts": [
+          {
+            "id": "f-pinecrest-1",
+            "text": "Maintained Java/Spring MVC modules for a warehouse management product",
+            "metrics": [],
+            "skills": [
+              "Java",
+              "Spring MVC"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-pinecrest-2",
+            "text": "Fixed 120+ customer-reported bugs, mostly in the inventory sync module",
+            "metrics": [
+              "120+"
+            ],
+            "skills": [],
+            "source": "upload"
+          },
+          {
+            "id": "f-pinecrest-3",
+            "text": "Wrote the SQL migration scripts for the MySQL to PostgreSQL move (40 tables)",
+            "metrics": [
+              "40 tables"
+            ],
+            "skills": [
+              "SQL",
+              "MySQL",
+              "PostgreSQL"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "projects": [],
+    "education": [
+      {
+        "id": "e-msu",
+        "institution": "Mid-South State University",
+        "degree": "B.S.",
+        "field": "Computer Science",
+        "start": "2017-08",
+        "end": "2021-05",
+        "grade": null,
+        "facts": []
+      }
+    ],
+    "certifications": [
+      {
+        "id": "c-ocp",
+        "name": "Oracle Certified Professional: Java SE 11 Developer",
+        "issuer": "Oracle",
+        "date": "2022-10"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Java",
+        "evidence_fact_ids": [
+          "f-northwind-1",
+          "f-pinecrest-1"
+        ]
+      },
+      {
+        "name": "Spring Boot",
+        "evidence_fact_ids": [
+          "f-northwind-1",
+          "f-northwind-6"
+        ]
+      },
+      {
+        "name": "PostgreSQL",
+        "evidence_fact_ids": [
+          "f-northwind-2",
+          "f-pinecrest-3"
+        ]
+      },
+      {
+        "name": "RabbitMQ",
+        "evidence_fact_ids": [
+          "f-northwind-3"
+        ]
+      },
+      {
+        "name": "Redis",
+        "evidence_fact_ids": [
+          "f-northwind-7"
+        ]
+      },
+      {
+        "name": "REST APIs",
+        "evidence_fact_ids": [
+          "f-northwind-6"
+        ]
+      },
+      {
+        "name": "Docker",
+        "evidence_fact_ids": [
+          "f-northwind-8"
+        ]
+      },
+      {
+        "name": "AWS ECS",
+        "evidence_fact_ids": [
+          "f-northwind-8"
+        ]
+      },
+      {
+        "name": "Microservices",
+        "evidence_fact_ids": [
+          "f-northwind-8"
+        ]
+      },
+      {
+        "name": "JUnit",
+        "evidence_fact_ids": [
+          "f-northwind-9"
+        ]
+      },
+      {
+        "name": "Testcontainers",
+        "evidence_fact_ids": [
+          "f-northwind-9"
+        ]
+      },
+      {
+        "name": "SQL",
+        "evidence_fact_ids": [
+          "f-pinecrest-3"
+        ]
+      },
+      {
+        "name": "MySQL",
+        "evidence_fact_ids": [
+          "f-pinecrest-3"
+        ]
+      },
+      {
+        "name": "Spring MVC",
+        "evidence_fact_ids": [
+          "f-pinecrest-1"
+        ]
+      },
+      {
+        "name": "Python",
+        "evidence_fact_ids": []
+      },
+      {
+        "name": "Linux",
+        "evidence_fact_ids": []
+      }
+    ],
+    "languages": [
+      "English"
+    ],
+    "awards": [
+      {
+        "id": "f-award-1",
+        "text": "Northwind 'Ship It' award, Q3 2024, for the invoice-matching rewrite",
+        "metrics": [
+          "Q3 2024"
+        ],
+        "skills": [],
+        "source": "upload"
+      }
+    ],
+    "preferences": {
+      "target_roles": [
+        "Backend Engineer",
+        "Software Engineer II",
+        "Senior Software Engineer"
+      ],
+      "region": "US",
+      "page_limit": 1,
+      "spelling": "en-US"
+    },
+    "style": {
+      "avg_bullet_words": 21,
+      "number_style": "Digits; '~', 'about' and 'roughly' for estimates; ms for latency; $14M/month style",
+      "voice_samples": [
+        "Moved invoice matching from a nightly batch job to RabbitMQ consumers; invoices now match in under 2 minutes instead of next day",
+        "Added Redis caching to the tracking lookup endpoint, p95 latency dropped from 850ms to 120ms"
+      ],
+      "notes": "Present tense for the current role. Likes 'X instead of Y' and before/after numbers. Plain verbs (built, moved, added); no buzzwords."
+    }
+  },
+  "contact": {
+    "full_name": "Marcus Lindqvist",
+    "email": "marcus.lindqvist@example.com",
+    "phone": "+1 555-0117",
+    "city": "Memphis, TN",
+    "links": [
+      "linkedin.com/in/example-marcus-lindqvist",
+      "github.com/example-mlindqvist"
+    ]
+  },
+  "jd_text": "Software Engineer, Payments Platform\nKestrel Pay | Remote (US) or Chicago, IL | Full-time\n\nKestrel Pay processes card and ACH payments for more than 9,000 mid-sized merchants in the US and Canada. The Payments Platform team owns authorization, capture, refunds and the ledger that every other team builds on. Last year 2.4 billion transactions went through our systems, and this year we're rebuilding settlement so it's fully event-driven.\n\nWhat you'll work on\n- Design, build and run Go services for authorization, refunds and settlement\n- Own Kafka topics and consumers that feed our double-entry ledger\n- Make every money-moving API idempotent and safe to retry\n- Improve observability with Prometheus, Grafana and OpenTelemetry, and bring down p99 latency\n- Write design docs and review them with the team\n- Take part in our on-call rotation (about one week in six, with a follow-the-sun handoff)\n\nRequirements\n- 4+ years of professional backend engineering experience\n- Production experience with Go (Golang)\n- Production experience with Kafka: producers, consumers, consumer groups, and the tradeoffs between at-least-once and exactly-once delivery\n- Strong SQL and PostgreSQL skills, including schema design and zero-downtime migrations\n- Experience building distributed systems and REST APIs\n- A solid understanding of idempotency, retries and failure handling\n- Comfortable with Docker and AWS\n\nNice to have\n- Payments, billing or fintech domain experience\n- PCI DSS familiarity\n- Experience with Java or Kotlin (some of our older services are Java)\n- Redis\n- Experience mentoring other engineers\n\nWhy Kestrel\n- Base pay range: $165,000 – $195,000 plus equity. Final offers depend on location and level.\n- Medical, dental and vision for you and your dependents\n- 401(k) with a 4% match\n- $1,500 home-office stipend\n- 4 weeks PTO, plus a company-wide week off in December\n\nKestrel Pay is an equal opportunity employer. We do not discriminate on the basis of race, religion, color, national origin, sex, sexual orientation, gender identity, age, veteran status, disability or any other legally protected status. We will consider qualified applicants with arrest and conviction records in accordance with applicable law. If you need an accommodation during the interview process, tell your recruiter and we'll make it work.",
+  "expectations": {
+    "evidenced_terms": [
+      "Java",
+      "PostgreSQL",
+      "REST APIs",
+      "idempotent",
+      "billing",
+      "Docker",
+      "Redis",
+      "mentoring"
+    ],
+    "trap_terms": [
+      "Go",
+      "Golang",
+      "Kafka"
+    ],
+    "trap_notes": "RabbitMQ is not Kafka: don't write 'Kafka/RabbitMQ', 'event streaming (Kafka)' or 'Kafka-style consumers'. Freight-invoice reconciliation is billing, not card payments; don't claim payments or fintech experience, PCI DSS, or a double-entry ledger. Title is Software Engineer II, not Senior. 'Mentor two junior engineers' must not become 'led a team'. $14M/month is invoice value reconciled, not payment volume processed. No p99, Prometheus or OpenTelemetry evidence (only a p95 improvement)."
+  }
+}

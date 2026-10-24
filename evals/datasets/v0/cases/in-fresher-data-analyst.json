@@ -1,0 +1,346 @@
+{
+  "id": "in-fresher-data-analyst",
+  "description": "Tier-2 college B.Com graduate with SQL/Excel/Power BI coursework projects and a short MIS internship, applying to a junior data analyst role (messy job-board paste) that wants Tableau and Python.",
+  "tags": [
+    "india",
+    "fresher",
+    "data-analyst",
+    "non-tech-degree",
+    "messy-jd"
+  ],
+  "profile": {
+    "schema_version": 1,
+    "headline": "B.Com (2025) | SQL, Excel, Power BI | Entry-level data analyst",
+    "summary_facts": [],
+    "experience": [
+      {
+        "id": "e-narmada",
+        "company": "Narmada Agro Traders Pvt. Ltd.",
+        "title": "Accounts & MIS Intern",
+        "location": "Indore",
+        "start": "2024-12",
+        "end": "2025-02",
+        "facts": [
+          {
+            "id": "f-narmada-1",
+            "text": "Prepared weekly sales MIS reports in Excel for 3 branch managers using pivot tables and VLOOKUP",
+            "metrics": [
+              "3 branch managers"
+            ],
+            "skills": [
+              "Excel",
+              "pivot tables",
+              "VLOOKUP",
+              "MIS reporting"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-narmada-2",
+            "text": "Reconciled about 1,100 GST invoices with Tally entries and flagged 27 mismatches to the accountant",
+            "metrics": [
+              "about 1,100",
+              "27 mismatches"
+            ],
+            "skills": [
+              "Excel",
+              "Tally",
+              "GST"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-narmada-3",
+            "text": "Cleaned the dealer master list (duplicate names, missing PIN codes) so the sales team could filter dealers district-wise",
+            "metrics": [],
+            "skills": [
+              "Excel",
+              "data cleaning"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "p-salesdash",
+        "name": "Retail Sales Dashboard (Power BI)",
+        "link": null,
+        "start": "2024-09",
+        "end": "2024-10",
+        "facts": [
+          {
+            "id": "f-salesdash-1",
+            "text": "Built a Power BI dashboard on a 50,000-row superstore sales dataset with region, category and month-wise views",
+            "metrics": [
+              "50,000-row"
+            ],
+            "skills": [
+              "Power BI",
+              "dashboards"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-salesdash-2",
+            "text": "Wrote DAX measures for YoY growth and profit margin",
+            "metrics": [],
+            "skills": [
+              "DAX",
+              "Power BI"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-salesdash-3",
+            "text": "Found that 3 sub-categories were loss-making in every region, mainly because of discounts above 20%",
+            "metrics": [
+              "3 sub-categories",
+              "above 20%"
+            ],
+            "skills": [
+              "data analysis"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "p-foodsql",
+        "name": "Food Delivery Orders Analysis (SQL)",
+        "link": null,
+        "start": "2025-03",
+        "end": "2025-04",
+        "facts": [
+          {
+            "id": "f-foodsql-1",
+            "text": "Wrote SQL queries in MySQL (joins, GROUP BY, CTEs, window functions) on a 3-table orders dataset",
+            "metrics": [
+              "3-table"
+            ],
+            "skills": [
+              "SQL",
+              "MySQL"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-foodsql-2",
+            "text": "Calculated repeat-order rate by city – Tier-2 cities had a higher repeat rate than metros (34% vs 28%)",
+            "metrics": [
+              "34%",
+              "28%"
+            ],
+            "skills": [
+              "SQL",
+              "data analysis"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "p-survey",
+        "name": "Household Budget Survey (B.Com semester project)",
+        "link": null,
+        "start": "2024-01",
+        "end": "2024-03",
+        "facts": [
+          {
+            "id": "f-survey-1",
+            "text": "Collected 120 responses through Google Forms and analysed them in Excel with pivot charts",
+            "metrics": [
+              "120 responses"
+            ],
+            "skills": [
+              "Excel",
+              "Google Forms",
+              "pivot charts"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-survey-2",
+            "text": "Presented the findings to the class and faculty guide; project got an A grade",
+            "metrics": [
+              "A grade"
+            ],
+            "skills": [],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "education": [
+      {
+        "id": "e-malwa",
+        "institution": "Malwa College of Commerce and Management, Indore",
+        "degree": "B.Com",
+        "field": "Accounting and Finance",
+        "start": "2022-07",
+        "end": "2025-05",
+        "grade": "CGPA 7.6/10",
+        "facts": [
+          {
+            "id": "f-malwa-1",
+            "text": "Scored 92/100 in Business Statistics; other relevant subjects: Financial Accounting, Cost Accounting, Business Mathematics",
+            "metrics": [
+              "92/100"
+            ],
+            "skills": [
+              "statistics"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "id": "c-excel",
+        "name": "Microsoft Excel – Beginner to Advanced",
+        "issuer": "Udemy",
+        "date": "2024-06"
+      },
+      {
+        "id": "c-sql",
+        "name": "SQL (Basic)",
+        "issuer": "HackerRank",
+        "date": "2024-11"
+      }
+    ],
+    "skills": [
+      {
+        "name": "SQL",
+        "evidence_fact_ids": [
+          "f-foodsql-1",
+          "f-foodsql-2"
+        ]
+      },
+      {
+        "name": "MySQL",
+        "evidence_fact_ids": [
+          "f-foodsql-1"
+        ]
+      },
+      {
+        "name": "Excel",
+        "evidence_fact_ids": [
+          "f-narmada-1",
+          "f-narmada-2",
+          "f-survey-1"
+        ]
+      },
+      {
+        "name": "Pivot tables",
+        "evidence_fact_ids": [
+          "f-narmada-1",
+          "f-survey-1"
+        ]
+      },
+      {
+        "name": "VLOOKUP",
+        "evidence_fact_ids": [
+          "f-narmada-1"
+        ]
+      },
+      {
+        "name": "Power BI",
+        "evidence_fact_ids": [
+          "f-salesdash-1",
+          "f-salesdash-2"
+        ]
+      },
+      {
+        "name": "DAX",
+        "evidence_fact_ids": [
+          "f-salesdash-2"
+        ]
+      },
+      {
+        "name": "Data cleaning",
+        "evidence_fact_ids": [
+          "f-narmada-3"
+        ]
+      },
+      {
+        "name": "MIS reporting",
+        "evidence_fact_ids": [
+          "f-narmada-1"
+        ]
+      },
+      {
+        "name": "Tally",
+        "evidence_fact_ids": [
+          "f-narmada-2"
+        ]
+      },
+      {
+        "name": "Statistics",
+        "evidence_fact_ids": [
+          "f-malwa-1"
+        ]
+      },
+      {
+        "name": "Google Sheets",
+        "evidence_fact_ids": []
+      },
+      {
+        "name": "MS PowerPoint",
+        "evidence_fact_ids": []
+      }
+    ],
+    "languages": [
+      "English",
+      "Hindi"
+    ],
+    "awards": [],
+    "preferences": {
+      "target_roles": [
+        "Data Analyst",
+        "MIS Analyst",
+        "Business Analyst"
+      ],
+      "region": "IN",
+      "page_limit": 1,
+      "spelling": "en-IN"
+    },
+    "style": {
+      "avg_bullet_words": 17,
+      "number_style": "Digits with commas (1,100; 50,000); % sign; 'about' for estimates",
+      "voice_samples": [
+        "Prepared weekly sales MIS reports in Excel for 3 branch managers using pivot tables and VLOOKUP",
+        "Found that 3 sub-categories were loss-making in every region, mainly because of discounts above 20%"
+      ],
+      "notes": "Plain, slightly formal Indian English (analysed, district-wise, month-wise). Starts most bullets with a past-tense verb."
+    }
+  },
+  "contact": {
+    "full_name": "Sneha Agrawal",
+    "email": "sneha.agrawal@example.com",
+    "phone": "+91 90000 02345",
+    "city": "Indore",
+    "links": [
+      "linkedin.com/in/example-sneha-agrawal"
+    ]
+  },
+  "jd_text": "Junior Data Analyst\n\nSaffronleaf Retail Pvt. Ltd.\n3.8\n212 Reviews\n\n\n\n0 - 2 years\n₹ 3.5-5.5 Lacs P.A.\nPune( Baner )\n\n\nPosted: 4 days ago    Openings: 3    Applicants: 500+\n\nApply now\n\nSave\n\n\n\nJob highlights\nGraduate in any discipline with good SQL and Excel\nBuild Tableau dashboards and weekly MIS reports for category and supply chain teams\n\nJob description\n\n\nSaffronleaf is a fast-growing D2C brand selling staples, spices and snacks across 9 states through our app and 1,400+ partner kirana stores. Our Analytics team (6 people) supports the category, supply chain and marketing teams with reports, dashboards and quick analysis.\n\nRoles and Responsibilities\n- Build and maintain dashboards in Tableau for category and supply chain teams\n- Write SQL queries to pull sales, inventory and order data from our data warehouse\n- Clean and prepare data using Excel and Python (pandas) before weekly reviews\n- Prepare weekly MIS reports and share key insights with business stakeholders\n- Track KPIs like fill rate, sell-through and repeat purchase rate\n- Handle ad-hoc analysis requests from category managers\n- Document data definitions so that numbers match across teams\n\n\nDesired Candidate Profile\n\nMust have:\n* Graduate in any discipline (B.Com / BBA / B.Sc / BCA / B.Tech)\n* Good knowledge of SQL - joins, GROUP BY, subqueries\n* Advanced Excel - pivot tables, VLOOKUP / XLOOKUP, charts\n* Hands-on Tableau (please share at least one dashboard link)\n* Basic Python for data cleaning (pandas)\n* Good communication in English and Hindi\n\nGood to have:\n* Power BI\n* Knowledge of retail / FMCG metrics\n* Basic statistics\n\n\nPerks and benefits\nHealth insurance, Performance bonus, Laptop provided, 5 days working, Monthly team outings\n\n\nRole: Data Analyst\nIndustry Type: Retail\nDepartment: Data Science & Analytics\nEmployment Type: Full Time, Permanent\nRole Category: Business Intelligence & Analytics\n\nEducation\nUG: Any Graduate\nPG: Any Postgraduate\n\nKey Skills\nSkills highlighted with ' * ' are preferred keyskills\nSQL*\nTableau*\nPython*\nAdvanced Excel\nMIS Reporting\nData Analysis\nPandas\nDashboards\n\nAbout company\nSaffronleaf Retail is an equal opportunity employer. We hire on merit and do not discriminate on the basis of gender, religion, caste or disability.\n\nApply now",
+  "expectations": {
+    "evidenced_terms": [
+      "SQL",
+      "pivot tables",
+      "VLOOKUP",
+      "Power BI",
+      "MIS reports",
+      "dashboards",
+      "GROUP BY"
+    ],
+    "trap_terms": [
+      "Tableau",
+      "Python",
+      "pandas"
+    ],
+    "trap_notes": "Power BI is not Tableau: don't swap them or write 'Tableau/Power BI'. All analytics projects are coursework or self-study on public datasets, not client or employer work, so don't present them as professional experience. The internship was 3 months of accounts/MIS work; don't retitle it 'Data Analyst Intern'. 'Advanced Excel' is supported only through pivot tables, VLOOKUP and pivot charts (XLOOKUP isn't evidenced). No retail/FMCG KPI work (fill rate, sell-through) in the profile. Keep CGPA 7.6/10 as stated."
+  }
+}

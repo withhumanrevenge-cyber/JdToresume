@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "headline": "Backend Software Engineer",
+  "summary_facts": [
+    {
+      "id": "f-sum-1",
+      "text": "Six years building backend services in Go and Python, mostly payments and logistics.",
+      "metrics": ["6 years"],
+      "skills": ["Go", "Python"],
+      "source": "upload"
+    }
+  ],
+  "experience": [
+    {
+      "id": "exp-northwind",
+      "company": "Northwind Payments",
+      "title": "Software Engineer II",
+      "location": "Austin, TX",
+      "start": "2022-03",
+      "end": null,
+      "facts": [
+        {
+          "id": "f-nw-1",
+          "text": "Built a settlement reconciliation service in Go that processes 2M payment events per day from Kafka into PostgreSQL.",
+          "metrics": ["2M events/day"],
+          "skills": ["Go", "Kafka", "PostgreSQL"],
+          "source": "upload"
+        },
+        {
+          "id": "f-nw-2",
+          "text": "Cut p99 latency of the payments API from 900 ms to 220 ms by adding Redis caching and query indexes.",
+          "metrics": ["900 ms", "220 ms"],
+          "skills": ["Redis", "PostgreSQL"],
+          "source": "upload"
+        },
+        {
+          "id": "f-nw-3",
+          "text": "Migrated 14 services from EC2 to Kubernetes on EKS with Terraform and Helm.",
+          "metrics": ["14 services"],
+          "skills": ["Kubernetes", "AWS", "Terraform", "Helm"],
+          "source": "upload"
+        },
+        {
+          "id": "f-nw-4",
+          "text": "Wrote the on-call runbook and ran incident reviews for the payments team of 8 engineers.",
+          "metrics": ["8 engineers"],
+          "skills": ["Incident management"],
+          "source": "upload"
+        },
+        {
+          "id": "f-nw-5",
+          "text": "Added contract tests with pytest that cut integration-test runtime by 35%.",
+          "metrics": ["35%"],
+          "skills": ["pytest"],
+          "source": "answer"
+        }
+      ]
+    },
+    {
+      "id": "exp-contoso",
+      "company": "Contoso Logistics",
+      "title": "Software Engineer",
+      "location": "Denver, CO",
+      "start": "2019-06",
+      "end": "2022-02",
+      "facts": [
+        {
+          "id": "f-co-1",
+          "text": "Designed REST APIs in Python with FastAPI for shipment tracking, used by 120 enterprise customers.",
+          "metrics": ["120 enterprise customers"],
+          "skills": ["Python", "FastAPI", "REST"],
+          "source": "upload"
+        },
+        {
+          "id": "f-co-2",
+          "text": "Replaced nightly batch jobs with an event pipeline on AWS SQS and Lambda; data freshness went from 24 hours to 5 minutes.",
+          "metrics": ["24 hours", "5 minutes"],
+          "skills": ["AWS", "SQS", "Lambda"],
+          "source": "upload"
+        },
+        {
+          "id": "f-co-3",
+          "text": "Built an offline-first sync workflow for the driver app backend in TypeScript and Node.js.",
+          "metrics": [],
+          "skills": ["TypeScript", "Node.js"],
+          "source": "upload"
+        },
+        {
+          "id": "f-co-4",
+          "text": "Mentored 3 junior engineers through weekly code review.",
+          "metrics": ["3 junior engineers"],
+          "skills": ["Mentoring"],
+          "source": "upload"
+        }
+      ]
+    },
+    {
+      "id": "exp-fabrikam",
+      "company": "Fabrikam Analytics",
+      "title": "Junior Developer",
+      "location": "Remote",
+      "start": "2017-07",
+      "end": "2019-05",
+      "facts": [
+        {
+          "id": "f-fa-1",
+          "text": "Maintained JavaScript dashboards in React for client reporting.",
+          "metrics": [],
+          "skills": ["JavaScript", "React"],
+          "source": "upload"
+        },
+        {
+          "id": "f-fa-2",
+          "text": "Automated CSV ingestion with Python scripts, saving the analytics team about 6 hours a week.",
+          "metrics": ["6 hours a week"],
+          "skills": ["Python"],
+          "source": "upload"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-ledger",
+      "name": "ledgerlite",
+      "link": "https://github.com/jrivera-example/ledgerlite",
+      "start": "2023-01",
+      "end": "2023-06",
+      "facts": [
+        {
+          "id": "f-pr-1",
+          "text": "Open-source double-entry ledger library in Go with 1.2k GitHub stars.",
+          "metrics": ["1.2k stars"],
+          "skills": ["Go"],
+          "source": "upload"
+        }
+      ]
+    },
+    {
+      "id": "proj-ratelimit",
+      "name": "rate-limiter-bench",
+      "link": null,
+      "start": null,
+      "end": null,
+      "facts": [
+        {
+          "id": "f-pr-2",
+          "text": "Benchmarked token-bucket and sliding-window rate limiters in Go backed by Redis, and published the results.",
+          "metrics": [],
+          "skills": ["Go", "Redis"],
+          "source": "upload"
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-ut",
+      "institution": "University of Texas at Austin",
+      "degree": "B.S.",
+      "field": "Computer Science",
+      "start": "2013-08",
+      "end": "2017-05",
+      "grade": "GPA 3.6/4.0",
+      "facts": [
+        {
+          "id": "f-ed-1",
+          "text": "Teaching assistant for Data Structures for two semesters.",
+          "metrics": [],
+          "skills": [],
+          "source": "upload"
+        }
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert-aws-dev",
+      "name": "AWS Certified Developer – Associate",
+      "issuer": "Amazon Web Services",
+      "date": "2023-04"
+    },
+    {
+      "id": "cert-ckad",
+      "name": "Certified Kubernetes Application Developer (CKAD)",
+      "issuer": "The Linux Foundation",
+      "date": "2024-02"
+    }
+  ],
+  "skills": [
+    {"name": "Go", "evidence_fact_ids": ["f-nw-1", "f-pr-1"]},
+    {"name": "Python", "evidence_fact_ids": ["f-co-1", "f-fa-2"]},
+    {"name": "TypeScript", "evidence_fact_ids": ["f-co-3"]},
+    {"name": "JavaScript", "evidence_fact_ids": ["f-fa-1"]},
+    {"name": "Kafka", "evidence_fact_ids": ["f-nw-1"]},
+    {"name": "PostgreSQL", "evidence_fact_ids": ["f-nw-1", "f-nw-2"]},
+    {"name": "Redis", "evidence_fact_ids": ["f-nw-2"]},
+    {"name": "Kubernetes", "evidence_fact_ids": ["f-nw-3"]},
+    {"name": "AWS", "evidence_fact_ids": ["f-nw-3", "f-co-2"]},
+    {"name": "Terraform", "evidence_fact_ids": ["f-nw-3"]},
+    {"name": "Helm", "evidence_fact_ids": ["f-nw-3"]},
+    {"name": "pytest", "evidence_fact_ids": ["f-nw-5"]}
+  ],
+  "languages": ["English", "Spanish"],
+  "awards": [
+    {
+      "id": "f-aw-1",
+      "text": "Northwind engineering award for the reconciliation service launch.",
+      "metrics": [],
+      "skills": [],
+      "source": "upload"
+    }
+  ],
+  "preferences": {
+    "target_roles": ["Senior Backend Engineer"],
+    "region": "US",
+    "page_limit": 1,
+    "spelling": "en-US"
+  },
+  "style": {
+    "avg_bullet_words": 18,
+    "number_style": "digits with units; 2M not 2,000,000; ms for latency",
+    "voice_samples": [
+      "Built a settlement reconciliation service in Go that processes 2M payment events per day.",
+      "Cut p99 latency of the payments API from 900 ms to 220 ms."
+    ],
+    "notes": "Plain verbs, numbers up front when there is one."
+  }
+}

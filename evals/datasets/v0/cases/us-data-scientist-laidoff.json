@@ -1,0 +1,361 @@
+{
+  "id": "us-data-scientist-laidoff",
+  "description": "Data scientist laid off from adtech in July 2026 (Python, scikit-learn, XGBoost, Databricks) applying to a healthcare ML engineer role that requires PyTorch and HIPAA/EHR experience.",
+  "tags": [
+    "us",
+    "data-science",
+    "laid-off",
+    "domain-gap",
+    "tool-swap"
+  ],
+  "profile": {
+    "schema_version": 1,
+    "headline": "Data Scientist | Python, XGBoost, scikit-learn, PySpark | 7 years building prediction models that run in production",
+    "summary_facts": [
+      {
+        "id": "f-summary-1",
+        "text": "Laid off in July 2026 when Brightwave Ads cut 30% of staff; available to start immediately",
+        "metrics": [
+          "July 2026",
+          "30%"
+        ],
+        "skills": [],
+        "source": "answer"
+      }
+    ],
+    "experience": [
+      {
+        "id": "e-brightwave",
+        "company": "Brightwave Ads",
+        "title": "Data Scientist II",
+        "location": "San Francisco, CA",
+        "start": "2022-03",
+        "end": "2026-07",
+        "facts": [
+          {
+            "id": "f-brightwave-1",
+            "text": "Built the click-through-rate model (Python, XGBoost) that scored about 3B bid requests a day; it beat the logistic regression baseline by 9% CTR in an A/B test",
+            "metrics": [
+              "about 3B bid requests a day",
+              "9%"
+            ],
+            "skills": [
+              "Python",
+              "XGBoost",
+              "A/B testing",
+              "logistic regression"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-brightwave-2",
+            "text": "Rebuilt the feature pipeline in PySpark on Databricks, which cut training data prep from 6 hours to 50 minutes",
+            "metrics": [
+              "6 hours",
+              "50 minutes"
+            ],
+            "skills": [
+              "PySpark",
+              "Databricks",
+              "Spark"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-brightwave-3",
+            "text": "Set up drift monitoring and weekly retraining with MLflow and Airflow",
+            "metrics": [],
+            "skills": [
+              "MLflow",
+              "Airflow",
+              "model monitoring"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-brightwave-4",
+            "text": "Worked with legal on CCPA opt-outs: removed opted-out user IDs from training sets and documented data lineage",
+            "metrics": [],
+            "skills": [
+              "CCPA",
+              "data privacy"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-brightwave-5",
+            "text": "Walked account managers and advertisers through model results in monthly reviews",
+            "metrics": [],
+            "skills": [
+              "stakeholder communication"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "e-copperline",
+        "company": "Copperline Media",
+        "title": "Data Scientist",
+        "location": "Los Angeles, CA",
+        "start": "2019-07",
+        "end": "2022-02",
+        "facts": [
+          {
+            "id": "f-copperline-1",
+            "text": "Built a subscriber churn model in scikit-learn (random forest); the retention team used it to target about 40k at-risk subscribers a month",
+            "metrics": [
+              "about 40k"
+            ],
+            "skills": [
+              "scikit-learn",
+              "Python",
+              "random forest"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-copperline-2",
+            "text": "Wrote SQL in BigQuery and built Tableau dashboards for the newsroom",
+            "metrics": [],
+            "skills": [
+              "SQL",
+              "BigQuery",
+              "Tableau"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-copperline-3",
+            "text": "Designed and analyzed 20+ A/B tests on paywall and newsletter signup flows",
+            "metrics": [
+              "20+"
+            ],
+            "skills": [
+              "A/B testing",
+              "experimental design",
+              "statistics"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-copperline-4",
+            "text": "Built a small photo-tagging image classifier in TensorFlow/Keras at an internal hackathon (prototype, never shipped)",
+            "metrics": [],
+            "skills": [
+              "TensorFlow",
+              "Keras"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "p-kaggle",
+        "name": "Kaggle – credit default prediction",
+        "link": "kaggle.com/example-nrahimi",
+        "start": "2026-08",
+        "end": "2026-09",
+        "facts": [
+          {
+            "id": "f-kaggle-1",
+            "text": "Finished in the top 8% of 3,100 teams with a LightGBM + XGBoost ensemble",
+            "metrics": [
+              "top 8%",
+              "3,100 teams"
+            ],
+            "skills": [
+              "LightGBM",
+              "XGBoost",
+              "Python"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "education": [
+      {
+        "id": "e-bayshore",
+        "institution": "Bayshore University",
+        "degree": "M.S.",
+        "field": "Statistics",
+        "start": "2017-08",
+        "end": "2019-05",
+        "grade": null,
+        "facts": [
+          {
+            "id": "f-bayshore-1",
+            "text": "Thesis: Bayesian hierarchical models for small-area estimation, written in R",
+            "metrics": [],
+            "skills": [
+              "Bayesian statistics",
+              "R"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "e-sierra",
+        "institution": "Sierra Vista College",
+        "degree": "B.S.",
+        "field": "Mathematics",
+        "start": "2013-08",
+        "end": "2017-05",
+        "grade": null,
+        "facts": []
+      }
+    ],
+    "certifications": [],
+    "skills": [
+      {
+        "name": "Python",
+        "evidence_fact_ids": [
+          "f-brightwave-1",
+          "f-copperline-1",
+          "f-kaggle-1"
+        ]
+      },
+      {
+        "name": "scikit-learn",
+        "evidence_fact_ids": [
+          "f-copperline-1"
+        ]
+      },
+      {
+        "name": "XGBoost",
+        "evidence_fact_ids": [
+          "f-brightwave-1",
+          "f-kaggle-1"
+        ]
+      },
+      {
+        "name": "LightGBM",
+        "evidence_fact_ids": [
+          "f-kaggle-1"
+        ]
+      },
+      {
+        "name": "PySpark",
+        "evidence_fact_ids": [
+          "f-brightwave-2"
+        ]
+      },
+      {
+        "name": "Databricks",
+        "evidence_fact_ids": [
+          "f-brightwave-2"
+        ]
+      },
+      {
+        "name": "MLflow",
+        "evidence_fact_ids": [
+          "f-brightwave-3"
+        ]
+      },
+      {
+        "name": "Airflow",
+        "evidence_fact_ids": [
+          "f-brightwave-3"
+        ]
+      },
+      {
+        "name": "SQL",
+        "evidence_fact_ids": [
+          "f-copperline-2"
+        ]
+      },
+      {
+        "name": "BigQuery",
+        "evidence_fact_ids": [
+          "f-copperline-2"
+        ]
+      },
+      {
+        "name": "Tableau",
+        "evidence_fact_ids": [
+          "f-copperline-2"
+        ]
+      },
+      {
+        "name": "A/B testing",
+        "evidence_fact_ids": [
+          "f-brightwave-1",
+          "f-copperline-3"
+        ]
+      },
+      {
+        "name": "TensorFlow",
+        "evidence_fact_ids": [
+          "f-copperline-4"
+        ]
+      },
+      {
+        "name": "R",
+        "evidence_fact_ids": [
+          "f-bayshore-1"
+        ]
+      },
+      {
+        "name": "Docker",
+        "evidence_fact_ids": []
+      }
+    ],
+    "languages": [
+      "English",
+      "Farsi"
+    ],
+    "awards": [],
+    "preferences": {
+      "target_roles": [
+        "Machine Learning Engineer",
+        "Senior Data Scientist"
+      ],
+      "region": "US",
+      "page_limit": 1,
+      "spelling": "en-US"
+    },
+    "style": {
+      "avg_bullet_words": 22,
+      "number_style": "Digits with B/k suffixes (3B, 40k); % sign; 'about' for estimates",
+      "voice_samples": [
+        "Built the click-through-rate model (Python, XGBoost) that scored about 3B bid requests a day; it beat the logistic regression baseline by 9% CTR in an A/B test",
+        "Rebuilt the feature pipeline in PySpark on Databricks, which cut training data prep from 6 hours to 50 minutes"
+      ],
+      "notes": "Measured and precise; names the model type and the baseline; flags prototypes as prototypes."
+    }
+  },
+  "contact": {
+    "full_name": "Nadia Rahimi",
+    "email": "nadia.rahimi@example.com",
+    "phone": "+1 555-0151",
+    "city": "Oakland, CA",
+    "links": [
+      "linkedin.com/in/example-nadia-rahimi",
+      "github.com/example-nrahimi"
+    ]
+  },
+  "jd_text": "Machine Learning Engineer – Clinical Prediction\nMendwell Health | Boston, MA or Remote (US) | Full-time\n\nAbout Mendwell\nMendwell builds early-warning models that help 140 partner hospitals spot patients at risk of sepsis, deterioration and 30-day readmission. Our models score more than 2 million inpatient encounters a year, and our nurse-first alert design has cut alert fatigue at partner sites by roughly a third.\n\nWhat you'll do\n• Train, validate and deploy deep learning and gradient-boosted models on EHR data (vitals, labs, medications and clinical notes)\n• Build and maintain feature pipelines over clinical data in Spark on Databricks\n• Check every model for calibration and bias across patient subgroups before it reaches a hospital\n• Monitor models in production for drift and data quality issues, and retrain them through MLflow\n• Work with our clinicians and hospital IT teams to turn model output into alerts people trust\n• Follow HIPAA and our SOC 2 controls in everything you build\n\nMinimum Qualifications\n• MS or PhD in Computer Science, Statistics, or a related quantitative field, or equivalent experience\n• 4+ years building and shipping machine learning models in production\n• Strong Python and SQL\n• Experience with PyTorch (required) and gradient-boosting libraries such as XGBoost or LightGBM\n• Experience working with clinical data, for example EHR, claims or registry data\n• Working knowledge of HIPAA and safe handling of PHI\n\nPreferred Qualifications\n• FHIR or HL7 experience\n• NLP on clinical notes\n• Experience with model fairness and calibration methods\n• Publications or talks in ML for health\n\nBenefits\n• Salary range: $170,000 – $205,000 base, plus equity and an annual bonus\n• Comprehensive medical, dental and vision coverage\n• 401(k) with a 5% match\n• 20 days PTO, plus the week between Christmas and New Year's off\n• $3,000 annual professional development budget\n\nMendwell Health is proud to be an Equal Opportunity Employer. We do not discriminate based upon race, religion, color, national origin, sex (including pregnancy, childbirth, or related medical conditions), sexual orientation, gender identity, gender expression, age, status as a protected veteran, status as an individual with a disability, or other applicable legally protected characteristics.",
+  "expectations": {
+    "evidenced_terms": [
+      "Python",
+      "SQL",
+      "XGBoost",
+      "LightGBM",
+      "Databricks",
+      "MLflow",
+      "drift",
+      "Spark"
+    ],
+    "trap_terms": [
+      "PyTorch",
+      "HIPAA",
+      "EHR",
+      "PHI"
+    ],
+    "trap_notes": "CCPA opt-out work is consumer ad privacy, not health-data compliance; don't map it to the JD's regulation. The TensorFlow/Keras hackathon classifier is an unshipped prototype, not the JD's deep learning framework and not production deep learning. All experience is adtech and media with no clinical or patient data, so don't say 'healthcare-adjacent'. Keep the Brightwave end date at 2026-07; don't hide the layoff with 'Present'. 3B bid requests a day is scoring volume, not users. Title is Data Scientist II, not ML Engineer."
+  }
+}

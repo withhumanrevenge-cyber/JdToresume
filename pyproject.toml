@@ -1,0 +1,35 @@
+[project]
+name = "CREATOR"
+version = "0.0.1"
+description = "CREATOR : AI job-application copilot. Phase 0: pipeline prototype, eval harness, renderer."
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn>=0.32",
+    "pydantic-settings>=2.6",
+    "sqlalchemy[asyncio]>=2.0.36",
+    "asyncpg>=0.30",
+    "alembic>=1.14",
+    "pyjwt[crypto]>=2.10",
+    "python-multipart>=0.0.20",
+    "python-docx>=1.1",
+    "groq>=1.7",
+    "pydantic>=2.11",
+    "typst>=0.13",
+    "pdfminer.six>=20250506",
+    "pypdf>=5.4",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.3", "httpx2"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["server/app", "evals"]
+
+[tool.pytest.ini_options]
+testpaths = ["server/tests", "evals/tests"]
+pythonpath = ["server", "."]

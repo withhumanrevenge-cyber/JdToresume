@@ -1,0 +1,454 @@
+{
+  "id": "us-newgrad-intl-swe",
+  "description": "MS CS international student on F-1 OPT (2 prior years at an Indian IT services firm, one US internship) applying to a new-grad cloud SWE role that sponsors H-1B but requires an AWS certification the candidate doesn't hold.",
+  "tags": [
+    "us",
+    "new-grad",
+    "swe",
+    "international",
+    "visa",
+    "cert-gap"
+  ],
+  "profile": {
+    "schema_version": 1,
+    "headline": "MS Computer Science (May 2026) | Python, AWS serverless, Java | 2 years of industry experience before grad school",
+    "summary_facts": [
+      {
+        "id": "f-summary-1",
+        "text": "On F-1 OPT since June 2026 and eligible for the 24-month STEM OPT extension; will need H-1B sponsorship later",
+        "metrics": [
+          "24-month"
+        ],
+        "skills": [],
+        "source": "answer"
+      }
+    ],
+    "experience": [
+      {
+        "id": "e-ridgeway",
+        "company": "Ridgeway Freight Systems",
+        "title": "Software Engineering Intern",
+        "location": "Chicago, IL",
+        "start": "2025-05",
+        "end": "2025-08",
+        "facts": [
+          {
+            "id": "f-ridgeway-1",
+            "text": "Built a Python AWS Lambda function that parses carrier EDI files dropped in S3 and writes shipment events to DynamoDB",
+            "metrics": [],
+            "skills": [
+              "Python",
+              "AWS Lambda",
+              "S3",
+              "DynamoDB"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-ridgeway-2",
+            "text": "Cut failed-parse alerts from about 40 a day to under 5 by adding schema validation and an SQS dead-letter queue",
+            "metrics": [
+              "about 40 a day",
+              "under 5"
+            ],
+            "skills": [
+              "SQS",
+              "Python"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-ridgeway-3",
+            "text": "Wrote pytest unit tests and wired them into the team's GitHub Actions pipeline",
+            "metrics": [],
+            "skills": [
+              "pytest",
+              "GitHub Actions",
+              "CI/CD"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-ridgeway-4",
+            "text": "Demoed the project at intern demo day to ~60 people including the CTO",
+            "metrics": [
+              "~60 people"
+            ],
+            "skills": [],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "e-avu-ta",
+        "company": "Alder Valley University",
+        "title": "Graduate Teaching Assistant, Distributed Systems",
+        "location": "Columbus, OH",
+        "start": "2025-01",
+        "end": "2026-05",
+        "facts": [
+          {
+            "id": "f-avu-ta-1",
+            "text": "TA for CS 5250 Distributed Systems (about 90 students per semester); ran weekly lab sessions and office hours",
+            "metrics": [
+              "about 90 students"
+            ],
+            "skills": [
+              "Distributed Systems"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-avu-ta-2",
+            "text": "Wrote a Python autograder for the Raft lab that runs each submission in a Docker container; grading went from ~3 days to a few hours per assignment",
+            "metrics": [
+              "~3 days"
+            ],
+            "skills": [
+              "Python",
+              "Docker"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-avu-ta-3",
+            "text": "Graded assignments and exams with 3 other TAs",
+            "metrics": [
+              "3 other TAs"
+            ],
+            "skills": [],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "e-coralbay",
+        "company": "Coralbay Infotech",
+        "title": "Associate Software Engineer",
+        "location": "Chennai, India",
+        "start": "2022-07",
+        "end": "2024-07",
+        "facts": [
+          {
+            "id": "f-coralbay-1",
+            "text": "Maintained REST APIs in Java/Spring Boot for a bank client's loan-servicing portal",
+            "metrics": [],
+            "skills": [
+              "Java",
+              "Spring Boot",
+              "REST APIs"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-coralbay-2",
+            "text": "Rewrote a slow nightly report query in PostgreSQL, runtime dropped from 47 min to 6 min",
+            "metrics": [
+              "47 min",
+              "6 min"
+            ],
+            "skills": [
+              "PostgreSQL",
+              "SQL"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-coralbay-3",
+            "text": "Handled L2 production support tickets as part of a 5-person team",
+            "metrics": [
+              "5-person"
+            ],
+            "skills": [
+              "production support"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-coralbay-4",
+            "text": "Wrote JUnit tests for new endpoints to meet the client's 70% coverage rule",
+            "metrics": [
+              "70%"
+            ],
+            "skills": [
+              "JUnit",
+              "Java"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "p-shuttle",
+        "name": "Campus Shuttle Tracker (CS 6420 Cloud Computing)",
+        "link": "github.com/example-karthik/shuttle-tracker",
+        "start": "2025-09",
+        "end": "2025-12",
+        "facts": [
+          {
+            "id": "f-shuttle-1",
+            "text": "Serverless shuttle-tracking app on AWS (API Gateway, Lambda, DynamoDB) deployed with AWS SAM; handled a 200-user class demo",
+            "metrics": [
+              "200-user"
+            ],
+            "skills": [
+              "AWS",
+              "API Gateway",
+              "AWS Lambda",
+              "DynamoDB",
+              "AWS SAM"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-shuttle-2",
+            "text": "Set up CloudWatch alarms and kept the whole project under a $15/month budget",
+            "metrics": [
+              "$15/month"
+            ],
+            "skills": [
+              "CloudWatch"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "p-raftkv",
+        "name": "Raft key-value store",
+        "link": "github.com/example-karthik/raft-kv",
+        "start": "2025-02",
+        "end": "2025-04",
+        "facts": [
+          {
+            "id": "f-raftkv-1",
+            "text": "Implemented leader election and log replication for a 5-node Raft cluster in Python asyncio; passed all 38 course test cases",
+            "metrics": [
+              "5-node",
+              "38"
+            ],
+            "skills": [
+              "Python",
+              "asyncio",
+              "Distributed Systems"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "education": [
+      {
+        "id": "e-avu",
+        "institution": "Alder Valley University",
+        "degree": "M.S.",
+        "field": "Computer Science",
+        "start": "2024-08",
+        "end": "2026-05",
+        "grade": "GPA 3.8/4.0",
+        "facts": [
+          {
+            "id": "f-avu-1",
+            "text": "Coursework: Distributed Systems, Cloud Computing, Advanced Algorithms, Database Systems",
+            "metrics": [],
+            "skills": [
+              "Distributed Systems",
+              "Cloud Computing"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "e-cit",
+        "institution": "Coromandel Institute of Technology",
+        "degree": "B.E.",
+        "field": "Computer Science and Engineering",
+        "start": "2018-08",
+        "end": "2022-05",
+        "grade": "CGPA 8.6/10",
+        "facts": []
+      }
+    ],
+    "certifications": [
+      {
+        "id": "c-ocajp",
+        "name": "Oracle Certified Associate, Java SE 8 Programmer",
+        "issuer": "Oracle",
+        "date": "2023-02"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Python",
+        "evidence_fact_ids": [
+          "f-ridgeway-1",
+          "f-avu-ta-2",
+          "f-raftkv-1"
+        ]
+      },
+      {
+        "name": "Java",
+        "evidence_fact_ids": [
+          "f-coralbay-1",
+          "f-coralbay-4"
+        ]
+      },
+      {
+        "name": "Spring Boot",
+        "evidence_fact_ids": [
+          "f-coralbay-1"
+        ]
+      },
+      {
+        "name": "AWS Lambda",
+        "evidence_fact_ids": [
+          "f-ridgeway-1",
+          "f-shuttle-1"
+        ]
+      },
+      {
+        "name": "DynamoDB",
+        "evidence_fact_ids": [
+          "f-ridgeway-1",
+          "f-shuttle-1"
+        ]
+      },
+      {
+        "name": "S3",
+        "evidence_fact_ids": [
+          "f-ridgeway-1"
+        ]
+      },
+      {
+        "name": "SQS",
+        "evidence_fact_ids": [
+          "f-ridgeway-2"
+        ]
+      },
+      {
+        "name": "API Gateway",
+        "evidence_fact_ids": [
+          "f-shuttle-1"
+        ]
+      },
+      {
+        "name": "CloudWatch",
+        "evidence_fact_ids": [
+          "f-shuttle-2"
+        ]
+      },
+      {
+        "name": "AWS SAM",
+        "evidence_fact_ids": [
+          "f-shuttle-1"
+        ]
+      },
+      {
+        "name": "PostgreSQL",
+        "evidence_fact_ids": [
+          "f-coralbay-2"
+        ]
+      },
+      {
+        "name": "SQL",
+        "evidence_fact_ids": [
+          "f-coralbay-2"
+        ]
+      },
+      {
+        "name": "REST APIs",
+        "evidence_fact_ids": [
+          "f-coralbay-1"
+        ]
+      },
+      {
+        "name": "Docker",
+        "evidence_fact_ids": [
+          "f-avu-ta-2"
+        ]
+      },
+      {
+        "name": "GitHub Actions",
+        "evidence_fact_ids": [
+          "f-ridgeway-3"
+        ]
+      },
+      {
+        "name": "pytest",
+        "evidence_fact_ids": [
+          "f-ridgeway-3"
+        ]
+      },
+      {
+        "name": "JUnit",
+        "evidence_fact_ids": [
+          "f-coralbay-4"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "evidence_fact_ids": []
+      },
+      {
+        "name": "Linux",
+        "evidence_fact_ids": []
+      }
+    ],
+    "languages": [
+      "English",
+      "Tamil",
+      "Hindi"
+    ],
+    "awards": [],
+    "preferences": {
+      "target_roles": [
+        "Software Engineer (New Grad)",
+        "Backend Engineer",
+        "Cloud Engineer"
+      ],
+      "region": "US",
+      "page_limit": 1,
+      "spelling": "en-US"
+    },
+    "style": {
+      "avg_bullet_words": 20,
+      "number_style": "Digits; '~' or 'about' for estimates; 'min' for minutes; dollar amounts with /month",
+      "voice_samples": [
+        "Cut failed-parse alerts from about 40 a day to under 5 by adding schema validation and an SQS dead-letter queue",
+        "Rewrote a slow nightly report query in PostgreSQL, runtime dropped from 47 min to 6 min",
+        "Serverless shuttle-tracking app on AWS (API Gateway, Lambda, DynamoDB) deployed with AWS SAM; handled a 200-user class demo"
+      ],
+      "notes": "Technical and compact; names AWS services inline; uses semicolons to join cause and result; no first person."
+    }
+  },
+  "contact": {
+    "full_name": "Karthik Ramanathan",
+    "email": "karthik.ramanathan@example.com",
+    "phone": "+1 555-0142",
+    "city": "Columbus, OH",
+    "links": [
+      "linkedin.com/in/example-karthik-ramanathan",
+      "github.com/example-karthik"
+    ]
+  },
+  "jd_text": "Software Engineer I – Cloud Services (New Grad 2026)\nQuarry Labs · Denver, CO (Hybrid, 3 days a week in office)\n\nAbout Quarry Labs\nQuarry Labs makes inventory, dispatch and billing software for 3,000+ independent building-supply yards across North America. Our customers are family businesses that sell lumber, concrete and roofing, and they run their whole day on our app. Everything we run is on AWS, and most of it is serverless.\n\nThe role\nYou'll join the 7-person Cloud Services team that owns our order and delivery APIs. New grads here ship to production in their first month, pair with a senior engineer for the first quarter, and own a service by the end of their first year.\n\nWhat you'll do\n- Build and maintain Python services on AWS Lambda, API Gateway and DynamoDB\n- Design REST APIs used by our web app, mobile driver app and customer integrations\n- Write and review infrastructure changes (we use AWS CDK)\n- Add tests, alarms and dashboards (CloudWatch, Datadog) to the services you own\n- Join the team's on-call rotation once you're comfortable (about 1 week in 7)\n- Work with product and support to fix customer-facing issues\n\nBasic qualifications\n- BS or MS in Computer Science or a related field, graduating between December 2025 and August 2026\n- Proficiency in Python\n- Experience building REST APIs\n- Hands-on experience with AWS (Lambda, S3, DynamoDB or similar), from work, internships or projects\n- AWS Certified Developer – Associate (required: several enterprise customer contracts require certified engineers on this team)\n- Familiarity with SQL and relational databases\n- Familiarity with CI/CD; we use GitHub Actions\n\nPreferred qualifications\n- A backend or cloud internship\n- Infrastructure as code (AWS CDK, Terraform or CloudFormation)\n- Event-driven patterns with SQS, SNS or EventBridge\n- Exposure to TypeScript\n\nVisa sponsorship\nQuarry Labs sponsors H-1B visas for this role and supports STEM OPT extensions. We are an E-Verify employer. Candidates currently on F-1 OPT are welcome to apply.\n\nCompensation and benefits\n- Base salary: $112,000 – $128,000, plus equity\n- Medical, dental and vision (we cover 100% of employee premiums)\n- 401(k) with a 4% match\n- $2,000 yearly learning stipend\n- 20 days PTO plus 10 holidays\n\nQuarry Labs is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or veteran status.",
+  "expectations": {
+    "evidenced_terms": [
+      "Python",
+      "AWS Lambda",
+      "DynamoDB",
+      "REST APIs",
+      "SQL",
+      "GitHub Actions",
+      "CloudWatch",
+      "SQS"
+    ],
+    "trap_terms": [
+      "AWS Certified Developer – Associate"
+    ],
+    "trap_notes": "No AWS certification of any kind: don't list one, write 'AWS certified', or add 'in progress' unless the user confirms it. AWS experience is one internship Lambda service plus class projects; don't call it 'production AWS at scale' or invent traffic numbers (200 users was a class demo). AWS SAM is not AWS CDK, and nothing shows Terraform, Datadog or EventBridge. TA is not 'instructor' or 'lecturer'. The visa fact is the user's own: stating OPT/STEM OPT eligibility is fine, but never write 'no sponsorship required'. Keep the Coralbay title 'Associate Software Engineer'."
+  }
+}

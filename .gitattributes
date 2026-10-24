@@ -1,0 +1,14 @@
+# Store text files with LF line endings, whatever OS they were written on. CI compares regenerated files
+# (packages/api-types) against the committed ones byte for byte.
+* text=auto eol=lf
+
+# Binary files: never touch line endings.
+*.pdf binary
+*.docx binary
+*.png binary
+*.jpg binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary

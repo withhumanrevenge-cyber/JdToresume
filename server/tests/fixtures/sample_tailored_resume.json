@@ -1,0 +1,92 @@
+{
+  "summary": "Backend engineer with 6 years building payment and logistics services in Go and Python, certified in AWS and Kubernetes. Cut payments API p99 latency from 900 ms to 220 ms and built a Kafka pipeline that reconciles 2M payment events a day.",
+  "summary_source_fact_ids": ["f-sum-1", "f-nw-1", "f-nw-2"],
+  "section_order": ["summary", "experience", "skills", "projects", "education", "certifications"],
+  "experience": [
+    {
+      "experience_id": "exp-northwind",
+      "bullets": [
+        {
+          "text": "Built a Go settlement reconciliation service that processes 2M payment events a day from Kafka into PostgreSQL.",
+          "source_fact_ids": ["f-nw-1"],
+          "targets_requirement_ids": ["r1", "r2", "r3"]
+        },
+        {
+          "text": "Cut payments API p99 latency from 900 ms to 220 ms with Redis caching and new PostgreSQL indexes.",
+          "source_fact_ids": ["f-nw-2"],
+          "targets_requirement_ids": ["r3"]
+        },
+        {
+          "text": "Migrated 14 services from EC2 to Kubernetes on AWS EKS using Terraform and Helm.",
+          "source_fact_ids": ["f-nw-3"],
+          "targets_requirement_ids": ["r4"]
+        },
+        {
+          "text": "Ran incident reviews and wrote the on-call runbook for an 8-engineer payments team.",
+          "source_fact_ids": ["f-nw-4"],
+          "targets_requirement_ids": []
+        }
+      ]
+    },
+    {
+      "experience_id": "exp-contoso",
+      "bullets": [
+        {
+          "text": "Designed RESTful APIs in Python and FastAPI for shipment tracking, used by 120 enterprise customers.",
+          "source_fact_ids": ["f-co-1"],
+          "targets_requirement_ids": []
+        },
+        {
+          "text": "Replaced nightly batch jobs with an event pipeline on AWS SQS and Lambda, taking data freshness from 24 hours to 5 minutes.",
+          "source_fact_ids": ["f-co-2"],
+          "targets_requirement_ids": ["r4"]
+        },
+        {
+          "text": "Built an offline-first sync workflow for the driver app backend in TypeScript and Node.js.",
+          "source_fact_ids": ["f-co-3"],
+          "targets_requirement_ids": []
+        }
+      ]
+    },
+    {
+      "experience_id": "exp-fabrikam",
+      "bullets": [
+        {
+          "text": "Automated CSV ingestion with Python scripts, saving the analytics team about 6 hours a week.",
+          "source_fact_ids": ["f-fa-2"],
+          "targets_requirement_ids": []
+        },
+        {
+          "text": "Maintained React and JavaScript dashboards for client reporting.",
+          "source_fact_ids": ["f-fa-1"],
+          "targets_requirement_ids": []
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "project_id": "proj-ledger",
+      "bullets": [
+        {
+          "text": "Wrote ledgerlite, an open-source double-entry ledger library in Go with 1.2k GitHub stars.",
+          "source_fact_ids": ["f-pr-1"],
+          "targets_requirement_ids": ["r1"]
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "education_id": "edu-ut",
+      "bullets": []
+    }
+  ],
+  "skill_groups": [
+    {"label": "Languages", "skills": ["Go", "Python", "TypeScript", "JavaScript", "SQL"]},
+    {"label": "Data & Messaging", "skills": ["Kafka", "PostgreSQL", "Redis", "AWS SQS"]},
+    {"label": "Cloud & Infra", "skills": ["AWS", "Kubernetes", "Terraform", "Helm"]},
+    {"label": "Testing", "skills": ["pytest"]}
+  ],
+  "certification_ids": ["cert-aws-dev", "cert-ckad"]
+}

@@ -1,0 +1,423 @@
+{
+  "id": "us-devops-senior",
+  "description": "Senior DevOps engineer with 10 years (Linux admin to AWS, Terraform and ECS on Fargate) applying to a platform role that requires production Kubernetes on EKS and a CKA.",
+  "tags": [
+    "us",
+    "senior",
+    "devops",
+    "cert-gap",
+    "tool-swap"
+  ],
+  "profile": {
+    "schema_version": 1,
+    "headline": "Senior DevOps Engineer | AWS, Terraform, ECS/Fargate | 10 years running production infrastructure",
+    "summary_facts": [],
+    "experience": [
+      {
+        "id": "e-tidewater",
+        "company": "Tidewater Analytics",
+        "title": "Senior DevOps Engineer",
+        "location": "Portland, OR",
+        "start": "2021-11",
+        "end": null,
+        "facts": [
+          {
+            "id": "f-tidewater-1",
+            "text": "Led the migration of 38 services from EC2 Auto Scaling groups to ECS on Fargate over 9 months with no customer-facing downtime",
+            "metrics": [
+              "38 services",
+              "9 months"
+            ],
+            "skills": [
+              "AWS ECS",
+              "Fargate",
+              "EC2"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-tidewater-2",
+            "text": "Wrote and maintain the Terraform modules (about 60) that every team uses for VPCs, ECS services, RDS and IAM",
+            "metrics": [
+              "about 60"
+            ],
+            "skills": [
+              "Terraform",
+              "AWS",
+              "VPC",
+              "RDS",
+              "IAM"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-tidewater-3",
+            "text": "Cut the AWS bill by 31% ($410k/yr) with Savings Plans, Graviton instances and rightsizing",
+            "metrics": [
+              "31%",
+              "$410k/yr"
+            ],
+            "skills": [
+              "AWS cost optimization"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-tidewater-4",
+            "text": "Built CI/CD pipelines in GitHub Actions with blue/green deploys through CodeDeploy; deploys went from weekly to 15–20 a day",
+            "metrics": [
+              "15–20 a day"
+            ],
+            "skills": [
+              "GitHub Actions",
+              "CI/CD",
+              "CodeDeploy"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-tidewater-5",
+            "text": "Run the platform team's on-call rotation, wrote the incident runbooks and facilitate blameless postmortems",
+            "metrics": [],
+            "skills": [
+              "incident management",
+              "on-call",
+              "postmortems"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-tidewater-6",
+            "text": "Mentor 2 junior engineers on the 5-person platform team",
+            "metrics": [
+              "2 junior engineers",
+              "5-person"
+            ],
+            "skills": [
+              "mentoring"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "e-larkspur",
+        "company": "Larkspur Media",
+        "title": "DevOps Engineer",
+        "location": "Seattle, WA",
+        "start": "2018-09",
+        "end": "2021-10",
+        "facts": [
+          {
+            "id": "f-larkspur-1",
+            "text": "Moved infrastructure from hand-built CloudFormation stacks to Terraform with remote state in S3",
+            "metrics": [],
+            "skills": [
+              "Terraform",
+              "CloudFormation",
+              "S3"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-larkspur-2",
+            "text": "Containerized the video transcoding workers with Docker and ran them on ECS (EC2 launch type)",
+            "metrics": [],
+            "skills": [
+              "Docker",
+              "AWS ECS"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-larkspur-3",
+            "text": "Set up Prometheus and Grafana with PagerDuty alerting; mean time to detect went from about 25 min to under 5",
+            "metrics": [
+              "about 25 min",
+              "under 5"
+            ],
+            "skills": [
+              "Prometheus",
+              "Grafana",
+              "PagerDuty"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-larkspur-4",
+            "text": "Wrote Ansible playbooks to manage the remaining EC2 fleet (~200 hosts)",
+            "metrics": [
+              "~200 hosts"
+            ],
+            "skills": [
+              "Ansible",
+              "EC2"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "e-granite",
+        "company": "Granite Peak Hosting",
+        "title": "Linux Systems Administrator",
+        "location": "Boise, ID",
+        "start": "2016-06",
+        "end": "2018-08",
+        "facts": [
+          {
+            "id": "f-granite-1",
+            "text": "Administered ~400 CentOS and Ubuntu servers across two data centers",
+            "metrics": [
+              "~400",
+              "two data centers"
+            ],
+            "skills": [
+              "Linux",
+              "CentOS",
+              "Ubuntu"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-granite-2",
+            "text": "Automated server provisioning with Bash and Puppet, setup time went from 2 days to 3 hours",
+            "metrics": [
+              "2 days",
+              "3 hours"
+            ],
+            "skills": [
+              "Bash",
+              "Puppet"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-granite-3",
+            "text": "Covered the night and weekend pager rotation",
+            "metrics": [],
+            "skills": [
+              "on-call"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "p-ecs-autoscale",
+        "name": "terraform-aws-ecs-autoscale (open source)",
+        "link": "github.com/example-ghalvorsen/terraform-aws-ecs-autoscale",
+        "start": "2023-02",
+        "end": null,
+        "facts": [
+          {
+            "id": "f-oss-1",
+            "text": "Terraform module for ECS service autoscaling on custom CloudWatch metrics; ~350 GitHub stars",
+            "metrics": [
+              "~350 GitHub stars"
+            ],
+            "skills": [
+              "Terraform",
+              "AWS ECS",
+              "CloudWatch"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "education": [
+      {
+        "id": "e-srsu",
+        "institution": "Snake River State University",
+        "degree": "B.S.",
+        "field": "Information Technology",
+        "start": "2012-08",
+        "end": "2016-05",
+        "grade": null,
+        "facts": []
+      }
+    ],
+    "certifications": [
+      {
+        "id": "c-sap",
+        "name": "AWS Certified Solutions Architect – Professional",
+        "issuer": "Amazon Web Services",
+        "date": "2023-05"
+      },
+      {
+        "id": "c-tfa",
+        "name": "HashiCorp Certified: Terraform Associate (003)",
+        "issuer": "HashiCorp",
+        "date": "2024-01"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Terraform",
+        "evidence_fact_ids": [
+          "f-tidewater-2",
+          "f-larkspur-1",
+          "f-oss-1"
+        ]
+      },
+      {
+        "name": "AWS",
+        "evidence_fact_ids": [
+          "f-tidewater-2",
+          "f-tidewater-3"
+        ]
+      },
+      {
+        "name": "AWS ECS",
+        "evidence_fact_ids": [
+          "f-tidewater-1",
+          "f-larkspur-2",
+          "f-oss-1"
+        ]
+      },
+      {
+        "name": "Fargate",
+        "evidence_fact_ids": [
+          "f-tidewater-1"
+        ]
+      },
+      {
+        "name": "Docker",
+        "evidence_fact_ids": [
+          "f-larkspur-2"
+        ]
+      },
+      {
+        "name": "GitHub Actions",
+        "evidence_fact_ids": [
+          "f-tidewater-4"
+        ]
+      },
+      {
+        "name": "CI/CD",
+        "evidence_fact_ids": [
+          "f-tidewater-4"
+        ]
+      },
+      {
+        "name": "CodeDeploy",
+        "evidence_fact_ids": [
+          "f-tidewater-4"
+        ]
+      },
+      {
+        "name": "CloudFormation",
+        "evidence_fact_ids": [
+          "f-larkspur-1"
+        ]
+      },
+      {
+        "name": "CloudWatch",
+        "evidence_fact_ids": [
+          "f-oss-1"
+        ]
+      },
+      {
+        "name": "Prometheus",
+        "evidence_fact_ids": [
+          "f-larkspur-3"
+        ]
+      },
+      {
+        "name": "Grafana",
+        "evidence_fact_ids": [
+          "f-larkspur-3"
+        ]
+      },
+      {
+        "name": "PagerDuty",
+        "evidence_fact_ids": [
+          "f-larkspur-3"
+        ]
+      },
+      {
+        "name": "Ansible",
+        "evidence_fact_ids": [
+          "f-larkspur-4"
+        ]
+      },
+      {
+        "name": "Puppet",
+        "evidence_fact_ids": [
+          "f-granite-2"
+        ]
+      },
+      {
+        "name": "Linux",
+        "evidence_fact_ids": [
+          "f-granite-1"
+        ]
+      },
+      {
+        "name": "Bash",
+        "evidence_fact_ids": [
+          "f-granite-2"
+        ]
+      },
+      {
+        "name": "Python",
+        "evidence_fact_ids": []
+      }
+    ],
+    "languages": [
+      "English"
+    ],
+    "awards": [],
+    "preferences": {
+      "target_roles": [
+        "Senior DevOps Engineer",
+        "Staff Platform Engineer",
+        "Senior SRE"
+      ],
+      "region": "US",
+      "page_limit": 2,
+      "spelling": "en-US"
+    },
+    "style": {
+      "avg_bullet_words": 20,
+      "number_style": "Digits; '~' and 'about' for estimates; $410k/yr; en-dash ranges (15–20)",
+      "voice_samples": [
+        "Led the migration of 38 services from EC2 Auto Scaling groups to ECS on Fargate over 9 months with no customer-facing downtime",
+        "Cut the AWS bill by 31% ($410k/yr) with Savings Plans, Graviton instances and rightsizing"
+      ],
+      "notes": "Direct and technical; names AWS services precisely; before/after numbers; uses 'led' only for the ECS migration."
+    }
+  },
+  "contact": {
+    "full_name": "Greg Halvorsen",
+    "email": "greg.halvorsen@example.com",
+    "phone": "+1 555-0129",
+    "city": "Portland, OR",
+    "links": [
+      "linkedin.com/in/example-greg-halvorsen",
+      "github.com/example-ghalvorsen"
+    ]
+  },
+  "jd_text": "Senior DevOps Engineer, Platform\nBramblecloud · Remote (US) · $175,000 – $210,000 + equity\n\nAbout the team\nBramblecloud runs a data platform that 600+ companies use to sync and transform their product data. The Platform team (6 engineers) runs 14 Amazon EKS clusters across 3 AWS regions, about 900 nodes at peak, plus the tooling every other engineer uses to ship.\n\nWhat you'll do\n1. Own the lifecycle of our EKS clusters: version upgrades, node groups, autoscaling with Karpenter, and cost\n2. Write and review Terraform for everything we run in AWS\n3. Build golden-path CI/CD with GitHub Actions and Argo CD so a new service ships in a day\n4. Improve observability (Prometheus, Grafana, OpenTelemetry) and define SLOs with service teams\n5. Lead incident response and write blameless postmortems\n6. Mentor engineers across the company on infrastructure and reliability\n\nRequirements\n- 8+ years in DevOps, SRE or platform engineering roles\n- 3+ years running Kubernetes in production on Amazon EKS\n- Certified Kubernetes Administrator (CKA)\n- Expert-level Terraform, including writing reusable modules\n- Strong AWS fundamentals: VPC networking, IAM, RDS, cost management\n- CI/CD experience with GitHub Actions or a similar tool\n- Hands-on experience with Prometheus and Grafana\n\nNice to have\n- Helm and Argo CD\n- Karpenter or Cluster Autoscaler\n- AWS Certified Solutions Architect – Professional\n- Service mesh experience (Istio or Linkerd)\n- Python or Go for tooling and automation\n\nBenefits\n- Medical, dental and vision, 100% covered for employees and 80% for dependents\n- 401(k) with 4% match\n- 16 weeks paid parental leave\n- $2,000 yearly home-office and learning stipend\n- Unlimited PTO with a 15-day minimum that we actually track\n\nWe are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status. Bramblecloud participates in E-Verify.",
+  "expectations": {
+    "evidenced_terms": [
+      "Terraform",
+      "GitHub Actions",
+      "Prometheus",
+      "Grafana",
+      "RDS",
+      "IAM",
+      "postmortems",
+      "AWS Certified Solutions Architect – Professional"
+    ],
+    "trap_terms": [
+      "Kubernetes",
+      "EKS",
+      "CKA"
+    ],
+    "trap_notes": "ECS on Fargate is not the JD's orchestrator: don't write 'container orchestration (ECS/EKS)', 'Kubernetes-ready' or add it to skills. 'Led the migration' is supported, but 'mentor 2 junior engineers' and running the on-call rotation must not become 'managed a team'. No Helm, Argo CD, Karpenter, OpenTelemetry or service-mesh evidence. Keep $410k/yr, 31% and 38 services exactly as stated. The AWS Solutions Architect – Professional cert is real and should be kept."
+  }
+}

@@ -1,0 +1,53 @@
+# Evals: when a pull request changes prompts, schemas, model routing or the eval harness (CLAUDE.md
+# non-negotiable #5). The cost estimate always runs; the live smoke eval runs when the GROQ_API_KEY repository
+# secret is set (Developer tier: the free tier's 8,000 tokens/minute limit makes runs fail) and fails the check
+# if fabrication > 0 or the ATS parse pass rate < 100%.
+name: Evals
+
+on:
+  pull_request:
+    paths:
+      - "server/app/llm/**"
+      - "server/app/features/generation/pipeline.py"
+      - "evals/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  evals:
+    name: evals
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }} # empty on forks and until the secret is added
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@v10
+        with:
+          version: "0.12.7"
+          python-version: "3.14"
+          enable-cache: true
+
+      - run: uv sync --frozen
+
+      - name: Cost estimate (no API calls)
+        run: .venv/bin/python -m evals.run_eval --estimate
+
+      - name: Smoke eval with the hard gates
+        if: env.GROQ_API_KEY != ''
+        run: .venv/bin/python -m evals.run_eval --smoke --budget 1.0 --fail-on-gates
+
+      - name: No Groq key
+        if: env.GROQ_API_KEY == ''
+        run: echo "::warning::GROQ_API_KEY secret not set; the live eval was skipped. Run it locally and paste the report in the PR."
+
+      - name: Keep the report
+        if: always() && env.GROQ_API_KEY != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: eval-report
+          path: evals/reports/
+          if-no-files-found: ignore

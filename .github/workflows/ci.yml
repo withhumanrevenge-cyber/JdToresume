@@ -1,0 +1,174 @@
+# CI: every pull request and every push to main. The four jobs below are required status checks on main
+# (CONTRIBUTING.md), so nothing merges unless all of them pass.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }} # a newer push to the same PR replaces the run
+
+permissions:
+  contents: read
+
+env:
+  PYTHON_VERSION: "3.14"
+  UV_VERSION: "0.12.7"
+  RUFF_VERSION: "0.17.2"
+  NODE_VERSION: "24"
+  COREPACK_ENABLE_DOWNLOAD_PROMPT: "0"
+
+jobs:
+  backend:
+    name: backend
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: tailor
+          POSTGRES_PASSWORD: tailor
+          POSTGRES_DB: tailor
+        ports: ["5433:5432"]
+        options: >-
+          --health-cmd "pg_isready -U tailor -d tailor"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      DATABASE_URL: postgresql+asyncpg://tailor:tailor@localhost:5433/tailor
+      TEST_DATABASE_URL: postgresql+asyncpg://tailor:tailor@localhost:5433/tailor_test
+      REQUIRE_TEST_DATABASE: "1" # database tests fail instead of skipping when Postgres is missing
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@v10
+        with:
+          version: ${{ env.UV_VERSION }}
+          python-version: ${{ env.PYTHON_VERSION }}
+          enable-cache: true
+
+      - name: Install dependencies (exactly as locked)
+        run: uv sync --frozen
+
+      - name: Lint (undefined names, unused imports, syntax errors)
+        run: uvx ruff@${{ env.RUFF_VERSION }} check --select F,E9 --line-length 120 server evals
+
+      - name: Create the test database
+        run: PGPASSWORD=tailor psql -h localhost -p 5433 -U tailor -d tailor -c "CREATE DATABASE tailor_test"
+
+      - name: Migrations apply and match the models
+        run: |
+          .venv/bin/python -m alembic upgrade head
+          .venv/bin/python -m alembic check
+
+      - name: Tests (API, pipeline with a fake Groq, rendering, evals harness)
+        run: .venv/bin/python -m pytest -q
+
+  web:
+    name: web
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          package-manager-cache: false
+
+      - name: Enable pnpm (the version pinned in package.json)
+        run: corepack enable
+
+      - name: Install dependencies (exactly as locked)
+        run: pnpm install --frozen-lockfile
+
+      - name: Type check
+        run: pnpm --filter web typecheck
+
+      - name: Lint
+        run: pnpm --filter web lint
+
+      - name: Unit tests
+        run: pnpm --filter web test
+
+      - name: Production build
+        run: pnpm --filter web build
+
+  api-contract:
+    name: api-contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@v10
+        with:
+          version: ${{ env.UV_VERSION }}
+          python-version: ${{ env.PYTHON_VERSION }}
+          enable-cache: true
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          package-manager-cache: false
+
+      - name: Install dependencies
+        run: |
+          uv sync --frozen
+          corepack enable
+          pnpm install --frozen-lockfile
+
+      - name: Regenerate the OpenAPI schema and the web app's API types
+        run: |
+          .venv/bin/python -m app.cli.openapi packages/api-types/openapi.json
+          pnpm api-types
+
+      - name: Fail if the committed types are out of date
+        run: |
+          if ! git diff --exit-code -- packages/api-types; then
+            echo "::error::packages/api-types is stale. Run: python -m app.cli.openapi packages/api-types/openapi.json && pnpm api-types, then commit."
+            exit 1
+          fi
+
+  api-image:
+    name: api-image
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: docker/setup-buildx-action@v4
+
+      - name: Build the API image (not pushed)
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: server/Dockerfile
+          load: true
+          tags: tailor-api:ci
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: The image refuses dev sign-in in production
+        run: |
+          if docker run --rm tailor-api:ci python -c "from app.core.config import Settings; Settings()"; then
+            echo "::error::The image started in production with dev sign-in tokens enabled"
+            exit 1
+          fi
+
+      - name: The image serves /health and renders a PDF
+        run: |
+          docker run -d --name api -p 8000:8000 -e ENVIRONMENT=test tailor-api:ci
+          for attempt in $(seq 1 30); do curl -sf http://localhost:8000/health && break; sleep 1; done
+          curl -sf http://localhost:8000/health
+          docker exec api python -c "
+          from app.features.rendering.typst_renderer import render_cover_letter_pdf, count_pages
+          doc = {'page': {'paper': 'a4'}, 'header': {'name': 'CI', 'contact': [{'text': 'ci@example.com', 'url': None}]},
+                 'date': '1 January 2026', 'recipient': ['Example'], 'salutation': 'Dear team,', 'paragraphs': ['Hello.'],
+                 'closing': 'Best,', 'signature': 'CI'}
+          assert count_pages(render_cover_letter_pdf(doc)) == 1"
+          docker stop api

@@ -1,0 +1,366 @@
+{
+  "id": "in-fresher-swe",
+  "description": "Indian B.Tech CSE fresher (Java/Spring Boot projects, one internship, CGPA) applying to an SDE-1 backend role at a Bengaluru product company that runs Go on Kubernetes.",
+  "tags": [
+    "india",
+    "fresher",
+    "swe",
+    "tool-gap"
+  ],
+  "profile": {
+    "schema_version": 1,
+    "headline": "B.Tech CSE (2026) | Java, Spring Boot, MySQL | Backend projects and one internship",
+    "summary_facts": [
+      {
+        "id": "f-summary-1",
+        "text": "Final-year B.Tech CSE student looking for backend SDE roles; most comfortable in Java and Spring Boot.",
+        "metrics": [],
+        "skills": [
+          "Java",
+          "Spring Boot"
+        ],
+        "source": "answer"
+      }
+    ],
+    "experience": [
+      {
+        "id": "e-kaveri",
+        "company": "Kaveri Cloudworks Pvt. Ltd.",
+        "title": "Software Development Intern",
+        "location": "Pune",
+        "start": "2025-05",
+        "end": "2025-07",
+        "facts": [
+          {
+            "id": "f-kaveri-1",
+            "text": "Built 4 REST APIs in Spring Boot for the internal leave-management tool used by around 300 employees",
+            "metrics": [
+              "4 REST APIs",
+              "around 300 employees"
+            ],
+            "skills": [
+              "Spring Boot",
+              "REST APIs",
+              "Java"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-kaveri-2",
+            "text": "Wrote JUnit tests for the leave approval module, coverage went from 41% to 68%",
+            "metrics": [
+              "41%",
+              "68%"
+            ],
+            "skills": [
+              "JUnit",
+              "Java"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-kaveri-3",
+            "text": "Wrote a Dockerfile for the service so other interns could run it locally",
+            "metrics": [],
+            "skills": [
+              "Docker"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-kaveri-4",
+            "text": "Picked up bug tickets from Jira, raised merge requests on GitLab and attended daily standups with the backend team",
+            "metrics": [],
+            "skills": [
+              "Jira",
+              "Git",
+              "GitLab",
+              "Agile"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "p-campuseats",
+        "name": "CampusEats – canteen pre-ordering app",
+        "link": "github.com/example-rohan/campuseats",
+        "start": "2024-08",
+        "end": "2024-11",
+        "facts": [
+          {
+            "id": "f-campuseats-1",
+            "text": "Built a canteen pre-order system using Spring Boot, MySQL and a basic React frontend – 450+ students signed up in the first month",
+            "metrics": [
+              "450+"
+            ],
+            "skills": [
+              "Spring Boot",
+              "MySQL",
+              "React"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-campuseats-2",
+            "text": "Average wait at the counter during lunch rush came down from about 12 min to 5 min (measured over 2 weeks)",
+            "metrics": [
+              "about 12 min",
+              "5 min",
+              "2 weeks"
+            ],
+            "skills": [],
+            "source": "upload"
+          },
+          {
+            "id": "f-campuseats-3",
+            "text": "Implemented JWT login with separate roles for students, canteen staff and admin",
+            "metrics": [],
+            "skills": [
+              "JWT",
+              "Spring Security"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "p-snip",
+        "name": "Snip – URL shortener",
+        "link": "github.com/example-rohan/snip",
+        "start": "2025-01",
+        "end": "2025-02",
+        "facts": [
+          {
+            "id": "f-snip-1",
+            "text": "URL shortener in Java with Redis caching; load tested with JMeter at 1,200 requests/sec on my laptop",
+            "metrics": [
+              "1,200 requests/sec"
+            ],
+            "skills": [
+              "Java",
+              "Redis",
+              "JMeter"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-snip-2",
+            "text": "Containerised the app and Redis using Docker Compose",
+            "metrics": [],
+            "skills": [
+              "Docker",
+              "Docker Compose"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "education": [
+      {
+        "id": "e-nvit",
+        "institution": "Narmada Valley Institute of Technology, Bhopal",
+        "degree": "B.Tech",
+        "field": "Computer Science and Engineering",
+        "start": "2022-08",
+        "end": "2026-06",
+        "grade": "CGPA 8.21/10",
+        "facts": [
+          {
+            "id": "f-nvit-1",
+            "text": "Relevant coursework: Data Structures, DBMS, Operating Systems, Computer Networks, OOP with Java",
+            "metrics": [],
+            "skills": [
+              "Data Structures",
+              "DBMS",
+              "Operating Systems",
+              "Computer Networks",
+              "OOP"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-nvit-2",
+            "text": "Solved 400+ problems on LeetCode and GeeksforGeeks, LeetCode contest rating 1720",
+            "metrics": [
+              "400+",
+              "1720"
+            ],
+            "skills": [
+              "Data Structures and Algorithms"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-nvit-3",
+            "text": "Secretary of the college coding club; took weekly DSA sessions for around 60 second-year students",
+            "metrics": [
+              "around 60"
+            ],
+            "skills": [
+              "Data Structures and Algorithms"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "id": "c-nptel-java",
+        "name": "Programming in Java (Elite)",
+        "issuer": "NPTEL",
+        "date": "2024-04"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Java",
+        "evidence_fact_ids": [
+          "f-kaveri-1",
+          "f-kaveri-2",
+          "f-snip-1"
+        ]
+      },
+      {
+        "name": "Spring Boot",
+        "evidence_fact_ids": [
+          "f-kaveri-1",
+          "f-campuseats-1"
+        ]
+      },
+      {
+        "name": "REST APIs",
+        "evidence_fact_ids": [
+          "f-kaveri-1"
+        ]
+      },
+      {
+        "name": "MySQL",
+        "evidence_fact_ids": [
+          "f-campuseats-1"
+        ]
+      },
+      {
+        "name": "Redis",
+        "evidence_fact_ids": [
+          "f-snip-1"
+        ]
+      },
+      {
+        "name": "Docker",
+        "evidence_fact_ids": [
+          "f-kaveri-3",
+          "f-snip-2"
+        ]
+      },
+      {
+        "name": "JUnit",
+        "evidence_fact_ids": [
+          "f-kaveri-2"
+        ]
+      },
+      {
+        "name": "Git",
+        "evidence_fact_ids": [
+          "f-kaveri-4"
+        ]
+      },
+      {
+        "name": "Data Structures and Algorithms",
+        "evidence_fact_ids": [
+          "f-nvit-2",
+          "f-nvit-3"
+        ]
+      },
+      {
+        "name": "React",
+        "evidence_fact_ids": [
+          "f-campuseats-1"
+        ]
+      },
+      {
+        "name": "Spring Security",
+        "evidence_fact_ids": [
+          "f-campuseats-3"
+        ]
+      },
+      {
+        "name": "C++",
+        "evidence_fact_ids": []
+      },
+      {
+        "name": "Linux",
+        "evidence_fact_ids": []
+      }
+    ],
+    "languages": [
+      "English",
+      "Hindi",
+      "Marathi"
+    ],
+    "awards": [
+      {
+        "id": "f-award-1",
+        "text": "2nd place at HackNVIT 2025 (36 teams) for a bus-pass renewal app",
+        "metrics": [
+          "2nd place",
+          "36 teams"
+        ],
+        "skills": [],
+        "source": "upload"
+      }
+    ],
+    "preferences": {
+      "target_roles": [
+        "SDE-1",
+        "Backend Developer",
+        "Software Engineer (Fresher)"
+      ],
+      "region": "IN",
+      "page_limit": 1,
+      "spelling": "en-IN"
+    },
+    "style": {
+      "avg_bullet_words": 16,
+      "number_style": "Digits throughout; '+' for counts (450+); 'about'/'around' for estimates; 'min' for minutes",
+      "voice_samples": [
+        "Built a canteen pre-order system using Spring Boot, MySQL and a basic React frontend – 450+ students signed up in the first month",
+        "Wrote JUnit tests for the leave approval module, coverage went from 41% to 68%",
+        "URL shortener in Java with Redis caching; load tested with JMeter at 1,200 requests/sec on my laptop"
+      ],
+      "notes": "Fresher. Short project-style bullets with en dashes and semicolons; sometimes 'my' in project bullets. Indian English spelling (containerised)."
+    }
+  },
+  "contact": {
+    "full_name": "Rohan Deshpande",
+    "email": "rohan.deshpande@example.com",
+    "phone": "+91 90000 01234",
+    "city": "Bhopal",
+    "links": [
+      "linkedin.com/in/example-rohan-deshpande",
+      "github.com/example-rohan"
+    ]
+  },
+  "jd_text": "SDE-1 (Backend) – Haldi Labs\nBengaluru (HSR Layout) | Full-time | On-site for the first 6 months, hybrid after\n\nAbout Haldi Labs\nHaldi Labs builds the ordering and credit platform that 40,000+ kirana stores and FMCG distributors use every day. Retailers place orders from our Android app, distributors manage stock and credit on our web dashboard, and both sides settle payments through us. We're a Series B product company with a 70-person engineering team.\n\nOur stack: Go for all new services, a few older Java / Spring Boot services that we're migrating, MySQL, Redis, Kafka, Docker and Kubernetes on GCP.\n\nWhat you'll do\n• Build backend services in Go for order placement, pricing and inventory sync\n• Design and document REST APIs used by the Android app and the distributor dashboard\n• Write unit and integration tests, and review your teammates' pull requests\n• Ship your own code to production with Docker and Kubernetes, and watch it on Grafana after release\n• Fix bugs in the legacy Java services while we move them over\n• Join the on-call rotation after your first 3 months (with a buddy for the first few weeks)\n\nWhat we're looking for\n• B.E. / B.Tech in Computer Science or a related branch (2025 or 2026 batch)\n• Strong fundamentals in data structures and algorithms\n• Hands-on experience with Go – college projects and internships count, but you should have written real Go code\n• Good understanding of SQL databases (MySQL or PostgreSQL), including joins and indexes\n• Experience building REST APIs in any framework\n• Working knowledge of Docker and Kubernetes (you can explain what a Pod and a Deployment are)\n• Comfortable with Git, pull requests and code reviews\n\nGood to have\n• Exposure to Kafka or any message queue\n• An internship at a product company\n• Competitive programming profile (LeetCode, Codeforces, CodeChef)\n• Open-source contributions\n\nInterview process\nOnline assessment (DSA, 90 min) → two technical rounds (problem solving + backend basics) → hiring manager chat. We share feedback within a week of each round.\n\nWhat we offer\n• ₹18–22 LPA CTC (fixed + ESOPs)\n• Health insurance for you, your spouse, children and parents\n• ₹50,000 yearly learning budget\n• MacBook and a home-office setup allowance\n\nHaldi Labs is an equal opportunity employer. We do not discriminate on the basis of gender, caste, religion, disability, sexual orientation or any other characteristic. Women and candidates from tier-2 and tier-3 colleges are strongly encouraged to apply.",
+  "expectations": {
+    "evidenced_terms": [
+      "Java",
+      "Spring Boot",
+      "data structures and algorithms",
+      "REST APIs",
+      "MySQL",
+      "Redis",
+      "Docker",
+      "Git"
+    ],
+    "trap_terms": [
+      "Go",
+      "Kubernetes"
+    ],
+    "trap_notes": "Internship title is 'Software Development Intern': don't upgrade it to 'Software Engineer' or 'SDE'. Docker use is basic (one Dockerfile, Docker Compose for a side project); don't stretch it into 'deployed containerised services to production' or anything implying Kubernetes. Kafka, GCP and Grafana are in the JD and absent from the profile. The 1,200 requests/sec figure is a laptop load test, not production traffic, and the 450+ sign-ups are students at one college canteen. Keep CGPA 8.21/10, 4 APIs and ~300 employees exactly as stated."
+  }
+}

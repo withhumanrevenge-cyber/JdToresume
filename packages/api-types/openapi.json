@@ -1,0 +1,3779 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Creator API",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health/ready": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Ready",
+        "operationId": "ready_health_ready_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadinessResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadinessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/me": {
+      "get": {
+        "tags": [
+          "account"
+        ],
+        "summary": "The signed-in user (created on their first request)",
+        "operationId": "read_me_v1_me_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "account"
+        ],
+        "summary": "Delete my account and all my data",
+        "operationId": "delete_me_v1_me_delete",
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/me/plan": {
+      "get": {
+        "tags": [
+          "account"
+        ],
+        "summary": "My plan, packs used and left, and Deep credits",
+        "operationId": "read_plan_v1_me_plan_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/me/export": {
+      "get": {
+        "tags": [
+          "account"
+        ],
+        "summary": "Download all my data as one JSON file",
+        "operationId": "export_my_data_v1_me_export_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountExport"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/profile/resume": {
+      "post": {
+        "tags": [
+          "profile"
+        ],
+        "summary": "Upload a resume (PDF, TXT or MD, up to 5 MB) and turn it into a new profile version",
+        "operationId": "upload_resume_v1_profile_resume_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_resume_v1_profile_resume_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResumeImportOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/profile": {
+      "get": {
+        "tags": [
+          "profile"
+        ],
+        "summary": "My latest profile version",
+        "operationId": "read_profile_v1_profile_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "profile"
+        ],
+        "summary": "Save an edited profile as a new version",
+        "operationId": "save_profile_v1_profile_put",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileUpdateIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/profile/contact": {
+      "get": {
+        "tags": [
+          "profile"
+        ],
+        "summary": "My contact details",
+        "operationId": "read_contact_v1_profile_contact_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ContactOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "profile"
+        ],
+        "summary": "Create or replace my contact details",
+        "operationId": "save_contact_v1_profile_contact_put",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContactIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ContactOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/jobs": {
+      "post": {
+        "tags": [
+          "jobs"
+        ],
+        "summary": "Add a job from pasted text or a link (201 when new, 200 when it was already known)",
+        "operationId": "add_job_v1_jobs_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JobIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/jobs/{job_id}": {
+      "get": {
+        "tags": [
+          "jobs"
+        ],
+        "summary": "A job I added, or any job read from a public link",
+        "operationId": "read_job_v1_jobs__job_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Job Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/applications": {
+      "post": {
+        "tags": [
+          "applications"
+        ],
+        "summary": "Start an application for a job (201 when new, 200 when it already exists)",
+        "operationId": "start_application_v1_applications_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApplicationIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "applications"
+        ],
+        "summary": "My applications, newest first",
+        "operationId": "list_applications_v1_applications_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 50,
+              "minimum": 1,
+              "default": 20,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "`next_before` from the previous page",
+              "title": "Before"
+            },
+            "description": "`next_before` from the previous page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationPage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/applications/{application_id}": {
+      "get": {
+        "tags": [
+          "applications"
+        ],
+        "summary": "One application with its latest pack",
+        "operationId": "read_application_v1_applications__application_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "application_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Application Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationDetailOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/applications/{application_id}/generate": {
+      "post": {
+        "tags": [
+          "applications"
+        ],
+        "summary": "Write the application pack, streaming each piece as it finishes",
+        "operationId": "generate_v1_applications__application_id__generate_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "application_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Application Id"
+            }
+          },
+          {
+            "name": "mode",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "deep",
+                    "quick"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "deep (best quality) or quick (faster). Leave it out to use the best mode your plan has left",
+              "title": "Mode"
+            },
+            "description": "deep (best quality) or quick (faster). Leave it out to use the best mode your plan has left"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Server-Sent Events, in this order:\n\n- `run`: the run has started (`run_id`, `mode`, `profile_version`)\n- `match_report`: requirement-by-requirement fit, gaps and questions\n- `resume`, `cover_letter`, `outreach`: in whichever order they finish\n- `done` (`cost_usd`, `duration_ms`) or `error` (`code`, `message`)\n\nLines starting with `:` are keep-alive comments; ignore them.",
+            "content": {
+              "text/event-stream": {}
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/applications/{application_id}/files/{file_name}": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "Download the resume or cover letter as PDF or DOCX",
+        "operationId": "download_v1_applications__application_id__files__file_name__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "application_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Application Id"
+            }
+          },
+          {
+            "name": "file_name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "enum": [
+                "resume.pdf",
+                "resume.docx",
+                "cover-letter.pdf",
+                "cover-letter.docx"
+              ],
+              "type": "string",
+              "title": "File Name"
+            }
+          },
+          {
+            "name": "template",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "enum": [
+                "classic",
+                "modern"
+              ],
+              "type": "string",
+              "description": "Resume layout (the cover letter has one layout)",
+              "default": "classic",
+              "title": "Template"
+            },
+            "description": "Resume layout (the cover letter has one layout)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The file, named like `Jordan-Rivera-Resume-Figma.pdf`.\n\nEvery file is read back the way an ATS would before it is sent. `X-ATS-Check: passed` or `failed` carries the\nresult; `GET /v1/applications/{id}/ats-check` shows the extracted text and the reasons.",
+            "content": {
+              "application/pdf": {},
+              "application/vnd.openxmlformats-officedocument.wordprocessingml.document": {}
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/applications/{application_id}/ats-check": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "What the ATS sees: the text a parser reads from the file, and the round-trip check",
+        "operationId": "ats_check_v1_applications__application_id__ats_check_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "application_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Application Id"
+            }
+          },
+          {
+            "name": "document",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "enum": [
+                "resume",
+                "cover_letter"
+              ],
+              "type": "string",
+              "default": "resume",
+              "title": "Document"
+            }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "enum": [
+                "pdf",
+                "docx"
+              ],
+              "type": "string",
+              "default": "pdf",
+              "title": "Format"
+            }
+          },
+          {
+            "name": "template",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "enum": [
+                "classic",
+                "modern"
+              ],
+              "type": "string",
+              "description": "Resume layout (the cover letter has one layout)",
+              "default": "classic",
+              "title": "Template"
+            },
+            "description": "Resume layout (the cover letter has one layout)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AtsView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/dev/sign-in": {
+      "post": {
+        "tags": [
+          "development"
+        ],
+        "summary": "Development only: get a sign-in token for an email (no password)",
+        "operationId": "dev_sign_in_v1_dev_sign_in_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DevSignInIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DevSignInOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AccountExport": {
+        "properties": {
+          "format_version": {
+            "type": "integer",
+            "const": 1,
+            "title": "Format Version",
+            "default": 1
+          },
+          "exported_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Exported At"
+          },
+          "account": {
+            "$ref": "#/components/schemas/ExportedAccount"
+          },
+          "contact_details": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ContactDetails"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "profile_versions": {
+            "items": {
+              "$ref": "#/components/schemas/ExportedProfileVersion"
+            },
+            "type": "array",
+            "title": "Profile Versions"
+          },
+          "jobs": {
+            "items": {
+              "$ref": "#/components/schemas/ExportedJob"
+            },
+            "type": "array",
+            "title": "Jobs"
+          },
+          "applications": {
+            "items": {
+              "$ref": "#/components/schemas/ExportedApplication"
+            },
+            "type": "array",
+            "title": "Applications"
+          },
+          "plan": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ExportedPlan"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "usage": {
+            "items": {
+              "$ref": "#/components/schemas/ExportedUsage"
+            },
+            "type": "array",
+            "title": "Usage"
+          },
+          "ai_calls": {
+            "items": {
+              "$ref": "#/components/schemas/ExportedAiCall"
+            },
+            "type": "array",
+            "title": "Ai Calls"
+          }
+        },
+        "type": "object",
+        "required": [
+          "exported_at",
+          "account",
+          "contact_details",
+          "profile_versions",
+          "jobs",
+          "applications",
+          "plan",
+          "usage",
+          "ai_calls"
+        ],
+        "title": "AccountExport"
+      },
+      "ApplicationDetailOut": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "job": {
+            "$ref": "#/components/schemas/JobSummary"
+          },
+          "latest_run": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RunOut"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "pieces": {
+            "$ref": "#/components/schemas/Pieces",
+            "description": "The latest run's finished pieces"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "created_at",
+          "job",
+          "latest_run",
+          "pieces"
+        ],
+        "title": "ApplicationDetailOut"
+      },
+      "ApplicationIn": {
+        "properties": {
+          "job_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Job Id",
+            "description": "A job from POST /v1/jobs"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "job_id"
+        ],
+        "title": "ApplicationIn"
+      },
+      "ApplicationOut": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "job": {
+            "$ref": "#/components/schemas/JobSummary"
+          },
+          "latest_run": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RunOut"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "created_at",
+          "job",
+          "latest_run"
+        ],
+        "title": "ApplicationOut"
+      },
+      "ApplicationPage": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/ApplicationOut"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "next_before": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Before",
+            "description": "Pass as `before` to get the next page; null on the last page"
+          }
+        },
+        "type": "object",
+        "required": [
+          "items",
+          "next_before"
+        ],
+        "title": "ApplicationPage"
+      },
+      "AtsCheck": {
+        "properties": {
+          "parse_ok": {
+            "type": "boolean",
+            "title": "Parse Ok",
+            "description": "True exactly when `issues` is empty"
+          },
+          "extractors_agree": {
+            "type": "boolean",
+            "title": "Extractors Agree"
+          },
+          "extractor_agreement": {
+            "type": "number",
+            "title": "Extractor Agreement",
+            "description": "Word-sequence similarity of the two extractors, 0..1"
+          },
+          "sections_found": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Sections Found",
+            "description": "Canonical section names in the order they were found"
+          },
+          "contact_found": {
+            "type": "boolean",
+            "title": "Contact Found"
+          },
+          "date_issues": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Date Issues"
+          },
+          "keyword_coverage": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Keyword Coverage",
+            "description": "Share of JobSpec.keywords found; None without a job"
+          },
+          "keywords_missing": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Keywords Missing"
+          },
+          "must_have_coverage": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Must Have Coverage",
+            "description": "Share of basic requirements with an evidence term in the text; None if there are none"
+          },
+          "issues": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Issues"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "parse_ok",
+          "extractors_agree",
+          "extractor_agreement",
+          "sections_found",
+          "contact_found",
+          "date_issues",
+          "keyword_coverage",
+          "keywords_missing",
+          "must_have_coverage",
+          "issues"
+        ],
+        "title": "AtsCheck"
+      },
+      "AtsView": {
+        "properties": {
+          "document": {
+            "type": "string",
+            "enum": [
+              "resume",
+              "cover_letter"
+            ],
+            "title": "Document"
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "pdf",
+              "docx"
+            ],
+            "title": "Format"
+          },
+          "file_name": {
+            "type": "string",
+            "title": "File Name",
+            "description": "The name the file downloads under"
+          },
+          "pages": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pages",
+            "description": "Page count of the PDF; None for a .docx (Word decides the pages)"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+            "description": "The plain text a parser reads from the file, in reading order"
+          },
+          "check": {
+            "$ref": "#/components/schemas/AtsCheck"
+          }
+        },
+        "type": "object",
+        "required": [
+          "document",
+          "format",
+          "file_name",
+          "pages",
+          "text",
+          "check"
+        ],
+        "title": "AtsView"
+      },
+      "Body_upload_resume_v1_profile_resume_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File",
+            "description": "The resume file"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file"
+        ],
+        "title": "Body_upload_resume_v1_profile_resume_post"
+      },
+      "Bullet": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "source_fact_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Source Fact Ids",
+            "description": "Profile fact ids that support EVERY claim in this bullet. Never empty."
+          },
+          "targets_requirement_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Targets Requirement Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "text",
+          "source_fact_ids",
+          "targets_requirement_ids"
+        ],
+        "title": "Bullet"
+      },
+      "CareerProfile": {
+        "properties": {
+          "schema_version": {
+            "type": "integer",
+            "title": "Schema Version",
+            "description": "Always 1 for now"
+          },
+          "headline": {
+            "type": "string",
+            "title": "Headline"
+          },
+          "summary_facts": {
+            "items": {
+              "$ref": "#/components/schemas/Fact"
+            },
+            "type": "array",
+            "title": "Summary Facts"
+          },
+          "experience": {
+            "items": {
+              "$ref": "#/components/schemas/Experience"
+            },
+            "type": "array",
+            "title": "Experience"
+          },
+          "projects": {
+            "items": {
+              "$ref": "#/components/schemas/Project"
+            },
+            "type": "array",
+            "title": "Projects"
+          },
+          "education": {
+            "items": {
+              "$ref": "#/components/schemas/Education"
+            },
+            "type": "array",
+            "title": "Education"
+          },
+          "certifications": {
+            "items": {
+              "$ref": "#/components/schemas/Certification"
+            },
+            "type": "array",
+            "title": "Certifications"
+          },
+          "skills": {
+            "items": {
+              "$ref": "#/components/schemas/Skill"
+            },
+            "type": "array",
+            "title": "Skills"
+          },
+          "languages": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Languages"
+          },
+          "awards": {
+            "items": {
+              "$ref": "#/components/schemas/Fact"
+            },
+            "type": "array",
+            "title": "Awards"
+          },
+          "preferences": {
+            "$ref": "#/components/schemas/Preferences"
+          },
+          "style": {
+            "$ref": "#/components/schemas/StyleProfile"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "schema_version",
+          "headline",
+          "summary_facts",
+          "experience",
+          "projects",
+          "education",
+          "certifications",
+          "skills",
+          "languages",
+          "awards",
+          "preferences",
+          "style"
+        ],
+        "title": "CareerProfile"
+      },
+      "Certification": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "issuer": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Issuer"
+          },
+          "date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date",
+            "description": "YYYY-MM, or just YYYY when the source shows only the year. Never invent a month. Null if not stated."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "issuer",
+          "date"
+        ],
+        "title": "Certification"
+      },
+      "ContactDetails": {
+        "properties": {
+          "full_name": {
+            "type": "string",
+            "title": "Full Name"
+          },
+          "email": {
+            "type": "string",
+            "title": "Email"
+          },
+          "phone": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phone"
+          },
+          "city": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "City"
+          },
+          "links": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Links"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "full_name",
+          "email",
+          "phone",
+          "city",
+          "links"
+        ],
+        "title": "ContactDetails",
+        "description": "PII. Never sent to the LLM; merged in at render time only."
+      },
+      "ContactIn": {
+        "properties": {
+          "full_name": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Full Name"
+          },
+          "email": {
+            "type": "string",
+            "maxLength": 320,
+            "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$",
+            "title": "Email"
+          },
+          "phone": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 50
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phone"
+          },
+          "city": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 120
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "City"
+          },
+          "links": {
+            "items": {
+              "type": "string",
+              "maxLength": 300,
+              "minLength": 4
+            },
+            "type": "array",
+            "maxItems": 10,
+            "title": "Links"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "full_name",
+          "email"
+        ],
+        "title": "ContactIn"
+      },
+      "ContactOut": {
+        "properties": {
+          "full_name": {
+            "type": "string",
+            "title": "Full Name"
+          },
+          "email": {
+            "type": "string",
+            "title": "Email"
+          },
+          "phone": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phone"
+          },
+          "city": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "City"
+          },
+          "links": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Links"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "full_name",
+          "email",
+          "phone",
+          "city",
+          "links",
+          "updated_at"
+        ],
+        "title": "ContactOut"
+      },
+      "CoverLetter": {
+        "properties": {
+          "salutation": {
+            "type": "string",
+            "title": "Salutation"
+          },
+          "paragraphs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Paragraphs"
+          },
+          "closing": {
+            "type": "string",
+            "title": "Closing",
+            "description": "e.g. 'Best regards,' — the name placeholder is added by the renderer"
+          },
+          "source_fact_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Source Fact Ids"
+          },
+          "addressed_gap_requirement_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Addressed Gap Requirement Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "salutation",
+          "paragraphs",
+          "closing",
+          "source_fact_ids",
+          "addressed_gap_requirement_ids"
+        ],
+        "title": "CoverLetter"
+      },
+      "CoverLetterOutcome": {
+        "properties": {
+          "letter": {
+            "$ref": "#/components/schemas/CoverLetter"
+          },
+          "findings": {
+            "items": {
+              "$ref": "#/components/schemas/LintFinding"
+            },
+            "type": "array",
+            "title": "Findings"
+          }
+        },
+        "type": "object",
+        "required": [
+          "letter",
+          "findings"
+        ],
+        "title": "CoverLetterOutcome"
+      },
+      "DevSignInIn": {
+        "properties": {
+          "email": {
+            "type": "string",
+            "maxLength": 320,
+            "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$",
+            "title": "Email"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "email"
+        ],
+        "title": "DevSignInIn"
+      },
+      "DevSignInOut": {
+        "properties": {
+          "token": {
+            "type": "string",
+            "title": "Token",
+            "description": "Send as 'Authorization: Bearer <token>'"
+          },
+          "expires_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Expires At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "token",
+          "expires_at"
+        ],
+        "title": "DevSignInOut"
+      },
+      "Education": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "institution": {
+            "type": "string",
+            "title": "Institution"
+          },
+          "degree": {
+            "type": "string",
+            "title": "Degree"
+          },
+          "field": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Field"
+          },
+          "start": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Start",
+            "description": "YYYY-MM, or just YYYY when the source shows only the year. Never invent a month. Null if not stated."
+          },
+          "end": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End",
+            "description": "YYYY-MM, or just YYYY when the source shows only the year. Never invent a month. Null if not stated."
+          },
+          "grade": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Grade",
+            "description": "e.g. 'CGPA 8.4/10' or 'GPA 3.7/4.0', exactly as in source"
+          },
+          "facts": {
+            "items": {
+              "$ref": "#/components/schemas/Fact"
+            },
+            "type": "array",
+            "title": "Facts"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "institution",
+          "degree",
+          "field",
+          "start",
+          "end",
+          "grade",
+          "facts"
+        ],
+        "title": "Education"
+      },
+      "Experience": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "company": {
+            "type": "string",
+            "title": "Company"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "location": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Location"
+          },
+          "start": {
+            "type": "string",
+            "title": "Start",
+            "description": "YYYY-MM, or just YYYY when the source shows only the year. Never invent a month."
+          },
+          "end": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End",
+            "description": "YYYY-MM, or just YYYY when the source shows only the year. Never invent a month. Null if current role."
+          },
+          "facts": {
+            "items": {
+              "$ref": "#/components/schemas/Fact"
+            },
+            "type": "array",
+            "title": "Facts"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "company",
+          "title",
+          "location",
+          "start",
+          "end",
+          "facts"
+        ],
+        "title": "Experience"
+      },
+      "ExportedAccount": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "email": {
+            "type": "string",
+            "title": "Email"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "email",
+          "created_at"
+        ],
+        "title": "ExportedAccount"
+      },
+      "ExportedAiCall": {
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "purpose": {
+            "type": "string",
+            "title": "Purpose"
+          },
+          "step": {
+            "type": "string",
+            "title": "Step"
+          },
+          "model": {
+            "type": "string",
+            "title": "Model",
+            "description": "Which AI model processed your data"
+          }
+        },
+        "type": "object",
+        "required": [
+          "created_at",
+          "purpose",
+          "step",
+          "model"
+        ],
+        "title": "ExportedAiCall"
+      },
+      "ExportedApplication": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "job_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Job Id"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "runs": {
+            "items": {
+              "$ref": "#/components/schemas/ExportedRun"
+            },
+            "type": "array",
+            "title": "Runs"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "job_id",
+          "status",
+          "created_at",
+          "runs"
+        ],
+        "title": "ExportedApplication"
+      },
+      "ExportedJob": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "company": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company"
+          },
+          "url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Url"
+          },
+          "added_by_you": {
+            "type": "boolean",
+            "title": "Added By You",
+            "description": "False for a public posting that other people's applications share"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "spec": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Spec",
+            "description": "The job as we read it (a JobSpec)"
+          },
+          "text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Text",
+            "description": "The text you pasted or we read for you; only for jobs you added"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "company",
+          "url",
+          "added_by_you",
+          "created_at",
+          "spec",
+          "text"
+        ],
+        "title": "ExportedJob"
+      },
+      "ExportedPlan": {
+        "properties": {
+          "plan": {
+            "type": "string",
+            "title": "Plan"
+          },
+          "plan_expires_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Plan Expires At"
+          },
+          "deep_credits": {
+            "type": "integer",
+            "title": "Deep Credits"
+          }
+        },
+        "type": "object",
+        "required": [
+          "plan",
+          "plan_expires_at",
+          "deep_credits"
+        ],
+        "title": "ExportedPlan"
+      },
+      "ExportedProfileVersion": {
+        "properties": {
+          "version": {
+            "type": "integer",
+            "title": "Version"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "profile": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Profile",
+            "description": "A CareerProfile"
+          }
+        },
+        "type": "object",
+        "required": [
+          "version",
+          "created_at",
+          "profile"
+        ],
+        "title": "ExportedProfileVersion"
+      },
+      "ExportedRun": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "mode": {
+            "type": "string",
+            "title": "Mode"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "profile_version": {
+            "type": "integer",
+            "title": "Profile Version"
+          },
+          "started_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Started At"
+          },
+          "finished_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Finished At"
+          },
+          "pieces": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Pieces",
+            "description": "kind -> content: match_report, resume, cover_letter, outreach"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "mode",
+          "status",
+          "profile_version",
+          "started_at",
+          "finished_at",
+          "pieces"
+        ],
+        "title": "ExportedRun"
+      },
+      "ExportedUsage": {
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "mode": {
+            "type": "string",
+            "title": "Mode"
+          },
+          "paid_with": {
+            "type": "string",
+            "title": "Paid With"
+          },
+          "run_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Run Id"
+          },
+          "refunded_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Refunded At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "created_at",
+          "mode",
+          "paid_with",
+          "run_id",
+          "refunded_at"
+        ],
+        "title": "ExportedUsage"
+      },
+      "Fact": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Stable id, e.g. 'f-acme-3'. Never reuse ids."
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+            "description": "One atomic, verifiable statement in the user's own words."
+          },
+          "metrics": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Metrics",
+            "description": "Numbers/quantities exactly as stated in the source, e.g. '40%', '2M events/day'."
+          },
+          "skills": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Skills",
+            "description": "Skills/tools this fact demonstrates, spelled as in the source."
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "upload",
+              "answer",
+              "edit"
+            ],
+            "title": "Source"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "metrics",
+          "skills",
+          "source"
+        ],
+        "title": "Fact"
+      },
+      "FactRelevance": {
+        "properties": {
+          "fact_id": {
+            "type": "string",
+            "title": "Fact Id"
+          },
+          "score": {
+            "type": "integer",
+            "title": "Score",
+            "description": "0 = irrelevant, 1 = weak, 2 = relevant, 3 = directly evidences a basic requirement"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "fact_id",
+          "score"
+        ],
+        "title": "FactRelevance"
+      },
+      "GapQuestion": {
+        "properties": {
+          "requirement_id": {
+            "type": "string",
+            "title": "Requirement Id"
+          },
+          "question": {
+            "type": "string",
+            "title": "Question",
+            "description": "Short question to the user, answerable in one line"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "requirement_id",
+          "question"
+        ],
+        "title": "GapQuestion"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HealthResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "environment": {
+            "type": "string",
+            "title": "Environment"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "version",
+          "environment"
+        ],
+        "title": "HealthResponse"
+      },
+      "JobIn": {
+        "properties": {
+          "url": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 2000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Url",
+            "description": "A link to the job posting"
+          },
+          "text": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 30000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Text",
+            "description": "The job description, pasted"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "JobIn",
+        "description": "Exactly one of `url` or `text`."
+      },
+      "JobOut": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "source": {
+            "type": "string",
+            "title": "Source",
+            "description": "text, ats_feed, embedded_data or page_text"
+          },
+          "ats_vendor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ats Vendor"
+          },
+          "url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Url"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "company": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "spec": {
+            "$ref": "#/components/schemas/JobSpec"
+          },
+          "reused": {
+            "type": "boolean",
+            "title": "Reused",
+            "description": "True when this job was already known, so nothing was fetched or parsed"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "source",
+          "ats_vendor",
+          "url",
+          "title",
+          "company",
+          "created_at",
+          "spec",
+          "reused"
+        ],
+        "title": "JobOut"
+      },
+      "JobSpec": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "company": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company"
+          },
+          "location": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Location"
+          },
+          "remote_policy": {
+            "type": "string",
+            "enum": [
+              "onsite",
+              "hybrid",
+              "remote",
+              "unknown"
+            ],
+            "title": "Remote Policy"
+          },
+          "seniority": {
+            "type": "string",
+            "enum": [
+              "intern",
+              "entry",
+              "mid",
+              "senior",
+              "lead",
+              "executive",
+              "unknown"
+            ],
+            "title": "Seniority"
+          },
+          "employment_type": {
+            "type": "string",
+            "enum": [
+              "full_time",
+              "part_time",
+              "contract",
+              "internship",
+              "unknown"
+            ],
+            "title": "Employment Type"
+          },
+          "visa_sponsorship": {
+            "type": "string",
+            "enum": [
+              "yes",
+              "no",
+              "unknown"
+            ],
+            "title": "Visa Sponsorship"
+          },
+          "salary": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/SalaryRange"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "requirements": {
+            "items": {
+              "$ref": "#/components/schemas/Requirement"
+            },
+            "type": "array",
+            "title": "Requirements"
+          },
+          "responsibilities": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Responsibilities"
+          },
+          "keywords": {
+            "items": {
+              "$ref": "#/components/schemas/Keyword"
+            },
+            "type": "array",
+            "title": "Keywords"
+          },
+          "company_signals": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Company Signals",
+            "description": "Concrete facts about the company/team from the posting, usable as a cover-letter hook"
+          },
+          "application_questions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Application Questions"
+          },
+          "language": {
+            "type": "string",
+            "title": "Language",
+            "description": "ISO 639-1 code of the posting language"
+          },
+          "unreadable_fields": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Unreadable Fields",
+            "description": "Fields that could not be determined; never guess"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "title",
+          "company",
+          "location",
+          "remote_policy",
+          "seniority",
+          "employment_type",
+          "visa_sponsorship",
+          "salary",
+          "requirements",
+          "responsibilities",
+          "keywords",
+          "company_signals",
+          "application_questions",
+          "language",
+          "unreadable_fields"
+        ],
+        "title": "JobSpec"
+      },
+      "JobSummary": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "company": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company"
+          },
+          "url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Url"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "company",
+          "url"
+        ],
+        "title": "JobSummary"
+      },
+      "Keyword": {
+        "properties": {
+          "term": {
+            "type": "string",
+            "title": "Term",
+            "description": "Exact spelling used in the posting"
+          },
+          "synonyms": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Synonyms"
+          },
+          "weight": {
+            "type": "integer",
+            "title": "Weight",
+            "description": "1 = mentioned once, 2 = important, 3 = central to the role"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "term",
+          "synonyms",
+          "weight"
+        ],
+        "title": "Keyword"
+      },
+      "LintFinding": {
+        "properties": {
+          "check": {
+            "type": "string",
+            "title": "Check"
+          },
+          "location": {
+            "type": "string",
+            "title": "Location"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "severity": {
+            "type": "string",
+            "title": "Severity"
+          }
+        },
+        "type": "object",
+        "required": [
+          "check",
+          "location",
+          "message",
+          "severity"
+        ],
+        "title": "LintFinding",
+        "description": "A deterministic check that flagged something (app/llm/style/linters.py)."
+      },
+      "MatchReport": {
+        "properties": {
+          "requirement_matches": {
+            "items": {
+              "$ref": "#/components/schemas/RequirementMatch"
+            },
+            "type": "array",
+            "title": "Requirement Matches"
+          },
+          "fact_relevance": {
+            "items": {
+              "$ref": "#/components/schemas/FactRelevance"
+            },
+            "type": "array",
+            "title": "Fact Relevance"
+          },
+          "keyword_plan": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Keyword Plan",
+            "description": "JD terms the resume can use truthfully, exact JD spelling"
+          },
+          "angle": {
+            "type": "string",
+            "title": "Angle",
+            "description": "1-2 sentences: how to position this candidate for this job"
+          },
+          "gap_questions": {
+            "items": {
+              "$ref": "#/components/schemas/GapQuestion"
+            },
+            "type": "array",
+            "title": "Gap Questions"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "requirement_matches",
+          "fact_relevance",
+          "keyword_plan",
+          "angle",
+          "gap_questions"
+        ],
+        "title": "MatchReport"
+      },
+      "OutreachOutcome": {
+        "properties": {
+          "outreach": {
+            "$ref": "#/components/schemas/OutreachPack"
+          },
+          "findings": {
+            "items": {
+              "$ref": "#/components/schemas/LintFinding"
+            },
+            "type": "array",
+            "title": "Findings"
+          }
+        },
+        "type": "object",
+        "required": [
+          "outreach",
+          "findings"
+        ],
+        "title": "OutreachOutcome"
+      },
+      "OutreachPack": {
+        "properties": {
+          "recruiter_email_subject": {
+            "type": "string",
+            "title": "Recruiter Email Subject"
+          },
+          "recruiter_email_body": {
+            "type": "string",
+            "title": "Recruiter Email Body"
+          },
+          "linkedin_note": {
+            "type": "string",
+            "title": "Linkedin Note",
+            "description": "200 characters or fewer"
+          },
+          "referral_ask": {
+            "type": "string",
+            "title": "Referral Ask"
+          },
+          "follow_up": {
+            "type": "string",
+            "title": "Follow Up"
+          },
+          "source_fact_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Source Fact Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "recruiter_email_subject",
+          "recruiter_email_body",
+          "linkedin_note",
+          "referral_ask",
+          "follow_up",
+          "source_fact_ids"
+        ],
+        "title": "OutreachPack"
+      },
+      "PackAllowance": {
+        "properties": {
+          "used": {
+            "type": "integer",
+            "title": "Used"
+          },
+          "limit": {
+            "type": "integer",
+            "title": "Limit"
+          },
+          "window": {
+            "type": "string",
+            "enum": [
+              "calendar_month",
+              "rolling_7_days"
+            ],
+            "title": "Window",
+            "description": "calendar_month (Free, UTC) or rolling_7_days (fair use on paid plans)"
+          },
+          "resets_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Resets At",
+            "description": "Free: start of next month. Paid: when the oldest counted pack leaves the 7-day window"
+          }
+        },
+        "type": "object",
+        "required": [
+          "used",
+          "limit",
+          "window",
+          "resets_at"
+        ],
+        "title": "PackAllowance"
+      },
+      "Pieces": {
+        "properties": {
+          "match_report": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/MatchReport"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "resume": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ResumeOutcome"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "cover_letter": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CoverLetterOutcome"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "outreach": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/OutreachOutcome"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "Pieces",
+        "description": "A run's finished pieces; each is null until it's done. The generate stream sends these same shapes."
+      },
+      "PlanOut": {
+        "properties": {
+          "plan": {
+            "type": "string",
+            "enum": [
+              "free",
+              "sprint",
+              "pro_monthly",
+              "pro_quarter"
+            ],
+            "title": "Plan",
+            "description": "The plan in effect now (a paid plan that ran out shows as free)"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "expires_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expires At"
+          },
+          "deep_included": {
+            "type": "boolean",
+            "title": "Deep Included"
+          },
+          "deep_credits": {
+            "type": "integer",
+            "title": "Deep Credits",
+            "description": "Deep packs on top of the plan (1 at sign-up, credit packs)"
+          },
+          "packs": {
+            "$ref": "#/components/schemas/PackAllowance"
+          },
+          "next_pack_mode": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "deep",
+                  "quick"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Pack Mode",
+            "description": "What a Generate without `mode` would use right now; null when nothing is left"
+          }
+        },
+        "type": "object",
+        "required": [
+          "plan",
+          "name",
+          "expires_at",
+          "deep_included",
+          "deep_credits",
+          "packs",
+          "next_pack_mode"
+        ],
+        "title": "PlanOut"
+      },
+      "Preferences": {
+        "properties": {
+          "target_roles": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Target Roles"
+          },
+          "region": {
+            "type": "string",
+            "enum": [
+              "US",
+              "CA",
+              "UK",
+              "IE",
+              "IN",
+              "DE",
+              "AE",
+              "AU",
+              "OTHER"
+            ],
+            "title": "Region"
+          },
+          "page_limit": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Page Limit"
+          },
+          "spelling": {
+            "type": "string",
+            "enum": [
+              "en-US",
+              "en-GB",
+              "en-IN",
+              "en-AU",
+              "en-CA"
+            ],
+            "title": "Spelling"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "target_roles",
+          "region",
+          "page_limit",
+          "spelling"
+        ],
+        "title": "Preferences"
+      },
+      "ProfileOut": {
+        "properties": {
+          "version": {
+            "type": "integer",
+            "title": "Version"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "profile": {
+            "$ref": "#/components/schemas/CareerProfile"
+          }
+        },
+        "type": "object",
+        "required": [
+          "version",
+          "created_at",
+          "profile"
+        ],
+        "title": "ProfileOut"
+      },
+      "ProfileUpdateIn": {
+        "properties": {
+          "base_version": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Base Version",
+            "description": "The version you loaded and edited (0 if there is no profile yet). If a newer version was saved in the meantime, the save is refused with 409 instead of overwriting it."
+          },
+          "profile": {
+            "$ref": "#/components/schemas/CareerProfile"
+          }
+        },
+        "type": "object",
+        "required": [
+          "base_version",
+          "profile"
+        ],
+        "title": "ProfileUpdateIn"
+      },
+      "Project": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "link": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Link"
+          },
+          "start": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Start",
+            "description": "YYYY-MM, or just YYYY when the source shows only the year. Never invent a month. Null if not stated."
+          },
+          "end": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End",
+            "description": "YYYY-MM, or just YYYY when the source shows only the year. Never invent a month. Null if not stated."
+          },
+          "facts": {
+            "items": {
+              "$ref": "#/components/schemas/Fact"
+            },
+            "type": "array",
+            "title": "Facts"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "link",
+          "start",
+          "end",
+          "facts"
+        ],
+        "title": "Project"
+      },
+      "ReadinessResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "ok",
+              "unavailable"
+            ],
+            "title": "Status"
+          },
+          "database": {
+            "type": "string",
+            "enum": [
+              "ok",
+              "unreachable"
+            ],
+            "title": "Database"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "database"
+        ],
+        "title": "ReadinessResponse"
+      },
+      "Requirement": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "'r1', 'r2', ... in order of appearance"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+            "description": "The requirement as written in the posting (trimmed)"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "skill",
+              "tool",
+              "cert",
+              "degree",
+              "years",
+              "domain",
+              "language",
+              "other"
+            ],
+            "title": "Kind"
+          },
+          "tier": {
+            "type": "string",
+            "enum": [
+              "basic",
+              "preferred"
+            ],
+            "title": "Tier",
+            "description": "basic = required/must-have; preferred = nice-to-have/bonus"
+          },
+          "evidence_terms": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Evidence Terms",
+            "description": "Exact terms a matching resume would contain, JD spelling first"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "kind",
+          "tier",
+          "evidence_terms"
+        ],
+        "title": "Requirement"
+      },
+      "RequirementMatch": {
+        "properties": {
+          "requirement_id": {
+            "type": "string",
+            "title": "Requirement Id"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "evidenced",
+              "partial",
+              "gap"
+            ],
+            "title": "Status"
+          },
+          "evidence_fact_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Evidence Fact Ids"
+          },
+          "note": {
+            "type": "string",
+            "title": "Note",
+            "description": "One short sentence: why this status"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "requirement_id",
+          "status",
+          "evidence_fact_ids",
+          "note"
+        ],
+        "title": "RequirementMatch"
+      },
+      "ResumeEducation": {
+        "properties": {
+          "education_id": {
+            "type": "string",
+            "title": "Education Id"
+          },
+          "bullets": {
+            "items": {
+              "$ref": "#/components/schemas/Bullet"
+            },
+            "type": "array",
+            "title": "Bullets"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "education_id",
+          "bullets"
+        ],
+        "title": "ResumeEducation"
+      },
+      "ResumeImportOut": {
+        "properties": {
+          "profile": {
+            "$ref": "#/components/schemas/ProfileOut"
+          },
+          "contact": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ContactOut"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The saved contact details (None until name and email are known)"
+          },
+          "detected_contact": {
+            "$ref": "#/components/schemas/ContactDetails",
+            "description": "What was found in this file, for the user to confirm"
+          },
+          "facts_without_numbers": {
+            "type": "integer",
+            "title": "Facts Without Numbers",
+            "description": "Facts with no metric; worth asking the user for numbers"
+          }
+        },
+        "type": "object",
+        "required": [
+          "profile",
+          "contact",
+          "detected_contact",
+          "facts_without_numbers"
+        ],
+        "title": "ResumeImportOut"
+      },
+      "ResumeOutcome": {
+        "properties": {
+          "resume": {
+            "$ref": "#/components/schemas/TailoredResume"
+          },
+          "revised": {
+            "type": "boolean",
+            "title": "Revised"
+          },
+          "verify": {
+            "$ref": "#/components/schemas/VerifyReport"
+          },
+          "findings": {
+            "items": {
+              "$ref": "#/components/schemas/LintFinding"
+            },
+            "type": "array",
+            "title": "Findings"
+          },
+          "draft": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TailoredResume"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "draft_findings": {
+            "items": {
+              "$ref": "#/components/schemas/LintFinding"
+            },
+            "type": "array",
+            "title": "Draft Findings"
+          }
+        },
+        "type": "object",
+        "required": [
+          "resume",
+          "revised",
+          "verify",
+          "findings",
+          "draft",
+          "draft_findings"
+        ],
+        "title": "ResumeOutcome"
+      },
+      "ResumeProject": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "bullets": {
+            "items": {
+              "$ref": "#/components/schemas/Bullet"
+            },
+            "type": "array",
+            "title": "Bullets"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "project_id",
+          "bullets"
+        ],
+        "title": "ResumeProject"
+      },
+      "ResumeRole": {
+        "properties": {
+          "experience_id": {
+            "type": "string",
+            "title": "Experience Id",
+            "description": "Id of a CareerProfile.experience entry; title/company/dates come from the profile"
+          },
+          "bullets": {
+            "items": {
+              "$ref": "#/components/schemas/Bullet"
+            },
+            "type": "array",
+            "title": "Bullets"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "experience_id",
+          "bullets"
+        ],
+        "title": "ResumeRole"
+      },
+      "RunOut": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "mode": {
+            "type": "string",
+            "title": "Mode"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status",
+            "description": "running, succeeded, failed or cancelled"
+          },
+          "profile_version": {
+            "type": "integer",
+            "title": "Profile Version"
+          },
+          "cost_usd": {
+            "type": "number",
+            "title": "Cost Usd"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          },
+          "started_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Started At"
+          },
+          "finished_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Finished At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "mode",
+          "status",
+          "profile_version",
+          "cost_usd",
+          "error",
+          "started_at",
+          "finished_at"
+        ],
+        "title": "RunOut"
+      },
+      "SalaryRange": {
+        "properties": {
+          "min": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Min"
+          },
+          "max": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max"
+          },
+          "currency": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Currency"
+          },
+          "period": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "year",
+                  "month",
+                  "hour"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Period"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "min",
+          "max",
+          "currency",
+          "period"
+        ],
+        "title": "SalaryRange"
+      },
+      "Skill": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "evidence_fact_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Evidence Fact Ids",
+            "description": "Facts proving this skill. Empty = declared by the user without evidence."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "evidence_fact_ids"
+        ],
+        "title": "Skill"
+      },
+      "SkillGroup": {
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "description": "e.g. 'Languages', 'Cloud & Infra'"
+          },
+          "skills": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Skills"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "label",
+          "skills"
+        ],
+        "title": "SkillGroup"
+      },
+      "StyleProfile": {
+        "properties": {
+          "avg_bullet_words": {
+            "type": "integer",
+            "title": "Avg Bullet Words"
+          },
+          "number_style": {
+            "type": "string",
+            "title": "Number Style",
+            "description": "How the user writes numbers, e.g. 'digits with % sign; 2M not 2,000,000'"
+          },
+          "voice_samples": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Voice Samples",
+            "description": "2-4 verbatim bullets from the user's original resume"
+          },
+          "notes": {
+            "type": "string",
+            "title": "Notes"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "avg_bullet_words",
+          "number_style",
+          "voice_samples",
+          "notes"
+        ],
+        "title": "StyleProfile"
+      },
+      "TailoredResume": {
+        "properties": {
+          "summary": {
+            "type": "string",
+            "title": "Summary"
+          },
+          "summary_source_fact_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Summary Source Fact Ids"
+          },
+          "section_order": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "summary",
+                "experience",
+                "projects",
+                "education",
+                "skills",
+                "certifications"
+              ]
+            },
+            "type": "array",
+            "title": "Section Order"
+          },
+          "experience": {
+            "items": {
+              "$ref": "#/components/schemas/ResumeRole"
+            },
+            "type": "array",
+            "title": "Experience"
+          },
+          "projects": {
+            "items": {
+              "$ref": "#/components/schemas/ResumeProject"
+            },
+            "type": "array",
+            "title": "Projects"
+          },
+          "education": {
+            "items": {
+              "$ref": "#/components/schemas/ResumeEducation"
+            },
+            "type": "array",
+            "title": "Education"
+          },
+          "skill_groups": {
+            "items": {
+              "$ref": "#/components/schemas/SkillGroup"
+            },
+            "type": "array",
+            "title": "Skill Groups"
+          },
+          "certification_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Certification Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "summary",
+          "summary_source_fact_ids",
+          "section_order",
+          "experience",
+          "projects",
+          "education",
+          "skill_groups",
+          "certification_ids"
+        ],
+        "title": "TailoredResume"
+      },
+      "UserOut": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "email": {
+            "type": "string",
+            "title": "Email"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "email",
+          "created_at"
+        ],
+        "title": "UserOut"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "VerifyReport": {
+        "properties": {
+          "violations": {
+            "items": {
+              "$ref": "#/components/schemas/Violation"
+            },
+            "type": "array",
+            "title": "Violations"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "violations"
+        ],
+        "title": "VerifyReport"
+      },
+      "Violation": {
+        "properties": {
+          "location": {
+            "type": "string",
+            "title": "Location",
+            "description": "Path such as 'experience[0].bullets[2]' or 'summary'"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "unsupported_claim",
+              "inflated_number",
+              "inflated_scope",
+              "title_change",
+              "new_skill",
+              "banned_phrase",
+              "generic",
+              "other"
+            ],
+            "title": "Kind"
+          },
+          "quote": {
+            "type": "string",
+            "title": "Quote"
+          },
+          "explanation": {
+            "type": "string",
+            "title": "Explanation"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ],
+            "title": "Severity"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "location",
+          "kind",
+          "quote",
+          "explanation",
+          "severity"
+        ],
+        "title": "Violation"
+      }
+    },
+    "securitySchemes": {
+      "HTTPBearer": {
+        "type": "http",
+        "description": "Sign-in token from the web app (or app.cli.dev_token locally)",
+        "scheme": "bearer"
+      }
+    }
+  }
+}

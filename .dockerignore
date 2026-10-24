@@ -1,0 +1,22 @@
+# Keep the API image small and free of local state and secrets.
+.git
+.env
+.env.*
+**/__pycache__
+**/*.pyc
+.venv
+.pytest_cache
+node_modules
+**/node_modules
+apps
+packages
+docs
+SUPER
+.claude
+concierge
+evals/reports
+server/tests
+infra
+.github
+*.md
+!server/README.md

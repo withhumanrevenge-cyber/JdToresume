@@ -1,0 +1,365 @@
+{
+  "id": "uk-marketing-manager",
+  "description": "UK marketer with 7 years (agency then DTC brand) who owns a £250k paid-social budget and line-manages two, applying for a Senior Marketing Manager role that wants a £1M+ budget, GA4 certification and Marketo. CV, en-GB, 2 pages.",
+  "tags": [
+    "uk",
+    "marketing",
+    "cv",
+    "en-gb",
+    "number-inflation",
+    "cert-gap"
+  ],
+  "profile": {
+    "schema_version": 1,
+    "headline": "Marketing Manager | DTC and e-commerce | Paid social, CRM, SEO",
+    "summary_facts": [],
+    "experience": [
+      {
+        "id": "e-fernhill",
+        "company": "Fernhill Outdoor Co.",
+        "title": "Marketing Manager",
+        "location": "Bristol",
+        "start": "2023-06",
+        "end": null,
+        "facts": [
+          {
+            "id": "f-fernhill-1",
+            "text": "Own the £250k annual paid social budget across Meta and TikTok; blended ROAS up from 2.1 to 3.4 in 12 months",
+            "metrics": [
+              "£250k",
+              "2.1",
+              "3.4",
+              "12 months"
+            ],
+            "skills": [
+              "paid social",
+              "Meta Ads",
+              "TikTok Ads",
+              "ROAS"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-fernhill-2",
+            "text": "Line manage a content executive and a CRM executive",
+            "metrics": [],
+            "skills": [
+              "line management"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-fernhill-3",
+            "text": "Rebuilt the email programme in Klaviyo (welcome, abandoned basket and post-purchase flows); email now drives about 28% of online revenue, up from 19%",
+            "metrics": [
+              "about 28%",
+              "19%"
+            ],
+            "skills": [
+              "Klaviyo",
+              "CRM",
+              "email marketing"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-fernhill-4",
+            "text": "Set up GA4 and server-side tagging with our agency after Universal Analytics was switched off, and built the Looker Studio reports the leadership team uses",
+            "metrics": [],
+            "skills": [
+              "GA4",
+              "Google Tag Manager",
+              "Looker Studio"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-fernhill-5",
+            "text": "Ran the AW24 'Wild Weekends' campaign with two creator partners – 1.9M impressions and our best October ever for new customers",
+            "metrics": [
+              "1.9M impressions"
+            ],
+            "skills": [
+              "influencer marketing",
+              "campaign management"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "e-blackthorn",
+        "company": "Blackthorn Media",
+        "title": "Senior Digital Marketing Executive",
+        "location": "Bristol",
+        "start": "2021-04",
+        "end": "2023-05",
+        "facts": [
+          {
+            "id": "f-blackthorn-1",
+            "text": "Managed paid social and PPC for 6 retail and hospitality clients",
+            "metrics": [
+              "6 retail and hospitality clients"
+            ],
+            "skills": [
+              "paid social",
+              "PPC",
+              "Google Ads"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-blackthorn-2",
+            "text": "Grew organic traffic for a garden centre client by 64% year on year through a content and technical SEO overhaul",
+            "metrics": [
+              "64%"
+            ],
+            "skills": [
+              "SEO",
+              "content strategy"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-blackthorn-3",
+            "text": "Wrote monthly performance reports and presented them to clients",
+            "metrics": [],
+            "skills": [
+              "reporting"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-blackthorn-4",
+            "text": "Trained 3 junior executives on Meta Ads Manager",
+            "metrics": [
+              "3 junior executives"
+            ],
+            "skills": [
+              "Meta Ads",
+              "training"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "e-quayside",
+        "company": "Quayside Homeware",
+        "title": "Marketing Executive",
+        "location": "Bath",
+        "start": "2019-08",
+        "end": "2021-03",
+        "facts": [
+          {
+            "id": "f-quayside-1",
+            "text": "Ran our Instagram, Facebook and Pinterest accounts and grew Instagram from 8k to 31k followers",
+            "metrics": [
+              "8k",
+              "31k"
+            ],
+            "skills": [
+              "social media",
+              "Instagram"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-quayside-2",
+            "text": "Coordinated photoshoots and product launches with the buying team",
+            "metrics": [],
+            "skills": [],
+            "source": "upload"
+          },
+          {
+            "id": "f-quayside-3",
+            "text": "Moved the newsletter from a spreadsheet to Mailchimp and set up our first automated welcome email",
+            "metrics": [],
+            "skills": [
+              "Mailchimp",
+              "email marketing"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "projects": [],
+    "education": [
+      {
+        "id": "e-avonmouth",
+        "institution": "Avonmouth University",
+        "degree": "BA (Hons)",
+        "field": "Marketing and Communications",
+        "start": "2016-09",
+        "end": "2019-06",
+        "grade": "2:1",
+        "facts": []
+      }
+    ],
+    "certifications": [
+      {
+        "id": "c-meta",
+        "name": "Meta Certified Media Buying Professional",
+        "issuer": "Meta",
+        "date": "2022-11"
+      },
+      {
+        "id": "c-cim",
+        "name": "CIM Level 4 Certificate in Professional Marketing",
+        "issuer": "Chartered Institute of Marketing",
+        "date": "2021-07"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Paid social",
+        "evidence_fact_ids": [
+          "f-fernhill-1",
+          "f-blackthorn-1"
+        ]
+      },
+      {
+        "name": "Meta Ads",
+        "evidence_fact_ids": [
+          "f-fernhill-1",
+          "f-blackthorn-4"
+        ]
+      },
+      {
+        "name": "TikTok Ads",
+        "evidence_fact_ids": [
+          "f-fernhill-1"
+        ]
+      },
+      {
+        "name": "Klaviyo",
+        "evidence_fact_ids": [
+          "f-fernhill-3"
+        ]
+      },
+      {
+        "name": "CRM",
+        "evidence_fact_ids": [
+          "f-fernhill-3"
+        ]
+      },
+      {
+        "name": "GA4",
+        "evidence_fact_ids": [
+          "f-fernhill-4"
+        ]
+      },
+      {
+        "name": "Google Tag Manager",
+        "evidence_fact_ids": [
+          "f-fernhill-4"
+        ]
+      },
+      {
+        "name": "Looker Studio",
+        "evidence_fact_ids": [
+          "f-fernhill-4"
+        ]
+      },
+      {
+        "name": "SEO",
+        "evidence_fact_ids": [
+          "f-blackthorn-2"
+        ]
+      },
+      {
+        "name": "Google Ads",
+        "evidence_fact_ids": [
+          "f-blackthorn-1"
+        ]
+      },
+      {
+        "name": "Content strategy",
+        "evidence_fact_ids": [
+          "f-blackthorn-2"
+        ]
+      },
+      {
+        "name": "Mailchimp",
+        "evidence_fact_ids": [
+          "f-quayside-3"
+        ]
+      },
+      {
+        "name": "Line management",
+        "evidence_fact_ids": [
+          "f-fernhill-2"
+        ]
+      },
+      {
+        "name": "Canva",
+        "evidence_fact_ids": []
+      },
+      {
+        "name": "Shopify",
+        "evidence_fact_ids": []
+      }
+    ],
+    "languages": [
+      "English",
+      "French (conversational)"
+    ],
+    "awards": [
+      {
+        "id": "f-award-1",
+        "text": "Shortlisted for Best Small Brand Campaign at the Severnside Digital Awards 2024",
+        "metrics": [],
+        "skills": [],
+        "source": "upload"
+      }
+    ],
+    "preferences": {
+      "target_roles": [
+        "Senior Marketing Manager",
+        "Head of Paid Social",
+        "Growth Marketing Manager"
+      ],
+      "region": "UK",
+      "page_limit": 2,
+      "spelling": "en-GB"
+    },
+    "style": {
+      "avg_bullet_words": 19,
+      "number_style": "£ with k/M (£250k, 1.9M); % sign; 'about' for estimates; 'year on year' written out",
+      "voice_samples": [
+        "Own the £250k annual paid social budget across Meta and TikTok; blended ROAS up from 2.1 to 3.4 in 12 months",
+        "Rebuilt the email programme in Klaviyo (welcome, abandoned basket and post-purchase flows); email now drives about 28% of online revenue, up from 19%",
+        "Ran our Instagram, Facebook and Pinterest accounts and grew Instagram from 8k to 31k followers"
+      ],
+      "notes": "British spelling (programme, centre, basket); semicolons to join result to action; season codes like AW24."
+    }
+  },
+  "contact": {
+    "full_name": "Hannah Whitcombe",
+    "email": "hannah.whitcombe@example.com",
+    "phone": "+44 7700 900417",
+    "city": "Bristol",
+    "links": [
+      "linkedin.com/in/example-hannah-whitcombe"
+    ]
+  },
+  "jd_text": "Senior Marketing Manager – Paid Social & CRM\nThistledown & Co.\nLondon (Shoreditch) – hybrid, 2 days a week in the studio\nPermanent, full-time\n£62,000 – £70,000 + 10% annual bonus\n\nAbout us\nThistledown & Co. is a B Corp-certified homeware brand selling bedding, linen and tableware made in Britain and Portugal. We turned over £18m last year, 70% of it online, and we're opening our second shop, in Edinburgh, this spring.\n\nThe role\nWe're looking for an experienced marketer to own paid social and CRM, the two channels that bring in most of our new and repeat customers. You'll report to the CMO, sit on the marketing leadership team and line-manage a team of three.\n\nWhat you'll do\n• Own paid social strategy and a £1M+ annual budget across Meta, TikTok and Pinterest\n• Plan and launch four seasonal campaigns a year with the brand and creative teams\n• Lead our lifecycle/CRM programme in Marketo and grow repeat purchase rate\n• Build measurement with our analytics partner: GA4, incrementality testing and MMM\n• Line-manage a paid social executive, a CRM executive and a content creator\n• Manage our creative and media agencies and present results to the board each month\n\nEssential\n• 6+ years in digital marketing, ideally in DTC or e-commerce\n• Proven experience managing a £1M+ paid social budget\n• GA4 certification\n• Hands-on Marketo experience (we're midway through migrating to it, so you'll be key)\n• Line management experience\n• Strong commercial awareness and confidence with ROAS, CAC and LTV\n\nDesirable\n• Pinterest Ads experience\n• SEO knowledge\n• CIM qualification\n• Experience at a homeware or lifestyle brand\n\nWhat we offer\n• 28 days' holiday plus bank holidays, and your birthday off\n• 6% matched pension\n• Private healthcare and an employee assistance programme\n• 40% staff discount and a seasonal product allowance\n• £1,000 a year personal development budget\n• Enhanced maternity, paternity and shared parental leave\n\nHow to apply\nSend your CV and a short cover note (no more than one page) telling us about a campaign you're proud of. Interviews will take place in the week of 9 November.\n\nThistledown & Co. is an equal opportunities employer. We welcome applications from everyone regardless of age, disability, gender identity, marriage or civil partnership, pregnancy or maternity, race, religion or belief, sex or sexual orientation. We're a Disability Confident Committed employer and will make reasonable adjustments at any stage of the process – just let us know.",
+  "expectations": {
+    "evidenced_terms": [
+      "paid social",
+      "CRM",
+      "GA4",
+      "Line management",
+      "ROAS",
+      "SEO",
+      "DTC",
+      "TikTok"
+    ],
+    "trap_terms": [
+      "GA4 certification",
+      "Marketo"
+    ],
+    "trap_notes": "Budget: she owns £250k a year; never write £1M+, 'seven-figure', or add agency client spend to get there. Team: she line-manages 2 people and trained 3 juniors at the agency; don't say 'team of 3+' or 'led a team of 5'. She uses GA4 daily but holds no GA4 qualification. Klaviyo and Mailchimp are not the JD's automation platform. No incrementality testing, MMM or Pinterest Ads (Pinterest was organic only at Quayside). The award was a shortlist, not a win. Write en-GB, call it a CV; 2 pages is fine."
+  }
+}

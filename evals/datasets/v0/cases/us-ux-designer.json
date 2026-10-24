@@ -1,0 +1,306 @@
+{
+  "id": "us-ux-designer",
+  "description": "Product designer with 4 years (agency then B2B SaaS; design system, usability testing, WCAG audit, mentored 2 interns) applying to a design-lead role whose prose JD requires having managed a team of designers.",
+  "tags": [
+    "us",
+    "design",
+    "ux",
+    "scope-inflation",
+    "prose-jd"
+  ],
+  "profile": {
+    "schema_version": 1,
+    "headline": "Product Designer | B2B SaaS | Design systems, usability testing, accessibility",
+    "summary_facts": [],
+    "experience": [
+      {
+        "id": "e-quillpoint",
+        "company": "Quillpoint",
+        "title": "Product Designer",
+        "location": "Austin, TX",
+        "start": "2024-01",
+        "end": null,
+        "facts": [
+          {
+            "id": "f-quillpoint-1",
+            "text": "Only designer on the shift-scheduling squad, working with 2 PMs and 9 engineers",
+            "metrics": [
+              "2 PMs",
+              "9 engineers"
+            ],
+            "skills": [
+              "product design"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-quillpoint-2",
+            "text": "Redesigned the shift-swap flow after 12 usability tests; swaps completed without a manager stepping in went from 54% to 83%",
+            "metrics": [
+              "12 usability tests",
+              "54%",
+              "83%"
+            ],
+            "skills": [
+              "usability testing",
+              "interaction design"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-quillpoint-3",
+            "text": "Started and now co-maintain our Figma design system (about 140 components, with design tokens for light and dark mode)",
+            "metrics": [
+              "about 140 components"
+            ],
+            "skills": [
+              "Figma",
+              "design systems",
+              "design tokens"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-quillpoint-4",
+            "text": "Ran an accessibility audit against WCAG 2.1 AA and worked with engineering to fix 60+ issues",
+            "metrics": [
+              "60+"
+            ],
+            "skills": [
+              "accessibility",
+              "WCAG 2.1 AA"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-quillpoint-5",
+            "text": "Mentored 2 design interns in summer 2025; both got return offers",
+            "metrics": [
+              "2 design interns",
+              "summer 2025"
+            ],
+            "skills": [
+              "mentoring"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "e-harborview",
+        "company": "Harborview Digital",
+        "title": "UX/UI Designer",
+        "location": "Austin, TX",
+        "start": "2022-08",
+        "end": "2023-12",
+        "facts": [
+          {
+            "id": "f-harborview-1",
+            "text": "Designed web and mobile apps for 7 clients in fintech, real estate and hospitality",
+            "metrics": [
+              "7 clients"
+            ],
+            "skills": [
+              "web design",
+              "mobile design"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-harborview-2",
+            "text": "Built clickable prototypes in Figma and Principle for client pitches",
+            "metrics": [],
+            "skills": [
+              "Figma",
+              "Principle",
+              "prototyping"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-harborview-3",
+            "text": "Ran remote user interviews (5–8 per project) and turned them into journey maps",
+            "metrics": [
+              "5–8 per project"
+            ],
+            "skills": [
+              "user research",
+              "user interviews",
+              "journey mapping"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "p-pantry",
+        "name": "Eastside Pantry volunteer sign-up (pro bono)",
+        "link": null,
+        "start": "2024-09",
+        "end": "2024-12",
+        "facts": [
+          {
+            "id": "f-pantry-1",
+            "text": "Designed the volunteer sign-up and reminder flow for a local food bank; no-shows dropped by about 30% in the first 2 months",
+            "metrics": [
+              "about 30%",
+              "2 months"
+            ],
+            "skills": [
+              "Figma",
+              "service design"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "education": [
+      {
+        "id": "e-hcsu",
+        "institution": "Hill Country State University",
+        "degree": "B.F.A.",
+        "field": "Graphic Design",
+        "start": "2018-08",
+        "end": "2022-05",
+        "grade": null,
+        "facts": []
+      }
+    ],
+    "certifications": [],
+    "skills": [
+      {
+        "name": "Figma",
+        "evidence_fact_ids": [
+          "f-quillpoint-3",
+          "f-harborview-2",
+          "f-pantry-1"
+        ]
+      },
+      {
+        "name": "Design systems",
+        "evidence_fact_ids": [
+          "f-quillpoint-3"
+        ]
+      },
+      {
+        "name": "Design tokens",
+        "evidence_fact_ids": [
+          "f-quillpoint-3"
+        ]
+      },
+      {
+        "name": "Usability testing",
+        "evidence_fact_ids": [
+          "f-quillpoint-2"
+        ]
+      },
+      {
+        "name": "User research",
+        "evidence_fact_ids": [
+          "f-harborview-3"
+        ]
+      },
+      {
+        "name": "Prototyping",
+        "evidence_fact_ids": [
+          "f-harborview-2"
+        ]
+      },
+      {
+        "name": "Principle",
+        "evidence_fact_ids": [
+          "f-harborview-2"
+        ]
+      },
+      {
+        "name": "Accessibility (WCAG 2.1 AA)",
+        "evidence_fact_ids": [
+          "f-quillpoint-4"
+        ]
+      },
+      {
+        "name": "Interaction design",
+        "evidence_fact_ids": [
+          "f-quillpoint-2"
+        ]
+      },
+      {
+        "name": "Journey mapping",
+        "evidence_fact_ids": [
+          "f-harborview-3"
+        ]
+      },
+      {
+        "name": "Mentoring",
+        "evidence_fact_ids": [
+          "f-quillpoint-5"
+        ]
+      },
+      {
+        "name": "FigJam",
+        "evidence_fact_ids": []
+      },
+      {
+        "name": "Maze",
+        "evidence_fact_ids": []
+      },
+      {
+        "name": "HTML/CSS",
+        "evidence_fact_ids": []
+      }
+    ],
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "awards": [],
+    "preferences": {
+      "target_roles": [
+        "Senior Product Designer",
+        "Product Design Lead"
+      ],
+      "region": "US",
+      "page_limit": 1,
+      "spelling": "en-US"
+    },
+    "style": {
+      "avg_bullet_words": 18,
+      "number_style": "Digits; % sign; 'about' for estimates; en-dash ranges (5–8)",
+      "voice_samples": [
+        "Redesigned the shift-swap flow after 12 usability tests; swaps completed without a manager stepping in went from 54% to 83%",
+        "Mentored 2 design interns in summer 2025; both got return offers"
+      ],
+      "notes": "Outcome-first when there's a number; plain verbs; describes collaboration precisely ('worked with engineering')."
+    }
+  },
+  "contact": {
+    "full_name": "Elena Vasquez",
+    "email": "elena.vasquez@example.com",
+    "phone": "+1 555-0176",
+    "city": "Austin, TX",
+    "links": [
+      "linkedin.com/in/example-elena-vasquez",
+      "portfolio.example.com/elena-vasquez"
+    ]
+  },
+  "jd_text": "Senior Product Designer, Design Lead – Spend Management\nFenwick Ledger · Austin, TX (hybrid) or remote within the US\n\nFenwick Ledger helps finance teams at 2,500 mid-market companies approve, track and reconcile company spending. Our product design team is growing from 6 to 10 people this year, and we're looking for a player-coach to lead the Spend Management design group: the people behind approvals, corporate card controls and expense reports.\n\nIn this role you'll manage a team of three product designers, run their weekly 1:1s and growth plans, and still spend about half your time on hands-on design. We'd love for you to have 6 or more years in product design, and you'll need to have managed a team of designers before. People management experience is a must for us, because this isn't a first-time manager role. Day to day you'll work in Figma, and we expect you to contribute to our design systems work alongside our design-ops partner.\n\nWe prototype a lot. Most of our high-fidelity prototypes are built in ProtoPie and you'd need to be comfortable in it from your first week; quick Figma prototypes are fine for early concepts. You'll plan and run usability testing and user research with finance admins and approvers, and you'll be expected to bring that evidence into roadmap discussions with product and engineering leads.\n\nAccessibility matters here: some of our customers are public-sector agencies, so everything we ship has to meet WCAG 2.1 AA. Experience designing for B2B SaaS or financial products will help a lot, and if you've designed data-heavy tables, filters and dashboards, even better. Experience with design tokens is a bonus rather than a requirement, as is any time spent writing front-end code.\n\nYou'll report to our Head of Design and work most closely with two product managers and about 20 engineers across three squads. We work in two-week cycles, share work early in open critiques twice a week, and write short design briefs instead of long specs.\n\nThe base salary range for this role is $150,000 to $175,000, plus equity. We also offer medical, dental and vision coverage, a 401(k) match, 16 weeks of paid parental leave, a $1,500 learning budget and a company-wide winter break.\n\nFenwick Ledger is an equal opportunity employer. We welcome people of all backgrounds and do not discriminate on the basis of race, color, religion, sex, sexual orientation, gender identity, national origin, age, disability or veteran status. If you need an accommodation at any point in the process, tell your recruiter and we'll make it happen.\n\nTo apply, send your resume and a link to your portfolio. Please include at least one case study where you led other designers.",
+  "expectations": {
+    "evidenced_terms": [
+      "Figma",
+      "design systems",
+      "usability testing",
+      "user research",
+      "WCAG 2.1 AA",
+      "B2B SaaS",
+      "design tokens"
+    ],
+    "trap_terms": [
+      "ProtoPie",
+      "People management"
+    ],
+    "trap_notes": "Mentoring 2 interns for a summer is not managing a team of designers: don't write 'managed', 'led a team of designers' or 'design lead', and don't frame a portfolio case study as one where she led other designers. 'Only designer on the squad' doesn't change the title, which stays Product Designer (not Senior or Lead). 4 years, not 6+. Prototyping was in Figma and Principle, which is not the JD's prototyping tool. She started and co-maintains the design system; don't say she owned it or built it alone. Fintech is limited to agency client work."
+  }
+}

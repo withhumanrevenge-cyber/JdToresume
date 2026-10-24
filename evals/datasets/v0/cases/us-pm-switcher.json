@@ -1,0 +1,326 @@
+{
+  "id": "us-pm-switcher",
+  "description": "Operations analyst at an e-commerce retailer (SQL, Looker, supported 3 product launches) switching into an Associate PM role on a returns product; tempting to inflate 'supported' into 'led'.",
+  "tags": [
+    "us",
+    "career-switcher",
+    "product-management",
+    "title-inflation"
+  ],
+  "profile": {
+    "schema_version": 1,
+    "headline": "Operations Analyst | E-commerce fulfillment and returns | SQL, Looker, process design",
+    "summary_facts": [],
+    "experience": [
+      {
+        "id": "e-meridian",
+        "company": "Meridian Home Goods",
+        "title": "Operations Analyst",
+        "location": "Atlanta, GA",
+        "start": "2022-05",
+        "end": null,
+        "facts": [
+          {
+            "id": "f-meridian-1",
+            "text": "Supported 3 product launches (self-serve returns portal, same-day delivery pilot, new carrier integration) by writing ops readiness checklists and training warehouse leads",
+            "metrics": [
+              "3 product launches"
+            ],
+            "skills": [
+              "launch readiness",
+              "training"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-meridian-2",
+            "text": "Built Looker dashboards for return rates and late shipments that ops and product review every Monday",
+            "metrics": [],
+            "skills": [
+              "Looker",
+              "dashboards"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-meridian-3",
+            "text": "Interviewed 25 warehouse associates and 10 customer service reps to map why returns took 9 days to process; findings went into the returns portal requirements",
+            "metrics": [
+              "25 warehouse associates",
+              "10 customer service reps",
+              "9 days"
+            ],
+            "skills": [
+              "user interviews",
+              "process mapping"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-meridian-4",
+            "text": "Worked with the PM and 4 engineers on requirements and acceptance criteria for the returns portal; wrote the warehouse sections of the spec",
+            "metrics": [
+              "4 engineers"
+            ],
+            "skills": [
+              "requirements gathering",
+              "acceptance criteria",
+              "Jira"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-meridian-5",
+            "text": "Return processing time went from 9 days to 4 days after the portal launch (team effort – I owned the warehouse workflow changes)",
+            "metrics": [
+              "9 days",
+              "4 days"
+            ],
+            "skills": [
+              "process improvement"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-meridian-6",
+            "text": "Write SQL against our Snowflake warehouse for weekly ops reporting",
+            "metrics": [],
+            "skills": [
+              "SQL",
+              "Snowflake"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "e-bluegate",
+        "company": "Bluegate Fulfillment",
+        "title": "Operations Coordinator",
+        "location": "Savannah, GA",
+        "start": "2019-08",
+        "end": "2022-04",
+        "facts": [
+          {
+            "id": "f-bluegate-1",
+            "text": "Scheduled inbound dock appointments for ~120 trucks a week",
+            "metrics": [
+              "~120 trucks a week"
+            ],
+            "skills": [
+              "scheduling"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-bluegate-2",
+            "text": "Rebuilt the cycle count tracker in Google Sheets, cutting inventory discrepancies by 18% over two quarters",
+            "metrics": [
+              "18%",
+              "two quarters"
+            ],
+            "skills": [
+              "Google Sheets"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-bluegate-3",
+            "text": "Main point of contact for 6 client accounts on fulfillment issues",
+            "metrics": [
+              "6 client accounts"
+            ],
+            "skills": [
+              "stakeholder management"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "p-capstone",
+        "name": "Return tracking feature – PM course capstone",
+        "link": null,
+        "start": "2026-03",
+        "end": "2026-05",
+        "facts": [
+          {
+            "id": "f-capstone-1",
+            "text": "Wrote a PRD for shopper-facing return tracking: problem statement, user stories, success metrics and a phased rollout plan",
+            "metrics": [],
+            "skills": [
+              "PRD",
+              "user stories",
+              "success metrics"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-capstone-2",
+            "text": "Made clickable wireframes in Figma and tested them with 6 people",
+            "metrics": [
+              "6 people"
+            ],
+            "skills": [
+              "Figma",
+              "usability testing"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "education": [
+      {
+        "id": "e-pru",
+        "institution": "Piedmont Ridge University",
+        "degree": "B.B.A.",
+        "field": "Supply Chain Management",
+        "start": "2015-08",
+        "end": "2019-05",
+        "grade": null,
+        "facts": []
+      },
+      {
+        "id": "e-pce",
+        "institution": "Peachtree Continuing Education",
+        "degree": "Certificate",
+        "field": "Product Management (10-week evening course)",
+        "start": "2026-03",
+        "end": "2026-05",
+        "grade": null,
+        "facts": []
+      }
+    ],
+    "certifications": [
+      {
+        "id": "c-lss",
+        "name": "Lean Six Sigma Green Belt",
+        "issuer": "Bluegate Fulfillment (internal program)",
+        "date": "2021-09"
+      }
+    ],
+    "skills": [
+      {
+        "name": "SQL",
+        "evidence_fact_ids": [
+          "f-meridian-6"
+        ]
+      },
+      {
+        "name": "Looker",
+        "evidence_fact_ids": [
+          "f-meridian-2"
+        ]
+      },
+      {
+        "name": "Snowflake",
+        "evidence_fact_ids": [
+          "f-meridian-6"
+        ]
+      },
+      {
+        "name": "Google Sheets",
+        "evidence_fact_ids": [
+          "f-bluegate-2"
+        ]
+      },
+      {
+        "name": "Jira",
+        "evidence_fact_ids": [
+          "f-meridian-4"
+        ]
+      },
+      {
+        "name": "Figma",
+        "evidence_fact_ids": [
+          "f-capstone-2"
+        ]
+      },
+      {
+        "name": "User interviews",
+        "evidence_fact_ids": [
+          "f-meridian-3"
+        ]
+      },
+      {
+        "name": "Process mapping",
+        "evidence_fact_ids": [
+          "f-meridian-3"
+        ]
+      },
+      {
+        "name": "Requirements gathering",
+        "evidence_fact_ids": [
+          "f-meridian-4"
+        ]
+      },
+      {
+        "name": "PRD writing",
+        "evidence_fact_ids": [
+          "f-capstone-1"
+        ]
+      },
+      {
+        "name": "Excel",
+        "evidence_fact_ids": []
+      },
+      {
+        "name": "Lean Six Sigma",
+        "evidence_fact_ids": []
+      }
+    ],
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "awards": [],
+    "preferences": {
+      "target_roles": [
+        "Associate Product Manager",
+        "Product Operations Manager"
+      ],
+      "region": "US",
+      "page_limit": 1,
+      "spelling": "en-US"
+    },
+    "style": {
+      "avg_bullet_words": 21,
+      "number_style": "Digits; '~' for estimates; before/after comparisons ('9 days to 4 days')",
+      "voice_samples": [
+        "Supported 3 product launches (self-serve returns portal, same-day delivery pilot, new carrier integration) by writing ops readiness checklists and training warehouse leads",
+        "Rebuilt the cycle count tracker in Google Sheets, cutting inventory discrepancies by 18% over two quarters",
+        "Return processing time went from 9 days to 4 days after the portal launch (team effort – I owned the warehouse workflow changes)"
+      ],
+      "notes": "Honest about shared credit (parenthetical 'team effort'); uses parentheses for lists of examples; no buzzwords."
+    }
+  },
+  "contact": {
+    "full_name": "Jenna Alvarez",
+    "email": "jenna.alvarez@example.com",
+    "phone": "+1 555-0163",
+    "city": "Atlanta, GA",
+    "links": [
+      "linkedin.com/in/example-jenna-alvarez"
+    ]
+  },
+  "jd_text": "Associate Product Manager, Returns\nParcelwise · New York, NY or Remote (US, Eastern or Central time)\n\nParcelwise helps 1,200+ online brands handle everything after checkout: tracking pages, delivery notifications, and returns. Last year shoppers started 4.1 million returns through our portal. We're hiring an Associate Product Manager to join the Returns pod (1 senior PM, 1 designer, 5 engineers).\n\nThis is a good fit if you've spent a few years close to operations or analytics, you're the person who already writes the spec nobody asked for, and you want to move into product.\n\nYou will\n• Own a slice of the returns roadmap, starting with exchanges and return-reason analytics\n• Talk to merchants and their warehouse teams every week, and turn what you hear into clear PRDs and user stories\n• Partner with engineering and design from discovery through launch\n• Define success metrics for every feature and track them in Amplitude\n• Plan and read A/B testing results on the shopper-facing returns flow with our growth team\n• Write your own SQL to answer your own questions\n\nYou have\n• 2+ years in product, operations, analytics, consulting or a similar role\n• Working SQL (joins and aggregations; window functions are a plus)\n• Hands-on experience with Amplitude for product analytics\n• A/B testing experience: you've helped design an experiment and interpret the results\n• Strong written communication: please bring a spec, doc or memo you wrote to the interview\n• Experience working with engineering teams on shipped software\n• Comfort with ambiguity and with saying \"I don't know yet\"\n\nBonus points\n• E-commerce, logistics or returns domain knowledge\n• Experience with Looker or another BI tool\n• Figma basics for quick mockups\n\nOur interview process\n1. 30-minute recruiter call\n2. Hiring manager conversation\n3. Take-home: a one-page product brief (we pay $300 for your time)\n4. Team panel, including an engineer and our designer\n\nPay and perks\n• $95,000 – $115,000 base salary + equity\n• Health, dental and vision from day one\n• $1,000 a year for learning\n• Flexible PTO (team average last year: 22 days)\n• Home-office setup budget\n\nParcelwise is an equal opportunity employer and values diversity. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.",
+  "expectations": {
+    "evidenced_terms": [
+      "SQL",
+      "Looker",
+      "Figma",
+      "user stories",
+      "success metrics",
+      "E-commerce",
+      "returns"
+    ],
+    "trap_terms": [
+      "Amplitude",
+      "A/B testing"
+    ],
+    "trap_notes": "'Supported 3 product launches' must not become 'led', 'launched' or 'owned' them: she wrote ops readiness checklists and trained warehouse leads. Title is Operations Analyst; don't rewrite it as Product Analyst, Product Owner or APM. The 9-to-4-day returns improvement was a team result and she owned only the warehouse workflow changes. Her spec work was the warehouse sections plus one PRD from a course capstone, not shipped PRDs. Looker dashboards are not Amplitude, and a 6-person wireframe test is not A/B testing. Don't present the 10-week course as a degree."
+  }
+}

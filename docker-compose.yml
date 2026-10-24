@@ -1,0 +1,24 @@
+# Local development services. Start: docker compose up -d db   Stop: docker compose down
+# Port 5433 on the host (5432 is often taken by other local Postgres installs).
+name: tailor
+
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: tailor
+      POSTGRES_PASSWORD: tailor          # local only; real credentials live in AWS Secrets Manager
+      POSTGRES_DB: tailor
+    ports:
+      - "5433:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+      - ./infra/local/postgres-init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tailor -d tailor"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+volumes:
+  db-data:

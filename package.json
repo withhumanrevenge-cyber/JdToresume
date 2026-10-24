@@ -1,0 +1,12 @@
+{
+  "name": "tailor",
+  "private": true,
+  "packageManager": "pnpm@10.34.7",
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "build:web": "pnpm --filter web build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "api-types": "pnpm --filter @tailor/api-types generate"
+  }
+}

@@ -1,0 +1,351 @@
+{
+  "id": "in-frontend-mid",
+  "description": "Pune frontend developer with 3 years of React/JavaScript (TypeScript and Next.js only in one side project) applying to a fintech SDE-2 web role built on Next.js + TypeScript that also wants React Native.",
+  "tags": [
+    "india",
+    "mid-level",
+    "frontend",
+    "scope-inflation"
+  ],
+  "profile": {
+    "schema_version": 1,
+    "headline": "Frontend Developer | React, JavaScript, Redux | 3 years building web apps",
+    "summary_facts": [],
+    "experience": [
+      {
+        "id": "e-sahyadri",
+        "company": "Sahyadri Softlabs Pvt. Ltd.",
+        "title": "Frontend Developer",
+        "location": "Pune",
+        "start": "2024-07",
+        "end": null,
+        "facts": [
+          {
+            "id": "f-sahyadri-1",
+            "text": "Build and maintain the seller dashboard in React and Redux, used by 6,000+ sellers",
+            "metrics": [
+              "6,000+"
+            ],
+            "skills": [
+              "React",
+              "Redux",
+              "JavaScript"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-sahyadri-2",
+            "text": "Brought the dashboard's initial JS bundle down from 2.4 MB to 900 KB with code splitting and lazy loading; Lighthouse performance score went from 48 to 81",
+            "metrics": [
+              "2.4 MB",
+              "900 KB",
+              "48",
+              "81"
+            ],
+            "skills": [
+              "code splitting",
+              "Lighthouse",
+              "Webpack",
+              "web performance"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-sahyadri-3",
+            "text": "Built the checkout and payment status pages with Razorpay integration",
+            "metrics": [],
+            "skills": [
+              "React",
+              "Razorpay"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-sahyadri-4",
+            "text": "Wrote unit tests with Jest and React Testing Library; dashboard coverage went from 22% to 61%",
+            "metrics": [
+              "22%",
+              "61%"
+            ],
+            "skills": [
+              "Jest",
+              "React Testing Library"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-sahyadri-5",
+            "text": "Work with 2 designers on our shared component library in Storybook",
+            "metrics": [
+              "2 designers"
+            ],
+            "skills": [
+              "Storybook",
+              "component library"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "e-bluetick",
+        "company": "Bluetick Digital Solutions",
+        "title": "Junior Frontend Developer",
+        "location": "Pune",
+        "start": "2023-07",
+        "end": "2024-06",
+        "facts": [
+          {
+            "id": "f-bluetick-1",
+            "text": "Built responsive landing pages and admin panels for 5 client projects using React and Tailwind CSS",
+            "metrics": [
+              "5 client projects"
+            ],
+            "skills": [
+              "React",
+              "Tailwind CSS",
+              "responsive design"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-bluetick-2",
+            "text": "Converted Figma designs into pixel-perfect HTML/CSS pages",
+            "metrics": [],
+            "skills": [
+              "Figma",
+              "HTML",
+              "CSS"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-bluetick-3",
+            "text": "Integrated REST APIs using Axios and handled loading and error states",
+            "metrics": [],
+            "skills": [
+              "REST APIs",
+              "Axios"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "p-kharcha",
+        "name": "Kharcha – expense splitting app",
+        "link": "github.com/example-shrutip/kharcha",
+        "start": "2025-05",
+        "end": "2025-08",
+        "facts": [
+          {
+            "id": "f-kharcha-1",
+            "text": "Built with Next.js, TypeScript and Firebase – my first project in TypeScript",
+            "metrics": [],
+            "skills": [
+              "Next.js",
+              "TypeScript",
+              "Firebase"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-kharcha-2",
+            "text": "Around 150 friends and college juniors use it to split trip and flat expenses",
+            "metrics": [
+              "Around 150"
+            ],
+            "skills": [],
+            "source": "upload"
+          },
+          {
+            "id": "f-kharcha-3",
+            "text": "Server-side rendered the group summary pages using the Next.js App Router",
+            "metrics": [],
+            "skills": [
+              "Next.js",
+              "SSR",
+              "App Router"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "education": [
+      {
+        "id": "e-ice",
+        "institution": "Indrayani College of Engineering, Pune",
+        "degree": "B.E.",
+        "field": "Information Technology",
+        "start": "2019-08",
+        "end": "2023-06",
+        "grade": "CGPA 8.0/10",
+        "facts": []
+      }
+    ],
+    "certifications": [],
+    "skills": [
+      {
+        "name": "React",
+        "evidence_fact_ids": [
+          "f-sahyadri-1",
+          "f-sahyadri-3",
+          "f-bluetick-1"
+        ]
+      },
+      {
+        "name": "JavaScript",
+        "evidence_fact_ids": [
+          "f-sahyadri-1"
+        ]
+      },
+      {
+        "name": "Redux",
+        "evidence_fact_ids": [
+          "f-sahyadri-1"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "evidence_fact_ids": [
+          "f-kharcha-1"
+        ]
+      },
+      {
+        "name": "Next.js",
+        "evidence_fact_ids": [
+          "f-kharcha-1",
+          "f-kharcha-3"
+        ]
+      },
+      {
+        "name": "Jest",
+        "evidence_fact_ids": [
+          "f-sahyadri-4"
+        ]
+      },
+      {
+        "name": "React Testing Library",
+        "evidence_fact_ids": [
+          "f-sahyadri-4"
+        ]
+      },
+      {
+        "name": "Storybook",
+        "evidence_fact_ids": [
+          "f-sahyadri-5"
+        ]
+      },
+      {
+        "name": "Tailwind CSS",
+        "evidence_fact_ids": [
+          "f-bluetick-1"
+        ]
+      },
+      {
+        "name": "Webpack",
+        "evidence_fact_ids": [
+          "f-sahyadri-2"
+        ]
+      },
+      {
+        "name": "REST APIs",
+        "evidence_fact_ids": [
+          "f-bluetick-3"
+        ]
+      },
+      {
+        "name": "HTML",
+        "evidence_fact_ids": [
+          "f-bluetick-2"
+        ]
+      },
+      {
+        "name": "CSS",
+        "evidence_fact_ids": [
+          "f-bluetick-2"
+        ]
+      },
+      {
+        "name": "Firebase",
+        "evidence_fact_ids": [
+          "f-kharcha-1"
+        ]
+      },
+      {
+        "name": "Figma",
+        "evidence_fact_ids": [
+          "f-bluetick-2"
+        ]
+      },
+      {
+        "name": "Git",
+        "evidence_fact_ids": []
+      }
+    ],
+    "languages": [
+      "English",
+      "Marathi",
+      "Hindi"
+    ],
+    "awards": [
+      {
+        "id": "f-award-1",
+        "text": "Spot Award at Sahyadri Softlabs for the bundle size work (Q1 2025)",
+        "metrics": [
+          "Q1 2025"
+        ],
+        "skills": [],
+        "source": "upload"
+      }
+    ],
+    "preferences": {
+      "target_roles": [
+        "Frontend Developer",
+        "Frontend Engineer (SDE-2)"
+      ],
+      "region": "IN",
+      "page_limit": 1,
+      "spelling": "en-IN"
+    },
+    "style": {
+      "avg_bullet_words": 17,
+      "number_style": "Digits; MB/KB units; % sign; '+' for counts",
+      "voice_samples": [
+        "Brought the dashboard's initial JS bundle down from 2.4 MB to 900 KB with code splitting and lazy loading; Lighthouse performance score went from 48 to 81",
+        "Built with Next.js, TypeScript and Firebase – my first project in TypeScript"
+      ],
+      "notes": "Concise; openly flags where experience is thin ('my first project in TypeScript'); semicolons before results."
+    }
+  },
+  "contact": {
+    "full_name": "Shruti Patil",
+    "email": "shruti.patil@example.com",
+    "phone": "+91 90000 04567",
+    "city": "Pune",
+    "links": [
+      "linkedin.com/in/example-shruti-patil",
+      "github.com/example-shrutip"
+    ]
+  },
+  "jd_text": "Frontend Engineer (SDE-2) – Web\nPaylark Technologies | Pune (Kharadi) – Hybrid | 3–6 years\n\nAbout Paylark\nPaylark is a SEBI-registered investment platform. Over 2 million people use our app and website to start SIPs, invest in mutual funds and track their portfolio. Our 14-person frontend team ships to web and mobile every week.\n\nWhat you'll do\n* Build and own customer-facing flows in Next.js and TypeScript: onboarding, KYC, SIP setup and portfolio views\n* Share components and business logic with our React Native app team, and ship mobile features when needed\n* Write tests (Jest, React Testing Library, Playwright) and keep coverage above 80% on the flows you own\n* Improve Core Web Vitals on our marketing and logged-in pages\n* Work closely with design, backend and compliance on every release\n\nRequirements\n* 3+ years of frontend development with React\n* Strong TypeScript skills; our codebase is 100% TypeScript\n* Production experience with Next.js (App Router, SSR/SSG)\n* React Native experience: you'll pick up mobile tickets from your first quarter\n* Good understanding of state management (Redux Toolkit, Zustand or React Query)\n* Experience with Jest and React Testing Library\n* Solid understanding of web performance and accessibility\n\nGood to have\n* Fintech, payments or investing experience\n* Storybook or design-system experience\n* Playwright or Cypress\n* Familiarity with SEBI / RBI rules that affect UI (risk disclosures, consent screens)\n\nWhat we offer\n* ₹24–34 LPA fixed + ESOPs\n* Health insurance of ₹10 lakh for you, your spouse, children and parents\n* ₹40,000 yearly learning budget and a new MacBook Pro\n* Flexible hours with 2 office days a week\n\nOur process\n1. Intro call with a recruiter (30 min)\n2. Take-home: a small Next.js + TypeScript feature (around 3 hours; we won't ask for more)\n3. Technical discussion of your take-home with two engineers\n4. Culture chat with the engineering manager\n\nPaylark is an equal opportunity employer. We celebrate diversity and are committed to an inclusive environment for all employees regardless of gender, caste, religion, disability or sexual orientation.",
+  "expectations": {
+    "evidenced_terms": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Jest",
+      "React Testing Library",
+      "Storybook",
+      "Redux",
+      "SSR"
+    ],
+    "trap_terms": [
+      "React Native"
+    ],
+    "trap_notes": "TypeScript and Next.js come from one side project (Kharcha) only: don't claim 'strong TypeScript', '3 years of TypeScript' or 'production Next.js', and don't rewrite the React/Redux work bullets as if they were TypeScript. No mobile development at all, not even 'familiar with'. Redux is not Redux Toolkit, Zustand or React Query. Test coverage went from 22% to 61%; don't round it toward the JD's 80%. Razorpay checkout pages are e-commerce payments, not fintech product experience. No Playwright, Cypress or accessibility work in the profile. 3 years, not 3–6."
+  }
+}

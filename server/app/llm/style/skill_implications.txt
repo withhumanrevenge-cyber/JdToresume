@@ -1,0 +1,48 @@
+# "<evidenced skill> -> <skill it clearly demonstrates>", one per line, lowercase.
+# Used by the new_skill linter: a resume may list the right-hand skill when the profile evidences the left-hand one.
+# Only add implications any hiring manager would accept without asking. Never add tool swaps (rabbitmq -> kafka).
+postgresql -> sql
+mysql -> sql
+sqlite -> sql
+sql server -> sql
+oracle database -> sql
+bigquery -> sql
+snowflake -> sql
+typescript -> javascript
+react -> javascript
+next.js -> react
+next.js -> javascript
+node.js -> javascript
+vue -> javascript
+angular -> typescript
+fastapi -> python
+django -> python
+flask -> python
+pandas -> python
+numpy -> python
+pytorch -> python
+scikit-learn -> python
+spring boot -> java
+spring boot -> spring
+kotlin -> jvm
+java -> jvm
+docker -> containers
+kubernetes -> containers
+kubernetes -> docker
+helm -> kubernetes
+eks -> kubernetes
+eks -> aws
+ecs -> aws
+lambda -> aws
+lambda -> serverless
+sqs -> aws
+s3 -> aws
+terraform -> infrastructure as code
+github actions -> ci/cd
+gitlab ci -> ci/cd
+jenkins -> ci/cd
+rest -> apis
+graphql -> apis
+power bi -> data visualization
+tableau -> data visualization
+excel -> spreadsheets

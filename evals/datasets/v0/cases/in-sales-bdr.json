@@ -1,0 +1,293 @@
+{
+  "id": "in-sales-bdr",
+  "description": "Inside-sales rep at an Indian B2B SaaS company (SMB outbound, HubSpot, Apollo, BANT) applying to an enterprise BDR role that requires Salesforce and ZoomInfo.",
+  "tags": [
+    "india",
+    "sales",
+    "bdr",
+    "tool-swap",
+    "scope-inflation"
+  ],
+  "profile": {
+    "schema_version": 1,
+    "headline": "Inside Sales | B2B SaaS | Outbound prospecting, HubSpot, 112% average quota attainment",
+    "summary_facts": [],
+    "experience": [
+      {
+        "id": "e-kitekart",
+        "company": "Kitekart Software Pvt. Ltd.",
+        "title": "Inside Sales Representative",
+        "location": "Gurugram",
+        "start": "2023-04",
+        "end": null,
+        "facts": [
+          {
+            "id": "f-kitekart-1",
+            "text": "Outbound to SMB retailers and distributors across North India – 60–80 cold calls and around 40 emails a day",
+            "metrics": [
+              "60–80 cold calls",
+              "around 40 emails a day"
+            ],
+            "skills": [
+              "cold calling",
+              "cold emailing",
+              "outbound prospecting"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-kitekart-2",
+            "text": "Averaged 112% of quarterly meeting quota over the last 6 quarters",
+            "metrics": [
+              "112%",
+              "6 quarters"
+            ],
+            "skills": [
+              "quota attainment"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-kitekart-3",
+            "text": "Booked 140+ qualified demos in FY 2025-26, which created ₹1.2 Cr of pipeline for the AEs",
+            "metrics": [
+              "140+",
+              "FY 2025-26",
+              "₹1.2 Cr"
+            ],
+            "skills": [
+              "pipeline generation",
+              "demo booking"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-kitekart-4",
+            "text": "Manage sequences, call logs and deal stages in HubSpot; built the team's 5-step reactivation sequence for expired trials",
+            "metrics": [
+              "5-step"
+            ],
+            "skills": [
+              "HubSpot",
+              "email sequences"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-kitekart-5",
+            "text": "Build lead lists with Apollo and LinkedIn Sales Navigator",
+            "metrics": [],
+            "skills": [
+              "Apollo",
+              "LinkedIn Sales Navigator"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-kitekart-6",
+            "text": "Run discovery calls in Hindi and English and qualify on BANT before handing over to the AE",
+            "metrics": [],
+            "skills": [
+              "discovery calls",
+              "BANT"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "e-zestline",
+        "company": "Zestline Technologies",
+        "title": "Customer Support Associate",
+        "location": "Noida",
+        "start": "2021-08",
+        "end": "2023-03",
+        "facts": [
+          {
+            "id": "f-zestline-1",
+            "text": "Handled 50+ chat and phone tickets a day for a payroll SaaS product on Freshdesk",
+            "metrics": [
+              "50+"
+            ],
+            "skills": [
+              "Freshdesk",
+              "customer support"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-zestline-2",
+            "text": "Passed upsell leads to the sales team – 22 of them converted to paid add-ons in 2022",
+            "metrics": [
+              "22",
+              "2022"
+            ],
+            "skills": [
+              "upselling"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-zestline-3",
+            "text": "Kept CSAT above 4.5/5 for 5 months in a row",
+            "metrics": [
+              "4.5/5",
+              "5 months"
+            ],
+            "skills": [
+              "customer satisfaction"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "projects": [],
+    "education": [
+      {
+        "id": "e-yims",
+        "institution": "Yamuna Institute of Management Studies, Delhi",
+        "degree": "BBA",
+        "field": "Marketing",
+        "start": "2018-07",
+        "end": "2021-06",
+        "grade": "CGPA 7.2/10",
+        "facts": []
+      }
+    ],
+    "certifications": [
+      {
+        "id": "c-hubspot",
+        "name": "HubSpot Sales Software Certification",
+        "issuer": "HubSpot Academy",
+        "date": "2024-02"
+      }
+    ],
+    "skills": [
+      {
+        "name": "HubSpot",
+        "evidence_fact_ids": [
+          "f-kitekart-4"
+        ]
+      },
+      {
+        "name": "Apollo",
+        "evidence_fact_ids": [
+          "f-kitekart-5"
+        ]
+      },
+      {
+        "name": "LinkedIn Sales Navigator",
+        "evidence_fact_ids": [
+          "f-kitekart-5"
+        ]
+      },
+      {
+        "name": "Cold calling",
+        "evidence_fact_ids": [
+          "f-kitekart-1"
+        ]
+      },
+      {
+        "name": "Email sequences",
+        "evidence_fact_ids": [
+          "f-kitekart-4"
+        ]
+      },
+      {
+        "name": "Discovery calls",
+        "evidence_fact_ids": [
+          "f-kitekart-6"
+        ]
+      },
+      {
+        "name": "BANT qualification",
+        "evidence_fact_ids": [
+          "f-kitekart-6"
+        ]
+      },
+      {
+        "name": "Pipeline generation",
+        "evidence_fact_ids": [
+          "f-kitekart-3"
+        ]
+      },
+      {
+        "name": "Freshdesk",
+        "evidence_fact_ids": [
+          "f-zestline-1"
+        ]
+      },
+      {
+        "name": "MS Excel",
+        "evidence_fact_ids": []
+      },
+      {
+        "name": "Negotiation",
+        "evidence_fact_ids": []
+      }
+    ],
+    "languages": [
+      "English",
+      "Hindi",
+      "Punjabi"
+    ],
+    "awards": [
+      {
+        "id": "f-award-1",
+        "text": "'Top SDR' award for Q2 FY 2025-26 out of a team of 9",
+        "metrics": [
+          "Q2 FY 2025-26",
+          "team of 9"
+        ],
+        "skills": [],
+        "source": "upload"
+      }
+    ],
+    "preferences": {
+      "target_roles": [
+        "Enterprise BDR",
+        "Business Development Representative",
+        "Sales Development Representative"
+      ],
+      "region": "IN",
+      "page_limit": 1,
+      "spelling": "en-IN"
+    },
+    "style": {
+      "avg_bullet_words": 17,
+      "number_style": "Indian number system with ₹ and Cr/lakh; financial year as 'FY 2025-26'; '+' for counts; en dash for ranges",
+      "voice_samples": [
+        "Outbound to SMB retailers and distributors across North India – 60–80 cold calls and around 40 emails a day",
+        "Booked 140+ qualified demos in FY 2025-26, which created ₹1.2 Cr of pipeline for the AEs"
+      ],
+      "notes": "Sales-floor shorthand (AE, SMB, BANT); short punchy lines; drops the subject in present-tense bullets."
+    }
+  },
+  "contact": {
+    "full_name": "Aditya Malhotra",
+    "email": "aditya.malhotra@example.com",
+    "phone": "+91 90000 03456",
+    "city": "Gurugram",
+    "links": [
+      "linkedin.com/in/example-aditya-malhotra"
+    ]
+  },
+  "jd_text": "Enterprise BDR – India & SEA\nOrbitly | Bengaluru (Indiranagar) | Hybrid, 3 days in office\n\nWho we are\nOrbitly is a no-code workflow automation platform used by 1,500+ companies in 30 countries to run approvals, onboarding and procurement. We raised our Series C last year and are now building an enterprise sales team for India and South-East Asia. You'll be one of the first four Enterprise BDRs, working directly with our Enterprise AEs and the Head of Sales, APAC.\n\nWhat you'll own\n- Outbound prospecting into enterprise accounts (₹500 Cr+ annual revenue) in BFSI, manufacturing and retail\n- Multi-threading into IT, finance and operations leaders at Director level and above\n- Booking qualified meetings for Enterprise AEs: the target is 12–15 SQLs a month\n- Running discovery calls using MEDDICC to qualify opportunities\n- Keeping every call, email and meeting logged in Salesforce\n- Working account plans with your AE for 40–50 named accounts\n- Sharing what you hear from the market with marketing and product\n\nMust-haves\n- 2+ years in B2B SaaS sales as an SDR, BDR or inside sales rep\n- Proven quota attainment (we'll ask to see the numbers)\n- Hands-on Salesforce experience: logging activity, managing opportunities, building simple reports\n- Experience using ZoomInfo for account and contact research\n- Comfortable with cold calling and LinkedIn Sales Navigator\n- Excellent spoken and written English; Hindi is a plus\n\nNice-to-haves\n- Experience selling to enterprise accounts or large Indian conglomerates\n- Outreach.io or Salesloft\n- Formal MEDDICC training\n- Prospecting into Singapore, Malaysia or Indonesia\n\nWhat we offer\n- OTE ₹14–18 LPA (60:40 fixed to variable), uncapped commission\n- Clear path to Enterprise AE in 18–24 months\n- Health insurance for you and your family (₹10 lakh cover)\n- Quarterly President's Club trips for top performers\n- Your own learning budget and paid sales certifications\n\nHiring process\nRecruiter call → Role-play cold call with a BDR manager → Meeting with an Enterprise AE → Final round with the Head of Sales, APAC\n\nOrbitly is an equal opportunity employer. We welcome applicants of every gender, caste, religion, region, disability status and sexual orientation, and we make hiring decisions based on skill and potential.",
+  "expectations": {
+    "evidenced_terms": [
+      "B2B SaaS",
+      "quota attainment",
+      "cold calling",
+      "LinkedIn Sales Navigator",
+      "discovery calls",
+      "Outbound prospecting",
+      "Hindi"
+    ],
+    "trap_terms": [
+      "Salesforce",
+      "ZoomInfo"
+    ],
+    "trap_notes": "HubSpot is not the JD's CRM: don't write 'Salesforce/HubSpot' or 'CRM (Salesforce)'. Apollo is not ZoomInfo. All selling so far is to SMB retailers and distributors; don't imply enterprise accounts, ₹500 Cr+ companies or Director-level multi-threading. He qualifies on BANT, not MEDDICC. ₹1.2 Cr is pipeline created for AEs, not revenue closed, and 112% is meeting quota, not revenue quota. Title is Inside Sales Representative; the 'Top SDR' award name doesn't make the title SDR or BDR."
+  }
+}

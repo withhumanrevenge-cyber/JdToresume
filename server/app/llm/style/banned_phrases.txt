@@ -1,0 +1,59 @@
+# One phrase per line, matched case-insensitively on word boundaries. Mirrors .claude/skills/resume-tailoring §6.
+# Lines starting with "~" are "soft" (letters may use one); all others fail the resume linter.
+spearheaded
+spearheading
+leveraged
+leveraging
+utilized
+utilizing
+results-driven
+detail-oriented
+team player
+self-starter
+go-getter
+hard-working
+hardworking
+passionate about
+synergy
+synergies
+proven track record
+think outside the box
+best-in-class
+cutting-edge
+world-class
+seamless
+seamlessly
+delve
+delved
+tapestry
+testament to
+pivotal
+meticulous
+meticulously
+honed
+adept at
+orchestrated
+navigate the complexities
+embark
+embarked
+unlock
+unlocked
+empower
+empowered
+elevate
+elevated
+foster
+fostered
+harness
+harnessed
+in today's fast-paced
+fast-paced environment
+ever-evolving landscape
+plays a crucial role
+I am writing to express my interest
+I believe I would be a great fit
+thrilled
+perfect fit
+~furthermore
+~moreover
+~additionally

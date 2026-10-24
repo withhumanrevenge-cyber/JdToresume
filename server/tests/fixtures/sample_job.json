@@ -1,0 +1,75 @@
+{
+  "title": "Senior Backend Engineer, Payments",
+  "company": "Example Pay",
+  "location": "Austin, TX",
+  "remote_policy": "hybrid",
+  "seniority": "senior",
+  "employment_type": "full_time",
+  "visa_sponsorship": "unknown",
+  "salary": null,
+  "requirements": [
+    {
+      "id": "r1",
+      "text": "5+ years building backend services in Go",
+      "kind": "skill",
+      "tier": "basic",
+      "evidence_terms": ["Go", "Golang"]
+    },
+    {
+      "id": "r2",
+      "text": "Production experience with Kafka",
+      "kind": "tool",
+      "tier": "basic",
+      "evidence_terms": ["Kafka"]
+    },
+    {
+      "id": "r3",
+      "text": "Strong PostgreSQL skills",
+      "kind": "tool",
+      "tier": "basic",
+      "evidence_terms": ["PostgreSQL", "Postgres"]
+    },
+    {
+      "id": "r4",
+      "text": "Experience running services on Kubernetes in AWS",
+      "kind": "tool",
+      "tier": "basic",
+      "evidence_terms": ["Kubernetes", "K8s"]
+    },
+    {
+      "id": "r5",
+      "text": "Experience with Java and Spring Boot",
+      "kind": "skill",
+      "tier": "basic",
+      "evidence_terms": ["Java", "Spring Boot"]
+    },
+    {
+      "id": "r6",
+      "text": "Familiarity with gRPC",
+      "kind": "tool",
+      "tier": "preferred",
+      "evidence_terms": ["gRPC"]
+    }
+  ],
+  "responsibilities": [
+    "Design and run the services that move money between merchants and banks",
+    "Own reliability of the settlement pipeline"
+  ],
+  "keywords": [
+    {"term": "Go", "synonyms": ["Golang"], "weight": 3},
+    {"term": "Kafka", "synonyms": [], "weight": 3},
+    {"term": "PostgreSQL", "synonyms": ["Postgres"], "weight": 2},
+    {"term": "Kubernetes", "synonyms": ["K8s"], "weight": 2},
+    {"term": "AWS", "synonyms": ["Amazon Web Services"], "weight": 2},
+    {"term": "Java", "synonyms": [], "weight": 2},
+    {"term": "gRPC", "synonyms": [], "weight": 1},
+    {"term": "Terraform", "synonyms": [], "weight": 1},
+    {"term": "payments", "synonyms": ["payment processing"], "weight": 2},
+    {"term": "REST APIs", "synonyms": ["RESTful APIs", "REST API"], "weight": 1},
+    {"term": "microservices", "synonyms": ["microservice architecture"], "weight": 1}
+  ],
+  "company_signals": ["Moving settlement from nightly batches to real-time streaming"],
+  "application_questions": [],
+  "language": "en",
+  "unreadable_fields": []
+}

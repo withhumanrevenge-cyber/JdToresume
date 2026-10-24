@@ -1,0 +1,308 @@
+{
+  "id": "us-nurse-icu",
+  "description": "BSN RN with 3 years on a med-surg/telemetry unit (BLS, ACLS, relief charge, step-down floating) applying to a night-shift MICU role that requires CCRN.",
+  "tags": [
+    "us",
+    "healthcare",
+    "nursing",
+    "cert-gap",
+    "non-tech"
+  ],
+  "profile": {
+    "schema_version": 1,
+    "headline": "Registered Nurse, BSN | 3 years Med-Surg/Telemetry | BLS, ACLS, NIHSS",
+    "summary_facts": [],
+    "experience": [
+      {
+        "id": "e-cedar-rn",
+        "company": "Cedar Valley Regional Medical Center",
+        "title": "Registered Nurse – Medical-Surgical/Telemetry",
+        "location": "Dayton, OH",
+        "start": "2023-08",
+        "end": null,
+        "facts": [
+          {
+            "id": "f-cedar-1",
+            "text": "Care for 5–6 adult patients per shift on a 32-bed med-surg/telemetry unit",
+            "metrics": [
+              "5–6 adult patients",
+              "32-bed"
+            ],
+            "skills": [
+              "medical-surgical nursing",
+              "telemetry"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-cedar-2",
+            "text": "Monitor cardiac rhythms and escalate changes to the provider; called 9 rapid responses in 2025, all patients stabilized or transferred safely",
+            "metrics": [
+              "9 rapid responses",
+              "2025"
+            ],
+            "skills": [
+              "telemetry monitoring",
+              "rapid responses"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-cedar-3",
+            "text": "Float to the cardiac step-down unit about twice a month, taking 3–4 patients",
+            "metrics": [
+              "about twice a month",
+              "3–4 patients"
+            ],
+            "skills": [
+              "step-down"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-cedar-4",
+            "text": "Relief charge nurse on nights when the regular charge nurse is off (roughly 1–2 shifts a month)",
+            "metrics": [
+              "roughly 1–2 shifts a month"
+            ],
+            "skills": [
+              "charge nurse duties"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-cedar-5",
+            "text": "Epic super-user for the unit; trained 14 nurses on the new barcode medication administration workflow",
+            "metrics": [
+              "14 nurses"
+            ],
+            "skills": [
+              "Epic",
+              "barcode medication administration"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-cedar-6",
+            "text": "Precepted 3 new graduate nurses through their 12-week orientation",
+            "metrics": [
+              "3 new graduate nurses",
+              "12-week"
+            ],
+            "skills": [
+              "precepting"
+            ],
+            "source": "upload"
+          }
+        ]
+      },
+      {
+        "id": "e-cedar-pct",
+        "company": "Cedar Valley Regional Medical Center",
+        "title": "Patient Care Technician",
+        "location": "Dayton, OH",
+        "start": "2021-06",
+        "end": "2023-07",
+        "facts": [
+          {
+            "id": "f-pct-1",
+            "text": "Took vitals, blood glucose checks and 12-lead EKGs and helped with ADLs for up to 12 patients on a med-surg floor",
+            "metrics": [
+              "12-lead",
+              "up to 12 patients"
+            ],
+            "skills": [
+              "EKG",
+              "vital signs"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-pct-2",
+            "text": "Answered call lights, helped with turns and early mobility, and reported changes in condition to the RN",
+            "metrics": [],
+            "skills": [
+              "patient mobility"
+            ],
+            "source": "upload"
+          },
+          {
+            "id": "f-pct-3",
+            "text": "Worked part-time (24 hrs/week) while finishing my BSN",
+            "metrics": [
+              "24 hrs/week"
+            ],
+            "skills": [],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "projects": [],
+    "education": [
+      {
+        "id": "e-bsn",
+        "institution": "Stillwater University College of Nursing",
+        "degree": "Bachelor of Science in Nursing (BSN)",
+        "field": "Nursing",
+        "start": "2019-08",
+        "end": "2023-05",
+        "grade": "GPA 3.6/4.0",
+        "facts": [
+          {
+            "id": "f-bsn-1",
+            "text": "Senior practicum: 120 hours on a cardiac step-down unit",
+            "metrics": [
+              "120 hours"
+            ],
+            "skills": [
+              "step-down"
+            ],
+            "source": "upload"
+          }
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "id": "c-rn",
+        "name": "Registered Nurse (RN) License – Ohio",
+        "issuer": "Ohio Board of Nursing",
+        "date": "2023-07"
+      },
+      {
+        "id": "c-bls",
+        "name": "Basic Life Support (BLS)",
+        "issuer": "American Heart Association",
+        "date": "2025-03"
+      },
+      {
+        "id": "c-acls",
+        "name": "Advanced Cardiovascular Life Support (ACLS)",
+        "issuer": "American Heart Association",
+        "date": "2025-03"
+      },
+      {
+        "id": "c-nihss",
+        "name": "NIH Stroke Scale (NIHSS)",
+        "issuer": null,
+        "date": "2024-09"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Telemetry monitoring",
+        "evidence_fact_ids": [
+          "f-cedar-1",
+          "f-cedar-2"
+        ]
+      },
+      {
+        "name": "Rapid response",
+        "evidence_fact_ids": [
+          "f-cedar-2"
+        ]
+      },
+      {
+        "name": "Epic",
+        "evidence_fact_ids": [
+          "f-cedar-5"
+        ]
+      },
+      {
+        "name": "Barcode medication administration",
+        "evidence_fact_ids": [
+          "f-cedar-5"
+        ]
+      },
+      {
+        "name": "Precepting",
+        "evidence_fact_ids": [
+          "f-cedar-6"
+        ]
+      },
+      {
+        "name": "Charge nurse duties",
+        "evidence_fact_ids": [
+          "f-cedar-4"
+        ]
+      },
+      {
+        "name": "12-lead EKG",
+        "evidence_fact_ids": [
+          "f-pct-1"
+        ]
+      },
+      {
+        "name": "IV therapy",
+        "evidence_fact_ids": []
+      },
+      {
+        "name": "Wound care",
+        "evidence_fact_ids": []
+      },
+      {
+        "name": "Patient and family education",
+        "evidence_fact_ids": []
+      }
+    ],
+    "languages": [
+      "English"
+    ],
+    "awards": [
+      {
+        "id": "f-award-1",
+        "text": "Unit Nurse of the Quarter, Q2 2025 (peer-nominated)",
+        "metrics": [
+          "Q2 2025"
+        ],
+        "skills": [],
+        "source": "upload"
+      }
+    ],
+    "preferences": {
+      "target_roles": [
+        "ICU Registered Nurse",
+        "Critical Care RN"
+      ],
+      "region": "US",
+      "page_limit": 1,
+      "spelling": "en-US"
+    },
+    "style": {
+      "avg_bullet_words": 15,
+      "number_style": "Digits with en-dash ranges (5–6, 3–4); 'about'/'roughly' for estimates",
+      "voice_samples": [
+        "Care for 5–6 adult patients per shift on a 32-bed med-surg/telemetry unit",
+        "Relief charge nurse on nights when the regular charge nurse is off (roughly 1–2 shifts a month)"
+      ],
+      "notes": "Clinical shorthand (ADLs, EKGs, med-surg); present tense for the current job; short, factual lines."
+    }
+  },
+  "contact": {
+    "full_name": "Alyssa Brennan",
+    "email": "alyssa.brennan@example.com",
+    "phone": "+1 555-0188",
+    "city": "Dayton, OH",
+    "links": [
+      "linkedin.com/in/example-alyssa-brennan"
+    ]
+  },
+  "jd_text": "Registered Nurse – Medical Intensive Care Unit (MICU), Nights\nLakemont General Hospital | Columbus, OH\nFull-time, 36 hours/week (3 x 12-hour night shifts, 7p–7a) | Every third weekend\nSign-on bonus: up to $10,000 for experienced RNs\n\nPosition Summary\nLakemont General is a 410-bed Level II trauma center. Our 24-bed Medical ICU cares for critically ill adults with sepsis, respiratory failure, GI bleeds, DKA and multi-organ failure. Staffing is 1:2, or 1:1 for unstable patients and patients on CRRT. You'll have a 12-week orientation with a dedicated ICU preceptor, plus our critical care course.\n\nKey Responsibilities\n- Assess, plan, deliver and evaluate care for 1–2 critically ill patients per shift\n- Titrate vasoactive, sedation and insulin drips per protocol\n- Care for patients on mechanical ventilation in partnership with respiratory therapy\n- Monitor arterial lines, central lines and hemodynamic values\n- Respond to codes and rapid responses across the hospital as part of the ICU team\n- Educate patients and families, and support families through end-of-life decisions\n- Document assessments and interventions in Epic\n- Take charge nurse shifts once you're eligible under our clinical ladder\n\nQualifications\nRequired:\n- Current Ohio RN license or multistate compact license\n- BSN from an accredited nursing program\n- 2+ years of acute care RN experience (ICU, step-down or ED strongly preferred)\n- BLS and ACLS from the American Heart Association, current at hire\n- CCRN certification (AACN), current at hire\n\nPreferred:\n- 1+ year of ICU experience\n- Experience with CRRT, arterial lines and vasoactive titration\n- NIHSS certification\n- Experience precepting new graduate nurses\n- Super-user experience with Epic\n\nWhat We Offer\n- Night differential of $5/hour and weekend differential of $3/hour\n- Tuition reimbursement up to $5,250 a year, plus CCRN exam and renewal reimbursement\n- Medical, dental and vision coverage starting day one\n- 403(b) with up to 5% employer match\n- Clinical ladder with pay increases at each level\n- Free parking and on-site childcare (waitlist)\n\nLakemont General Hospital is an Equal Opportunity Employer. We do not discriminate on the basis of race, color, religion, sex, national origin, age, disability, veteran status, sexual orientation, gender identity or any other status protected by law. Lakemont General is a drug-free and tobacco-free workplace; offers are contingent on a background check and drug screen.",
+  "expectations": {
+    "evidenced_terms": [
+      "BLS",
+      "ACLS",
+      "BSN",
+      "Epic",
+      "rapid responses",
+      "NIHSS",
+      "precepting",
+      "step-down"
+    ],
+    "trap_terms": [
+      "CCRN"
+    ],
+    "trap_notes": "Floating to step-down about twice a month and a step-down practicum are not ICU experience: don't write 'ICU experience', 'critical care experience' or 'MICU'. Relief charge 1–2 shifts a month must not become 'Charge Nurse'. Nothing in the profile shows vasoactive drip titration, mechanical ventilation, arterial lines or CRRT. Don't round 3 years up. The certification gap can appear only as a plan the user confirms (e.g. a planned exam date), never as held."
+  }
+}
