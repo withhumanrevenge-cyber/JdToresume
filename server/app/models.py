@@ -9,10 +9,11 @@ from app.features.billing.models import EntitlementRow, UsageRow
 from app.features.generation.models import ArtifactRow, GenerationRunRow
 from app.features.jobs.models import JobRow
 from app.features.profiles.models import CareerProfileRow, ContactDetailsRow
+from app.features.scans.models import ScanRow
 from app.features.users.models import UserRow
 from app.llm.ledger import LlmCallRow
 
 __all__ = [
     "ApplicationRow", "ArtifactRow", "CareerProfileRow", "ContactDetailsRow", "EntitlementRow", "GenerationRunRow",
-    "JobRow", "LlmCallRow", "UsageRow", "UserRow",
+    "JobRow", "LlmCallRow", "ScanRow", "UsageRow", "UserRow",
 ]

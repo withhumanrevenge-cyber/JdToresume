@@ -18,6 +18,7 @@ import { CoverLetterPanel } from "@/features/pack/components/cover-letter-panel"
 import { MatchReport } from "@/features/pack/components/match-report"
 import { OutreachPanel } from "@/features/pack/components/outreach-panel"
 import { ResumePanel } from "@/features/pack/components/resume-panel"
+import { ScanCard } from "@/features/scans/components/scan-card"
 import type { Schemas } from "@/lib/api/client"
 import { formatDate } from "@/lib/format"
 
@@ -78,6 +79,7 @@ export function ApplicationScreen({ id }: { id: string }) {
       />
 
       <div className="flex flex-col gap-8">
+        {!hasPieces && !generation.active && <ScanCard jobId={detail.job.id} job={job.data?.spec} />}
         <GeneratePanel applicationId={id} hasPack={hasPieces} />
 
         {(hasPieces || generation.active) && (

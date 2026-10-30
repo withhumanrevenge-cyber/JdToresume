@@ -5,7 +5,7 @@ For how the pieces fit together, see [ARCHITECTURE.md](ARCHITECTURE.md). For wha
 [WORK_LEFT.md](WORK_LEFT.md).
 
 **Snapshot:**
-- **Backend:** 20 API operations, 10 tables, 4 migrations; 241 automated tests (236 backend, 5 eval harness).
+- **Backend:** 22 API operations, 11 tables, 5 migrations; 248 automated tests (243 backend, 5 eval harness).
 - **Web app:** 7 routes; unit tests, typecheck, lint and production build.
 - **CI/CD:** four required CI checks on `main`, an eval workflow, and image publishing to GitHub Container Registry.
 
@@ -128,6 +128,28 @@ For how the pieces fit together, see [ARCHITECTURE.md](ARCHITECTURE.md). For wha
   - Deleting an application never refunds packs.
   - The export excludes our internal cost figures, and a test fails if a new table isn't classified for the export.
 - **Tests:** `test_account.py`
+
+## Free match scan (backlog item 5)
+
+- **What:** `POST /v1/scans` with a job id compares the user's current profile with the job, without generating
+  anything or spending a pack. `GET /v1/scans?job_id=` returns the latest scan. In the web app, an application with
+  no pack yet shows a "Check your fit first" card with the result.
+- **How:** the pipeline's own `match_plan` step on the Quick model (gpt-oss-20b), with the same profile redaction and
+  PII guard. Keyword and must-have coverage are measured in the profile's text (titles, companies, facts, skills,
+  education) with the same matcher as the ATS check.
+- **Files:** `server/app/features/scans/*`, migration `8b41c6e2d7f9`, `apps/web/src/features/scans/*`;
+  `keyword_coverage` and `must_have_coverage` in `rendering/ats_roundtrip.py` are now public.
+- **Decisions:**
+  - A repeat scan of the same job with the same profile version returns the saved result: no AI call, no count.
+  - Fair use: 20 scans that call the AI per UTC day (`SCANS_PER_DAY` in `billing/plans.py`), then `429 scan_limit` with `Retry-After`.
+  - A scan from an older profile version is marked `stale`.
+  - Scans are personal data: they're in the account export and deleted with the account.
+  - The AI's cost is recorded in `llm_calls` with purpose `scan`.
+- **Verified live** against Groq: a pasted job scanned in a few seconds; the result showed the gap honestly ("dbt or
+  Airflow") and the missing keywords. That run caught a bug (company names weren't counted, so "logistics" in
+  "Brightline Logistics" was reported missing), fixed with a test.
+- **Tests:** `test_scans.py`
+- **Not yet:** the ATS parse check of the uploaded resume file (WORK_LEFT item 5).
 
 ## Web app
 

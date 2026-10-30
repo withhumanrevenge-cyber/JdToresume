@@ -17,7 +17,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.features.data_export.repository import ExportRepository
 from app.features.data_export.schemas import (
     AccountExport, ExportedAccount, ExportedAiCall, ExportedApplication, ExportedJob, ExportedPlan,
-    ExportedProfileVersion, ExportedRun, ExportedUsage,
+    ExportedProfileVersion, ExportedRun, ExportedScan, ExportedUsage,
 )
 from app.features.users.models import UserRow
 
@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 
 EXPORTED_TABLES = frozenset({
     "users", "contact_details", "career_profiles", "jobs", "applications", "generation_runs", "artifacts",
-    "entitlements", "usage_ledger", "llm_calls",
+    "entitlements", "usage_ledger", "llm_calls", "scans",
 })
 NOT_PERSONAL_TABLES: frozenset[str] = frozenset()  # tables that hold nothing about a person (none yet)
 
@@ -67,6 +67,8 @@ class ExportService:
                               deep_credits=entitlement.deep_credits) if entitlement else None,
             usage=[ExportedUsage(created_at=u.created_at, mode=u.mode, paid_with=u.paid_with, run_id=u.run_id,
                                  refunded_at=u.refunded_at) for u in await data.usage()],
+            scans=[ExportedScan(created_at=s.created_at, job_id=s.job_id, profile_version=s.profile_version,
+                                result=s.result) for s in await data.scans()],
             ai_calls=[ExportedAiCall(created_at=c.created_at, purpose=c.purpose, step=c.step, model=c.model)
                       for c in await data.ai_calls()],
         )

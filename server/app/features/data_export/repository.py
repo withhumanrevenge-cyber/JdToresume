@@ -13,6 +13,7 @@ from app.features.billing.models import EntitlementRow, UsageRow
 from app.features.generation.models import ArtifactRow, GenerationRunRow
 from app.features.jobs.models import JobRow
 from app.features.profiles.models import CareerProfileRow, ContactDetailsRow
+from app.features.scans.models import ScanRow
 from app.llm.ledger import LlmCallRow
 
 
@@ -70,4 +71,9 @@ class ExportRepository:
     async def ai_calls(self) -> list[LlmCallRow]:
         return list(await self._session.scalars(
             select(LlmCallRow).where(LlmCallRow.user_id == self._user_id).order_by(LlmCallRow.created_at)
+        ))
+
+    async def scans(self) -> list[ScanRow]:
+        return list(await self._session.scalars(
+            select(ScanRow).where(ScanRow.user_id == self._user_id).order_by(ScanRow.created_at)
         ))

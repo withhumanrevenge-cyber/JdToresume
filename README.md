@@ -11,9 +11,9 @@ Everything it writes comes from your own experience. Every resume bullet cites t
 on, an AI fact-checker reviews the draft, and gaps are surfaced as questions, never filled in. Your name, email and
 phone never reach the AI: it writes placeholders that are filled in when the document is made.
 
-> **Status:** the backend (8 parts) and the web app are built and tested: 236 backend tests plus 5 eval-harness tests, and
+> **Status:** the backend (8 parts) and the web app are built and tested: 243 backend tests plus 5 eval-harness tests, and
 > web unit tests, typecheck and build, all in CI. It runs end to end locally against the real AI (Groq). It is not deployed yet,
-> and real sign-in, payments and the free match scan are still to come. See
+> and real sign-in, payments and pack editing are still to come. See
 > [what's done](docs/engineering/WORK_DONE.md) and [what's left](docs/engineering/WORK_LEFT.md).
 
 ## How it works
@@ -161,13 +161,14 @@ corepack pnpm --filter web typecheck
 │   │   │   ├── profiles/          ✓ resume upload → parsed, versioned profile; contact details
 │   │   │   ├── jobs/              ✓ jobs from text or links, shared cache, no-scraping rule
 │   │   │   ├── applications/      ✓ start, list, read applications with their latest pack
+│   │   │   ├── scans/             ✓ free match scan: profile vs. job, no pack spent
 │   │   │   ├── generation/        ✓ the pipeline and the streaming generate endpoint
 │   │   │   ├── rendering/         ✓ PDF (Typst) and DOCX, ATS round-trip check, downloads
 │   │   │   ├── billing/           ✓ plans, entitlements, usage metering (payments not yet)
 │   │   │   └── data_export/       ✓ GET /v1/me/export
 │   │   ├── api/                   ✓ route collection, health, dev-only sign-in
 │   │   └── cli/                   ✓ dev tokens, plan grants, OpenAPI export, Phase 0 concierge tool
-│   ├── migrations/                ✓ Alembic (4 migrations, 10 tables)
+│   ├── migrations/                ✓ Alembic (5 migrations, 11 tables)
 │   ├── tests/                     ✓ pytest against real Postgres, with a fake Groq
 │   └── Dockerfile                 ✓ the API image (published to GHCR by CD)
 ├── templates/                     ✓ Typst templates: resume (classic, modern), cover letter

@@ -432,6 +432,100 @@
         }
       }
     },
+    "/v1/scans": {
+      "post": {
+        "tags": [
+          "scans"
+        ],
+        "summary": "Scan a job against my profile (free; 201 when new, 200 when the saved scan still applies)",
+        "operationId": "scan_job_v1_scans_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScanIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScanOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "scans"
+        ],
+        "summary": "My latest scan of a job",
+        "operationId": "latest_scan_v1_scans_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "description": "The job that was scanned",
+              "title": "Job Id"
+            },
+            "description": "The job that was scanned"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScanOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/applications": {
       "post": {
         "tags": [
@@ -935,6 +1029,13 @@
             "type": "array",
             "title": "Usage"
           },
+          "scans": {
+            "items": {
+              "$ref": "#/components/schemas/ExportedScan"
+            },
+            "type": "array",
+            "title": "Scans"
+          },
           "ai_calls": {
             "items": {
               "$ref": "#/components/schemas/ExportedAiCall"
@@ -953,6 +1054,7 @@
           "applications",
           "plan",
           "usage",
+          "scans",
           "ai_calls"
         ],
         "title": "AccountExport"
@@ -2106,6 +2208,38 @@
           "pieces"
         ],
         "title": "ExportedRun"
+      },
+      "ExportedScan": {
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "job_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Job Id"
+          },
+          "profile_version": {
+            "type": "integer",
+            "title": "Profile Version"
+          },
+          "result": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Result",
+            "description": "What the scan found (match report and keyword coverage)"
+          }
+        },
+        "type": "object",
+        "required": [
+          "created_at",
+          "job_id",
+          "profile_version",
+          "result"
+        ],
+        "title": "ExportedScan"
       },
       "ExportedUsage": {
         "properties": {
@@ -3476,6 +3610,111 @@
           "period"
         ],
         "title": "SalaryRange"
+      },
+      "ScanIn": {
+        "properties": {
+          "job_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Job Id",
+            "description": "A job from POST /v1/jobs"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "job_id"
+        ],
+        "title": "ScanIn"
+      },
+      "ScanOut": {
+        "properties": {
+          "match_report": {
+            "$ref": "#/components/schemas/MatchReport"
+          },
+          "keyword_coverage": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Keyword Coverage",
+            "description": "Share of the job's keywords already in the profile; null if the job lists none"
+          },
+          "keywords_found": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Keywords Found"
+          },
+          "keywords_missing": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Keywords Missing"
+          },
+          "must_have_coverage": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Must Have Coverage",
+            "description": "Share of must-have requirements whose evidence terms appear in the profile; null if none can be checked"
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "job_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Job Id"
+          },
+          "profile_version": {
+            "type": "integer",
+            "title": "Profile Version"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "stale": {
+            "type": "boolean",
+            "title": "Stale",
+            "description": "True when the profile has a newer version than the one scanned: scan again"
+          },
+          "scans_left_today": {
+            "type": "integer",
+            "title": "Scans Left Today",
+            "description": "Free scans left before the daily fair-use limit (resets 00:00 UTC)"
+          }
+        },
+        "type": "object",
+        "required": [
+          "match_report",
+          "keyword_coverage",
+          "keywords_found",
+          "keywords_missing",
+          "must_have_coverage",
+          "id",
+          "job_id",
+          "profile_version",
+          "created_at",
+          "stale",
+          "scans_left_today"
+        ],
+        "title": "ScanOut"
       },
       "Skill": {
         "properties": {

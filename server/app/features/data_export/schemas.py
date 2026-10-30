@@ -70,6 +70,13 @@ class ExportedUsage(BaseModel):
     refunded_at: datetime | None
 
 
+class ExportedScan(BaseModel):
+    created_at: datetime
+    job_id: uuid.UUID
+    profile_version: int
+    result: dict[str, Any] = Field(description="What the scan found (match report and keyword coverage)")
+
+
 class ExportedAiCall(BaseModel):
     created_at: datetime
     purpose: str
@@ -87,4 +94,5 @@ class AccountExport(BaseModel):
     applications: list[ExportedApplication]
     plan: ExportedPlan | None
     usage: list[ExportedUsage]
+    scans: list[ExportedScan]
     ai_calls: list[ExportedAiCall]

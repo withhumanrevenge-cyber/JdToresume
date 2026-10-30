@@ -78,6 +78,7 @@ everything, and a test fails when a new table is added without deciding whether 
 | applications | `POST /v1/applications`, `GET /v1/applications` (keyset pages), `GET /v1/applications/{id}` (with the latest pack, typed) | `applications` |
 | generation | `POST /v1/applications/{id}/generate` (SSE stream) | `generation_runs`, `artifacts` |
 | rendering | `GET /v1/applications/{id}/files/{resume\|cover-letter}.{pdf\|docx}`, `GET /v1/applications/{id}/ats-check` | none (rendered on request) |
+| scans | `POST /v1/scans` (free match scan, Quick model, no pack spent; 20 a day), `GET /v1/scans?job_id=` | `scans` |
 | billing | `GET /v1/me/plan` | `entitlements`, `usage_ledger` |
 | data_export | `GET /v1/me/export` | reads all |
 | api (dev) | `POST /v1/dev/sign-in` (only with `AUTH_MODE=dev`) | none |
@@ -205,7 +206,9 @@ erDiagram
     users ||--o| entitlements : has
     users ||--o{ usage_ledger : spends
     users ||--o{ llm_calls : "costs (SET NULL)"
+    users ||--o{ scans : runs
     jobs ||--o{ applications : "applied to"
+    jobs ||--o{ scans : "scanned in"
     applications ||--o{ generation_runs : has
     generation_runs ||--o{ artifacts : produces
     generation_runs ||--o{ usage_ledger : "paid by (SET NULL)"
@@ -270,6 +273,13 @@ erDiagram
         string mode
         string paid_with
         timestamptz refunded_at
+    }
+    scans {
+        uuid id PK
+        uuid user_id FK
+        uuid job_id FK
+        int profile_version
+        jsonb result "ScanResult"
     }
     llm_calls {
         uuid id PK

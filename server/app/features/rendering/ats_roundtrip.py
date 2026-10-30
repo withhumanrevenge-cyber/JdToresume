@@ -273,14 +273,15 @@ def _glyph_issues(text: str, extractor: str) -> list[str]:
     return issues
 
 
-def _keyword_coverage(text: str, job: JobSpec) -> tuple[float | None, list[str]]:
+def keyword_coverage(text: str, job: JobSpec) -> tuple[float | None, list[str]]:
+    """(share of the job's keywords found in `text`, the ones missing). Also used by the match scan on profiles."""
     if not job.keywords:
         return None, []
     missing = [k.term for k in job.keywords if not any(term_present(t, text) for t in (k.term, *k.synonyms))]
     return (len(job.keywords) - len(missing)) / len(job.keywords), missing
 
 
-def _must_have_coverage(text: str, job: JobSpec) -> float | None:
+def must_have_coverage(text: str, job: JobSpec) -> float | None:
     """Over basic requirements that list evidence terms; one without terms cannot be checked from text."""
     checkable = [r for r in job.requirements if r.tier == "basic" and r.evidence_terms]
     if not checkable:
@@ -320,11 +321,11 @@ def check_text(
     if extracted.min_font_size is not None and extracted.min_font_size < MIN_FONT_SIZE_PT - _FONT_SIZE_TOLERANCE:
         issues.append(f"text smaller than {MIN_FONT_SIZE_PT:g} pt ({extracted.min_font_size:.1f} pt)")
 
-    keyword_coverage, keywords_missing, must_have = None, [], None
+    coverage, keywords_missing, must_have = None, [], None
     if job is not None:
         flat = text.replace("\n", " ")
-        keyword_coverage, keywords_missing = _keyword_coverage(flat, job)
-        must_have = _must_have_coverage(flat, job)
+        coverage, keywords_missing = keyword_coverage(flat, job)
+        must_have = must_have_coverage(flat, job)
 
     return AtsCheck(
         parse_ok=not issues,
@@ -333,7 +334,7 @@ def check_text(
         sections_found=section_names,
         contact_found=not contact_issues,
         date_issues=date_issues,
-        keyword_coverage=keyword_coverage,
+        keyword_coverage=coverage,
         keywords_missing=keywords_missing,
         must_have_coverage=must_have,
         issues=issues,

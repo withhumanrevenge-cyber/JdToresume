@@ -97,22 +97,11 @@ docs/ARCHITECTURE.md §13–14.
 
 **Start here:** `server/app/features/billing/service.py`, `apps/web/src/features/account/`.
 
-### 5. Free match scan · M
-**Why:** the free hook in the funnel (PRD §4 and §7): check your current resume against a job without generating
-anything.
-
-**Scope:**
-- `POST /v1/scan` with a job id: run `match_plan` on the user's base profile.
-- Return the requirement checklist (shown, partly, gap) and keyword coverage.
-- Fair use: 20 a day per user, enforced with a counter like the usage ledger or Valkey.
-- A screen in the web app (from the job page, before Generate).
-- The PRD also asks for an ATS parse check of the *current* resume file. Uploads aren't stored today, so either keep
-  the original upload (item 10, with the retention setting) or run the check at upload time and store the result.
-
-**Acceptance:** a scan result in ≤ 8 s; the 21st scan in a day is refused with a clear message; no pack is spent.
-
-**Start here:** `server/app/features/generation/pipeline.py` (`match_plan` step), `server/app/llm/schemas.py`
-(`MatchReport`), `apps/web/src/features/pack/components/match-report.tsx` (reuse the view).
+### 5. Free match scan · done, one follow-up
+Built: `POST /v1/scans` and `GET /v1/scans`, plus the "Check your fit" card in the web app (see WORK_DONE.md).
+**Still open:** the PRD's ATS parse check of the user's *current* resume file. Uploads aren't stored, so this waits
+for item 10 (keep the original upload, with the retention setting), or the check runs at upload time and its result
+is stored with the profile version.
 
 ### 6. Review and edit the pack · L
 **Why:** the PRD's diff review: per bullet, the original fact against the tailored line, why it changed, and

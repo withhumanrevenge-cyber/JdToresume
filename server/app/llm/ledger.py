@@ -21,7 +21,7 @@ from app.llm.client import LLMCall
 
 logger = logging.getLogger(__name__)
 
-Purpose = Literal["resume_parse", "job_extract", "generation"]
+Purpose = Literal["resume_parse", "job_extract", "generation", "scan"]
 
 
 class LlmCallRow(Base):

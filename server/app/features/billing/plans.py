@@ -39,6 +39,7 @@ PLANS: dict[str, Plan] = {plan.id: plan for plan in (FREE, SPRINT, PRO_MONTHLY, 
 
 SIGNUP_DEEP_CREDITS = 1  # "1 Deep pack at signup": the first pack shows the best we can do
 CREDIT_PACK_DEEP_CREDITS = 10  # India credit pack: ₹99 for 10 Deep packs
+SCANS_PER_DAY = 20  # free match scans per UTC day, on every plan ("unlimited, fair use 20/day")
 
 
 def window_start(window: Window, now: datetime) -> datetime:

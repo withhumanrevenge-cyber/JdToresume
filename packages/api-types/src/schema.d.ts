@@ -177,6 +177,24 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/v1/scans": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** My latest scan of a job */
+        get: operations["latest_scan_v1_scans_get"];
+        put?: never;
+        /** Scan a job against my profile (free; 201 when new, 200 when the saved scan still applies) */
+        post: operations["scan_job_v1_scans_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/v1/applications": {
         parameters: {
             query?: never;
@@ -308,6 +326,8 @@ export interface components {
             plan: components["schemas"]["ExportedPlan"] | null;
             /** Usage */
             usage: components["schemas"]["ExportedUsage"][];
+            /** Scans */
+            scans: components["schemas"]["ExportedScan"][];
             /** Ai Calls */
             ai_calls: components["schemas"]["ExportedAiCall"][];
         };
@@ -774,6 +794,28 @@ export interface components {
              * @description kind -> content: match_report, resume, cover_letter, outreach
              */
             pieces: {
+                [key: string]: unknown;
+            };
+        };
+        /** ExportedScan */
+        ExportedScan: {
+            /**
+             * Created At
+             * Format: date-time
+             */
+            created_at: string;
+            /**
+             * Job Id
+             * Format: uuid
+             */
+            job_id: string;
+            /** Profile Version */
+            profile_version: number;
+            /**
+             * Result
+             * @description What the scan found (match report and keyword coverage)
+             */
+            result: {
                 [key: string]: unknown;
             };
         };
@@ -1301,6 +1343,60 @@ export interface components {
             /** Period */
             period: ("year" | "month" | "hour") | null;
         };
+        /** ScanIn */
+        ScanIn: {
+            /**
+             * Job Id
+             * Format: uuid
+             * @description A job from POST /v1/jobs
+             */
+            job_id: string;
+        };
+        /** ScanOut */
+        ScanOut: {
+            match_report: components["schemas"]["MatchReport"];
+            /**
+             * Keyword Coverage
+             * @description Share of the job's keywords already in the profile; null if the job lists none
+             */
+            keyword_coverage: number | null;
+            /** Keywords Found */
+            keywords_found: string[];
+            /** Keywords Missing */
+            keywords_missing: string[];
+            /**
+             * Must Have Coverage
+             * @description Share of must-have requirements whose evidence terms appear in the profile; null if none can be checked
+             */
+            must_have_coverage: number | null;
+            /**
+             * Id
+             * Format: uuid
+             */
+            id: string;
+            /**
+             * Job Id
+             * Format: uuid
+             */
+            job_id: string;
+            /** Profile Version */
+            profile_version: number;
+            /**
+             * Created At
+             * Format: date-time
+             */
+            created_at: string;
+            /**
+             * Stale
+             * @description True when the profile has a newer version than the one scanned: scan again
+             */
+            stale: boolean;
+            /**
+             * Scans Left Today
+             * @description Free scans left before the daily fair-use limit (resets 00:00 UTC)
+             */
+            scans_left_today: number;
+        };
         /** Skill */
         Skill: {
             /** Name */
@@ -1738,6 +1834,71 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["JobOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    latest_scan_v1_scans_get: {
+        parameters: {
+            query: {
+                /** @description The job that was scanned */
+                job_id: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ScanOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    scan_job_v1_scans_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ScanIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ScanOut"];
                 };
             };
             /** @description Validation Error */
