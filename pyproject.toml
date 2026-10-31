@@ -4,12 +4,12 @@ version = "0.0.1"
 description = "CREATOR : AI job-application copilot. Phase 0: pipeline prototype, eval harness, renderer."
 requires-python = ">=3.12"
 dependencies = [
-    "fastapi>=0.115",
+    "fastapi>=0.162.0",
     "uvicorn>=0.32",
-    "pydantic-settings>=2.6",
+    "pydantic-settings>=2.16.1",
     "sqlalchemy[asyncio]>=2.0.36",
     "asyncpg>=0.30",
-    "alembic>=1.14",
+    "alembic>=1.20.1",
     "pyjwt[crypto]>=2.10",
     "python-multipart>=0.0.20",
     "python-docx>=1.1",
@@ -17,11 +17,11 @@ dependencies = [
     "pydantic>=2.11",
     "typst>=0.13",
     "pdfminer.six>=20250506",
-    "pypdf>=5.4",
+    "pypdf>=6.21.3",
 ]
 
 [dependency-groups]
-dev = ["pytest>=8.3", "httpx2"]
+dev = ["pytest>=9.2.0", "httpx2"]
 
 [build-system]
 requires = ["hatchling"]
