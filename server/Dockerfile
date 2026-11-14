@@ -3,7 +3,7 @@
 #   docker run -p 8000:8000 -e DATABASE_URL=... -e GROQ_API_KEY=... tailor-api
 # Migrations run as a separate one-off task with the same image: python -m alembic upgrade head
 
-FROM python:3.14-slim AS runtime
+FROM python:3.15-slim AS runtime
 
 COPY --from=ghcr.io/astral-sh/uv:0.12.7 /uv /usr/local/bin/uv
 
